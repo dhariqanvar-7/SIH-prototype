@@ -1,0 +1,203 @@
+{
+  "synthetic": true,
+  "seed": 20260213,
+  "generated_utc": "2026-09-23T18:54:21+00:00",
+  "ward_id": "WARD-01",
+  "crs_projected": "EPSG:32643",
+  "crs_geographic": "EPSG:4326",
+  "units": "metres (projected), degrees (geographic)",
+  "warning": "All content is fictional. No real parcel/owner/place represented.",
+  "expected_counts": {
+    "cadastral_features": 100,
+    "extracted_buildings_t1": 117,
+    "extracted_buildings_t2": 120,
+    "revenue_records": 104,
+    "municipal_records": 90,
+    "ground_truth_observations": 30,
+    "gnss_observations": 20,
+    "utility_features": 15,
+    "clean_parcels": 100,
+    "clean_buildings_t1": 120,
+    "clean_buildings_t2": 123,
+    "injected_errors": 97,
+    "expected_changes": 14
+  },
+  "feature_counts": {
+    "cadastral_features": 100,
+    "extracted_buildings_t1": 117,
+    "extracted_buildings_t2": 120,
+    "revenue_records": 104,
+    "municipal_records": 90,
+    "ground_truth_observations": 30,
+    "gnss_observations": 20,
+    "utility_features": 15,
+    "clean_parcels": 100,
+    "clean_buildings_t1": 120,
+    "clean_buildings_t2": 123,
+    "injected_errors": 97,
+    "expected_changes": 14
+  },
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 649,
+      "sha256_canonical": "7e2fadd4dddcd4436af9bb41e1a4131d08a6ec4018aab2e3ffd9b17df9ee3927",
+      "synthetic": true
+    },
+    {
+      "path": "data_dictionary.csv",
+      "bytes": 2392,
+      "sha256_canonical": "8117797de3a78effab646dba5c1fdf299dd6ca8fc98b20d1e22cb85bb7ab2693",
+      "synthetic": true,
+      "record_count": 35
+    },
+    {
+      "path": "evaluation_only\\clean_buildings_t1.gpkg",
+      "bytes": 131072,
+      "sha256_canonical": "cf95b80c49480e8c5650cde8f169b4e2180903874210113b1c19ed5ecdd634e8",
+      "synthetic": true,
+      "crs": "EPSG:32643",
+      "geometry_type": [
+        "Polygon"
+      ],
+      "record_count": 120
+    },
+    {
+      "path": "evaluation_only\\clean_buildings_t2.gpkg",
+      "bytes": 131072,
+      "sha256_canonical": "4190a54dd3de346f2bb5199dbd2c38ff0cd9b243782836af2774f542ec425c2e",
+      "synthetic": true,
+      "crs": "EPSG:32643",
+      "geometry_type": [
+        "Polygon"
+      ],
+      "record_count": 123
+    },
+    {
+      "path": "evaluation_only\\clean_parcels.gpkg",
+      "bytes": 131072,
+      "sha256_canonical": "591483a4fb3b35e1cb46196cff756d02644faad8c11918db4e931a8ccec45f2e",
+      "synthetic": true,
+      "crs": "EPSG:32643",
+      "geometry_type": [
+        "Polygon"
+      ],
+      "record_count": 100
+    },
+    {
+      "path": "evaluation_only\\expected_changes.csv",
+      "bytes": 677,
+      "sha256_canonical": "cd3694bfe3960bee81f5a44b36aa63094a8264e7289d2c69cb9a99c00b6b92ad",
+      "synthetic": true,
+      "record_count": 14
+    },
+    {
+      "path": "evaluation_only\\injected_errors.csv",
+      "bytes": 14661,
+      "sha256_canonical": "f8d998f79465a75f93f2e8e5f9d0afb631d79cc4d1229f3a2b021b1f27442768",
+      "synthetic": true,
+      "record_count": 97
+    },
+    {
+      "path": "evaluation_only\\record_links.csv",
+      "bytes": 10693,
+      "sha256_canonical": "79e7207d36ded38b74fdc487173019de7442fa00bc6e33632a18bc41a0a18118",
+      "synthetic": true,
+      "record_count": 194
+    },
+    {
+      "path": "generate_dataset.py",
+      "bytes": 48789,
+      "sha256_canonical": "5bf7dd49ca009034cbe62e1c3a070b382b2279e7bb1b2e2e3b35877b4a992f4d",
+      "synthetic": true
+    },
+    {
+      "path": "inputs\\cadastral.gpkg",
+      "bytes": 131072,
+      "sha256_canonical": "ca4a70340fa9a6ac61bb18e1f492149533077e85eec392bbb38d7ec934dd5d83",
+      "synthetic": true,
+      "crs": "EPSG:32643",
+      "geometry_type": [
+        "MultiPolygon"
+      ],
+      "record_count": 100
+    },
+    {
+      "path": "inputs\\extracted_buildings_t1.geojson",
+      "bytes": 42551,
+      "sha256_canonical": "e3b9b7a34f48001ccf3cdbaac86b1cd3ce405dc221a1a8b570173e7e4464ec98",
+      "synthetic": true,
+      "crs": "EPSG:4326",
+      "geometry_type": [
+        "Polygon"
+      ],
+      "record_count": 117
+    },
+    {
+      "path": "inputs\\extracted_buildings_t2.geojson",
+      "bytes": 44037,
+      "sha256_canonical": "7bedf5268f20cab6f5c4d7d2de72abff10009e601d80218f4d2d26d5a1d5e5f9",
+      "synthetic": true,
+      "crs": "EPSG:4326",
+      "geometry_type": [
+        "Polygon"
+      ],
+      "record_count": 120
+    },
+    {
+      "path": "inputs\\gnss_observations.csv",
+      "bytes": 811,
+      "sha256_canonical": "fd1735135a1530fea8649dc0bcfa10a61830eeeb336e101fde1aef21118a5541",
+      "synthetic": true,
+      "record_count": 20
+    },
+    {
+      "path": "inputs\\ground_truth_observations.geojson",
+      "bytes": 38780,
+      "sha256_canonical": "9e436bc580095849281f41f66926279c03a8f8a02cb5651246a58a877efea1e0",
+      "synthetic": true,
+      "crs": "EPSG:4326",
+      "geometry_type": [
+        "Polygon"
+      ],
+      "record_count": 30
+    },
+    {
+      "path": "inputs\\legacy_parcels_no_crs.geojson",
+      "bytes": 73059,
+      "sha256_canonical": "a1715741814735779251e199bf62a76383e88d04bda723c3b7562e211c3a05af",
+      "synthetic": true,
+      "crs": "EPSG:4326",
+      "geometry_type": [
+        "Polygon",
+        "MultiPolygon"
+      ],
+      "record_count": 100
+    },
+    {
+      "path": "inputs\\municipal.csv",
+      "bytes": 4514,
+      "sha256_canonical": "cdf0987c7e6b2a7069af52799e32e5df0275490ee984b6c9e04ff6b40d72c8dc",
+      "synthetic": true,
+      "record_count": 90
+    },
+    {
+      "path": "inputs\\revenue.csv",
+      "bytes": 3345,
+      "sha256_canonical": "860064e33ff4031e5edac162be92e8090b8f9801d6b3d48b06591476d55061a0",
+      "synthetic": true,
+      "record_count": 104
+    },
+    {
+      "path": "inputs\\utilities.geojson",
+      "bytes": 4034,
+      "sha256_canonical": "6c446da362d4dfcbd26ff6109b591454b464be4365e7825f58cd3f097ccebf2e",
+      "synthetic": true,
+      "crs": "EPSG:4326",
+      "geometry_type": [
+        "LineString"
+      ],
+      "record_count": 15
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+property_id,plot_ref,address,use_type
+MUN-0001,P / 001,132 Synthetic Lane 2,Industrial
+MUN-0002,P / 002,51 Synthetic Lane 1,Residential
+MUN-0003,P / 003,145 Synthetic Lane 5,Mixed Use
+MUN-0004,P / 004,41 Synthetic Lane 4,Industrial
+MUN-0005,P / 005,17 Synthetic Lane 1,Mixed Use
+MUN-0006,P / 007,92 Synthetic Lane 3,Mixed Use
+MUN-0007,P / 008,84 Synthetic Lane 7,Residential
+MUN-0008,P - 009,169 Synthetic Lane 8,Institutional
+MUN-0009,P / 010,32 Synthetic Lane 1,Residential
+MUN-0010,P / 011,128 Synthetic Lane 4,Residential
+MUN-0011,P / 012,104 Synthetic Lane 6,Utility
+MUN-0012,P / 013,39 Synthetic Lane 7,Institutional
+MUN-0013,P / 014,173 Synthetic Lane 5,Open Space
+MUN-0014,P / 015,14 Synthetic Lane 5,Mixed Use
+MUN-0015,P / 016,89 Synthetic Lane 1,Residential
+MUN-0016,P / 017,34 Synthetic Lane 8,Mixed Use
+MUN-0017,P / 018,162 Synthetic Lane 6,Mixed Use
+MUN-0018,P / 019,177 Synthetic Lane 7,Mixed Use
+MUN-0019,P / 020,36 Synthetic Lane 8,Institutional
+MUN-0020,P / 021,5 Synthetic Lane 7,Industrial
+MUN-0021,P / 022,65 Synthetic Lane 6,Residential
+MUN-0022,P / 023,16 Synthetic Lane 5,Residential
+MUN-0023, P / 024,166 Synthetic Lane 2,Open Space
+MUN-0024, P / 025,33 Synthetic Lane 4,Residential
+MUN-0025,P / 026,77 Synthetic Lane 3,Residential
+MUN-0026,P / 027,84 Synthetic Lane 2,Open Space
+MUN-0027,P / 028,12 Synthetic Lane 3,Mixed Use
+MUN-0028,P / 029,47 Synthetic Lane 3,Commercial
+MUN-0029,P / 030,5 Synthetic Lane 4,Commercial
+MUN-0030,P / 031,28 Synthetic Lane 1,Residential
+MUN-0031,P / 032,142 Synthetic Lane 4,Residential
+MUN-0032,P / 033,124 Synthetic Lane 7,Mixed Use
+MUN-0033,P / 034,169 Synthetic Lane 6,Mixed Use
+MUN-0034,P / 035,157 Synthetic Lane 3,Industrial
+MUN-0035,P / 036,39 Synthetic Lane 2,Open Space
+MUN-0036,P / 037,66 Synthetic Lane 8,Industrial
+MUN-0037,P / 038,146 Synthetic Lane 1,Residential
+MUN-0038,P / 039,132 Synthetic Lane 6,Open Space
+MUN-0039,P / 040,38 Synthetic Lane 5,Utility
+MUN-0040,P / 041,47 Synthetic Lane 5,Residential
+MUN-0041,P / 042,59 Synthetic Lane 4,Industrial
+MUN-0042,P / 043,153 Synthetic Lane 6,Commercial
+MUN-0043,P / 045,119 Synthetic Lane 5,Residential
+MUN-0044,p / 046,99 Synthetic Lane 2,Residential
+MUN-0045,P / 047,80 Synthetic Lane 7,Mixed Use
+MUN-0046,P / 048,100 Synthetic Lane 1,Open Space
+MUN-0047,P / 049,122 Synthetic Lane 4,Residential
+MUN-0048,P / 050,39 Synthetic Lane 1,Residential
+MUN-0049,P / 051,100 Synthetic Lane 3,Commercial
+MUN-0050,P / 052,12 Synthetic Lane 4,Open Space
+MUN-0051,P / 053,110 Synthetic Lane 6,Institutional
+MUN-0052,P / 054,16 Synthetic Lane 4,Commercial
+MUN-0053,P / 055,164 Synthetic Lane 3,Institutional
+MUN-0054,P / 056,146 Synthetic Lane 8,Institutional
+MUN-0055,P / 058,197 Synthetic Lane 5,Utility
+MUN-0056,P / 059,112 Synthetic Lane 7,Industrial
+MUN-0057,P / 060,85 Synthetic Lane 6,Commercial
+MUN-0058,P / 062,75 Synthetic Lane 5,Open Space
+MUN-0059,P / 063,112 Synthetic Lane 7,Mixed Use
+MUN-0060,P / 064,175 Synthetic Lane 3,Open Space
+MUN-0061,p / 066,186 Synthetic Lane 6,Residential
+MUN-0062,P / 067,50 Synthetic Lane 4,Utility
+MUN-0063,P / 068,17 Synthetic Lane 4,Institutional
+MUN-0064,P / 070,56 Synthetic Lane 7,Residential
+MUN-0065,P / 072,48 Synthetic Lane 1,Open Space
+MUN-0066,P / 073,126 Synthetic Lane 6,Residential
+MUN-0067,P / 074,71 Synthetic Lane 5,Commercial
+MUN-0068,P / 075,99 Synthetic Lane 4,Industrial
+MUN-0069,P / 076,182 Synthetic Lane 4,Residential
+MUN-0070,P / 078,93 Synthetic Lane 4,Residential
+MUN-0071,P / 079,194 Synthetic Lane 5,Residential
+MUN-0072,P / 080,189 Synthetic Lane 7,Institutional
+MUN-0073,P / 081,15 Synthetic Lane 1,Institutional
+MUN-0074,P / 082,144 Synthetic Lane 3,Commercial
+MUN-0075,P / 084,59 Synthetic Lane 4,Residential
+MUN-0076,p / 085,148 Synthetic Lane 7,Residential
+MUN-0077,P / 086,143 Synthetic Lane 4,Mixed Use
+MUN-0078,P / 087,18 Synthetic Lane 4,Utility
+MUN-0079,P / 088,109 Synthetic Lane 1,Commercial
+MUN-0080,P / 089,124 Synthetic Lane 1,Residential
+MUN-0081,P / 090,87 Synthetic Lane 4,Commercial
+MUN-0082,P / 091,163 Synthetic Lane 5,Residential
+MUN-0083,P / 092,60 Synthetic Lane 1,Residential
+MUN-0084,P / 094,125 Synthetic Lane 2,Commercial
+MUN-0085,P / 095,28 Synthetic Lane 2,Residential
+MUN-0086,P / 096,7 Synthetic Lane 2,Utility
+MUN-0087,P / 097,142 Synthetic Lane 1,Mixed Use
+MUN-0088,P - 098,135 Synthetic Lane 2,Residential
+MUN-0089,P / 099,152 Synthetic Lane 2,Mixed Use
+MUN-0090,P / 100,6 Synthetic Lane 8,Residential

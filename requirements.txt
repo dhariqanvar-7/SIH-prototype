@@ -1,0 +1,10 @@
+geopandas>=1.0,<2
+shapely>=2.0,<3
+pyproj>=3.5,<4
+pandas>=2,<4
+numpy>=1.24,<3
+pyogrio>=0.7
+streamlit>=1.40,<2
+folium>=0.18,<1
+streamlit-folium>=0.24,<1
+pytest>=8,<10

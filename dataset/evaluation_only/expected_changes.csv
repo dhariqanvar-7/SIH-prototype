@@ -1,0 +1,15 @@
+building_id,change_type,parcel_id,notes
+B-121,added,P-059,new footprint 96.5 m2
+B-122,added,P-042,new footprint 75.4 m2
+B-123,added,P-002,new footprint 39.3 m2
+B-124,added,P-042,new footprint 61.6 m2
+B-125,added,P-051,new footprint 108.5 m2
+B-126,added,P-072,new footprint 45.0 m2
+B-051,removed,P-043,"present at t1, absent at t2"
+B-022,removed,P-017,"present at t1, absent at t2"
+B-007,removed,P-005,"present at t1, absent at t2"
+B-084,extended,P-071,52.7 -> 85.3 m2 (+61.9%)
+B-111,extended,P-092,46.8 -> 82.3 m2 (+75.7%)
+B-055,extended,P-049,81.3 -> 102.4 m2 (+25.9%)
+B-102,extended,P-085,52.6 -> 76.1 m2 (+44.7%)
+B-070,extended,P-058,45.5 -> 59.6 m2 (+30.9%)

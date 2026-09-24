@@ -1,0 +1,98 @@
+error_id,source_file,source_feature_id,error_type,original_value,modified_value,expected_action,parcel_id,truth_group
+ERR-0001,inputs/cadastral.gpkg,P-080,self_intersection,valid polygon,self-intersecting (Self-intersection[500198.121940798 3000385.27827362]),repair_geometry_and_flag_for_survey_review,P-080,invalid_geometry
+ERR-0002,inputs/cadastral.gpkg,P-009,self_intersection,valid polygon,self-intersecting (Self-intersection[500141.18759943 3000066.34472121]),repair_geometry_and_flag_for_survey_review,P-009,invalid_geometry
+ERR-0003,inputs/cadastral.gpkg,P-072,self_intersection,valid polygon,self-intersecting (Self-intersection[500056.580332467 3000468.19761911]),repair_geometry_and_flag_for_survey_review,P-072,invalid_geometry
+ERR-0004,inputs/cadastral.gpkg,P-024|P-028,parcel_overlap,touching boundary,overlap area 55.39 m2,resolve_topology_conflict,P-024,overlap
+ERR-0005,inputs/cadastral.gpkg,P-047|P-048,parcel_overlap,touching boundary,overlap area 33.76 m2,resolve_topology_conflict,P-047,overlap
+ERR-0006,inputs/cadastral.gpkg,P-065|P-067,parcel_overlap,touching boundary,overlap area 41.59 m2,resolve_topology_conflict,P-065,overlap
+ERR-0007,inputs/cadastral.gpkg,P-060|P-061,parcel_overlap,touching boundary,overlap area 15.57 m2,resolve_topology_conflict,P-060,overlap
+ERR-0008,inputs/cadastral.gpkg,P-068|P-069,parcel_overlap,touching boundary,overlap area 11.85 m2,resolve_topology_conflict,P-068,overlap
+ERR-0009,inputs/revenue.csv,REV-0016,area_mismatch,1579.11,1242.40,flag_attribute_conflict_and_recompute_from_geometry,P-016,area_conflict
+ERR-0010,inputs/revenue.csv,REV-0007,area_mismatch,1657.61,1936.78,flag_attribute_conflict_and_recompute_from_geometry,P-007,area_conflict
+ERR-0011,inputs/revenue.csv,REV-0017,area_mismatch,1014.46,907.74,flag_attribute_conflict_and_recompute_from_geometry,P-017,area_conflict
+ERR-0012,inputs/revenue.csv,REV-0012,area_mismatch,1528.78,1187.57,flag_attribute_conflict_and_recompute_from_geometry,P-012,area_conflict
+ERR-0013,inputs/revenue.csv,REV-0089,area_mismatch,3294.31,2501.33,flag_attribute_conflict_and_recompute_from_geometry,P-089,area_conflict
+ERR-0014,inputs/revenue.csv,REV-0005,area_mismatch,3263.53,2664.33,flag_attribute_conflict_and_recompute_from_geometry,P-005,area_conflict
+ERR-0015,inputs/revenue.csv,REV-0031,area_mismatch,1262.63,1438.29,flag_attribute_conflict_and_recompute_from_geometry,P-031,area_conflict
+ERR-0016,inputs/revenue.csv,REV-0062,area_mismatch,1307.93,1023.78,flag_attribute_conflict_and_recompute_from_geometry,P-062,area_conflict
+ERR-0017,inputs/revenue.csv,REV-0040,area_mismatch,2039.83,2438.08,flag_attribute_conflict_and_recompute_from_geometry,P-040,area_conflict
+ERR-0018,inputs/revenue.csv,REV-0045,area_mismatch,727.69,878.52,flag_attribute_conflict_and_recompute_from_geometry,P-045,area_conflict
+ERR-0019,inputs/revenue.csv,REV-0018,identifier_format,018,18,normalise_identifier_and_link_to_parcel,P-018,id_format
+ERR-0020,inputs/revenue.csv,REV-0100,identifier_format,100, 100,normalise_identifier_and_link_to_parcel,P-100,id_format
+ERR-0021,inputs/revenue.csv,REV-0071,identifier_format,071,071 ,normalise_identifier_and_link_to_parcel,P-071,id_format
+ERR-0022,inputs/revenue.csv,REV-0002,identifier_format,002,P-002,normalise_identifier_and_link_to_parcel,P-002,id_format
+ERR-0023,inputs/revenue.csv,REV-0087,identifier_format,087, 087,normalise_identifier_and_link_to_parcel,P-087,id_format
+ERR-0024,inputs/revenue.csv,REV-0041,identifier_format,041, 041,normalise_identifier_and_link_to_parcel,P-041,id_format
+ERR-0025,inputs/revenue.csv,REV-0001,identifier_format,001, 001,normalise_identifier_and_link_to_parcel,P-001,id_format
+ERR-0026,inputs/revenue.csv,REV-0025,identifier_format,025,P-025,normalise_identifier_and_link_to_parcel,P-025,id_format
+ERR-0027,inputs/revenue.csv,REV-0101,duplicate_record,,duplicate of REV-0013 (survey_no=013),deduplicate_on_business_key,P-013,duplicate
+ERR-0028,inputs/revenue.csv,REV-0102,duplicate_record,,duplicate of REV-0028 (survey_no=028),deduplicate_on_business_key,P-028,duplicate
+ERR-0029,inputs/revenue.csv,REV-0103,duplicate_record,,duplicate of REV-0048 (survey_no=048),deduplicate_on_business_key,P-048,duplicate
+ERR-0030,inputs/revenue.csv,REV-0104,duplicate_record,,duplicate of REV-0030 (survey_no=030),deduplicate_on_business_key,P-030,duplicate
+ERR-0031,inputs/municipal.csv,MUN-0006,missing_record,plot_ref=P / 006 (parcel P-006),,flag_incomplete_source_coverage,P-006,missing_municipal
+ERR-0032,inputs/municipal.csv,MUN-0044,missing_record,plot_ref=P / 044 (parcel P-044),,flag_incomplete_source_coverage,P-044,missing_municipal
+ERR-0033,inputs/municipal.csv,MUN-0057,missing_record,plot_ref=P / 057 (parcel P-057),,flag_incomplete_source_coverage,P-057,missing_municipal
+ERR-0034,inputs/municipal.csv,MUN-0061,missing_record,plot_ref=P / 061 (parcel P-061),,flag_incomplete_source_coverage,P-061,missing_municipal
+ERR-0035,inputs/municipal.csv,MUN-0065,missing_record,plot_ref=P / 065 (parcel P-065),,flag_incomplete_source_coverage,P-065,missing_municipal
+ERR-0036,inputs/municipal.csv,MUN-0069,missing_record,plot_ref=P / 069 (parcel P-069),,flag_incomplete_source_coverage,P-069,missing_municipal
+ERR-0037,inputs/municipal.csv,MUN-0071,missing_record,plot_ref=P / 071 (parcel P-071),,flag_incomplete_source_coverage,P-071,missing_municipal
+ERR-0038,inputs/municipal.csv,MUN-0077,missing_record,plot_ref=P / 077 (parcel P-077),,flag_incomplete_source_coverage,P-077,missing_municipal
+ERR-0039,inputs/municipal.csv,MUN-0083,missing_record,plot_ref=P / 083 (parcel P-083),,flag_incomplete_source_coverage,P-083,missing_municipal
+ERR-0040,inputs/municipal.csv,MUN-0093,missing_record,plot_ref=P / 093 (parcel P-093),,flag_incomplete_source_coverage,P-093,missing_municipal
+ERR-0041,inputs/municipal.csv,MUN-0024,identifier_format,P / 025, P / 025,normalise_identifier_and_link_to_parcel,P-025,id_format
+ERR-0042,inputs/municipal.csv,MUN-0061,identifier_format,P / 066,p / 066,normalise_identifier_and_link_to_parcel,P-066,id_format
+ERR-0043,inputs/municipal.csv,MUN-0044,identifier_format,P / 046,p / 046,normalise_identifier_and_link_to_parcel,P-046,id_format
+ERR-0044,inputs/municipal.csv,MUN-0008,identifier_format,P / 009,P - 009,normalise_identifier_and_link_to_parcel,P-009,id_format
+ERR-0045,inputs/municipal.csv,MUN-0088,identifier_format,P / 098,P - 098,normalise_identifier_and_link_to_parcel,P-098,id_format
+ERR-0046,inputs/municipal.csv,MUN-0023,identifier_format,P / 024, P / 024,normalise_identifier_and_link_to_parcel,P-024,id_format
+ERR-0047,inputs/municipal.csv,MUN-0076,identifier_format,P / 085,p / 085,normalise_identifier_and_link_to_parcel,P-085,id_format
+ERR-0048,inputs/extracted_buildings_t1.geojson,B-015,missing_detection,clean footprint B-015 present,,flag_extraction_omission_via_ground_truth,P-013,missing_detection
+ERR-0049,inputs/extracted_buildings_t1.geojson,EXT-T1-0016,geometry_displacement,0.00 m,3.08 m,match_spatially_despite_positional_offset,P-014,displacement
+ERR-0050,inputs/extracted_buildings_t1.geojson,EXT-T1-0039,geometry_displacement,0.00 m,2.33 m,match_spatially_despite_positional_offset,P-033,displacement
+ERR-0051,inputs/extracted_buildings_t1.geojson,B-052,missing_detection,clean footprint B-052 present,,flag_extraction_omission_via_ground_truth,P-044,missing_detection
+ERR-0052,inputs/extracted_buildings_t1.geojson,EXT-T1-0059,geometry_displacement,0.00 m,1.74 m,match_spatially_despite_positional_offset,P-053,displacement
+ERR-0053,inputs/extracted_buildings_t1.geojson,EXT-T1-0063,geometry_displacement,0.00 m,2.41 m,match_spatially_despite_positional_offset,P-055,displacement
+ERR-0054,inputs/extracted_buildings_t1.geojson,B-071,missing_detection,clean footprint B-071 present,,flag_extraction_omission_via_ground_truth,P-059,missing_detection
+ERR-0055,inputs/extracted_buildings_t1.geojson,EXT-T1-0070,geometry_displacement,0.00 m,2.56 m,match_spatially_despite_positional_offset,P-062,displacement
+ERR-0056,inputs/extracted_buildings_t1.geojson,B-077,missing_detection,clean footprint B-077 present,,flag_extraction_omission_via_ground_truth,P-065,missing_detection
+ERR-0057,inputs/extracted_buildings_t1.geojson,EXT-T1-0074,geometry_displacement,0.00 m,2.42 m,match_spatially_despite_positional_offset,P-067,displacement
+ERR-0058,inputs/extracted_buildings_t1.geojson,B-079,missing_detection,clean footprint B-079 present,,flag_extraction_omission_via_ground_truth,P-068,missing_detection
+ERR-0059,inputs/extracted_buildings_t1.geojson,EXT-T1-0077,geometry_displacement,0.00 m,1.29 m,match_spatially_despite_positional_offset,P-070,displacement
+ERR-0060,inputs/extracted_buildings_t1.geojson,B-086,missing_detection,clean footprint B-086 present,,flag_extraction_omission_via_ground_truth,P-073,missing_detection
+ERR-0061,inputs/extracted_buildings_t1.geojson,EXT-T1-0085,geometry_displacement,0.00 m,2.71 m,match_spatially_despite_positional_offset,P-075,displacement
+ERR-0062,inputs/extracted_buildings_t1.geojson,EXT-T1-0089,geometry_displacement,0.00 m,4.19 m,match_spatially_despite_positional_offset,P-077,displacement
+ERR-0063,inputs/extracted_buildings_t1.geojson,EXT-T1-0094,geometry_displacement,0.00 m,3.20 m,match_spatially_despite_positional_offset,P-084,displacement
+ERR-0064,inputs/extracted_buildings_t1.geojson,EXT-T1-0097,geometry_displacement,0.00 m,1.26 m,match_spatially_despite_positional_offset,P-086,displacement
+ERR-0065,inputs/extracted_buildings_t1.geojson,EXT-T1-0100,geometry_displacement,0.00 m,2.47 m,match_spatially_despite_positional_offset,P-087,displacement
+ERR-0066,inputs/extracted_buildings_t1.geojson,B-116,missing_detection,clean footprint B-116 present,,flag_extraction_omission_via_ground_truth,P-095,missing_detection
+ERR-0067,inputs/extracted_buildings_t1.geojson,B-120,missing_detection,clean footprint B-120 present,,flag_extraction_omission_via_ground_truth,P-100,missing_detection
+ERR-0068,inputs/extracted_buildings_t1.geojson,EXT-T1-0113,false_detection,,spurious footprint 51.9 m2,flag_unsupported_detection,,false_detection
+ERR-0069,inputs/extracted_buildings_t1.geojson,EXT-T1-0114,false_detection,,spurious footprint 66.1 m2,flag_unsupported_detection,,false_detection
+ERR-0070,inputs/extracted_buildings_t1.geojson,EXT-T1-0115,false_detection,,spurious footprint 49.0 m2,flag_unsupported_detection,,false_detection
+ERR-0071,inputs/extracted_buildings_t1.geojson,EXT-T1-0116,false_detection,,spurious footprint 56.4 m2,flag_unsupported_detection,,false_detection
+ERR-0072,inputs/extracted_buildings_t1.geojson,EXT-T1-0117,false_detection,,spurious footprint 88.9 m2,flag_unsupported_detection,,false_detection
+ERR-0073,inputs/extracted_buildings_t2.geojson,B-015,missing_detection,clean footprint B-015 present,,flag_extraction_omission_via_ground_truth,P-013,missing_detection
+ERR-0074,inputs/extracted_buildings_t2.geojson,EXT-T2-0232,geometry_displacement,0.00 m,3.04 m,match_spatially_despite_positional_offset,P-014,displacement
+ERR-0075,inputs/extracted_buildings_t2.geojson,EXT-T2-0254,geometry_displacement,0.00 m,2.81 m,match_spatially_despite_positional_offset,P-033,displacement
+ERR-0076,inputs/extracted_buildings_t2.geojson,B-052,missing_detection,clean footprint B-052 present,,flag_extraction_omission_via_ground_truth,P-044,missing_detection
+ERR-0077,inputs/extracted_buildings_t2.geojson,EXT-T2-0273,geometry_displacement,0.00 m,2.11 m,match_spatially_despite_positional_offset,P-053,displacement
+ERR-0078,inputs/extracted_buildings_t2.geojson,EXT-T2-0277,geometry_displacement,0.00 m,2.76 m,match_spatially_despite_positional_offset,P-055,displacement
+ERR-0079,inputs/extracted_buildings_t2.geojson,B-071,missing_detection,clean footprint B-071 present,,flag_extraction_omission_via_ground_truth,P-059,missing_detection
+ERR-0080,inputs/extracted_buildings_t2.geojson,EXT-T2-0284,geometry_displacement,0.00 m,2.65 m,match_spatially_despite_positional_offset,P-062,displacement
+ERR-0081,inputs/extracted_buildings_t2.geojson,B-077,missing_detection,clean footprint B-077 present,,flag_extraction_omission_via_ground_truth,P-065,missing_detection
+ERR-0082,inputs/extracted_buildings_t2.geojson,EXT-T2-0288,geometry_displacement,0.00 m,2.27 m,match_spatially_despite_positional_offset,P-067,displacement
+ERR-0083,inputs/extracted_buildings_t2.geojson,B-079,missing_detection,clean footprint B-079 present,,flag_extraction_omission_via_ground_truth,P-068,missing_detection
+ERR-0084,inputs/extracted_buildings_t2.geojson,EXT-T2-0291,geometry_displacement,0.00 m,2.09 m,match_spatially_despite_positional_offset,P-070,displacement
+ERR-0085,inputs/extracted_buildings_t2.geojson,B-086,missing_detection,clean footprint B-086 present,,flag_extraction_omission_via_ground_truth,P-073,missing_detection
+ERR-0086,inputs/extracted_buildings_t2.geojson,EXT-T2-0299,geometry_displacement,0.00 m,1.67 m,match_spatially_despite_positional_offset,P-075,displacement
+ERR-0087,inputs/extracted_buildings_t2.geojson,EXT-T2-0303,geometry_displacement,0.00 m,2.65 m,match_spatially_despite_positional_offset,P-077,displacement
+ERR-0088,inputs/extracted_buildings_t2.geojson,EXT-T2-0308,geometry_displacement,0.00 m,1.81 m,match_spatially_despite_positional_offset,P-084,displacement
+ERR-0089,inputs/extracted_buildings_t2.geojson,EXT-T2-0311,geometry_displacement,0.00 m,2.72 m,match_spatially_despite_positional_offset,P-086,displacement
+ERR-0090,inputs/extracted_buildings_t2.geojson,EXT-T2-0314,geometry_displacement,0.00 m,1.42 m,match_spatially_despite_positional_offset,P-087,displacement
+ERR-0091,inputs/extracted_buildings_t2.geojson,B-116,missing_detection,clean footprint B-116 present,,flag_extraction_omission_via_ground_truth,P-095,missing_detection
+ERR-0092,inputs/extracted_buildings_t2.geojson,B-120,missing_detection,clean footprint B-120 present,,flag_extraction_omission_via_ground_truth,P-100,missing_detection
+ERR-0093,inputs/extracted_buildings_t2.geojson,EXT-T2-0333,false_detection,,spurious footprint 51.9 m2,flag_unsupported_detection,,false_detection
+ERR-0094,inputs/extracted_buildings_t2.geojson,EXT-T2-0334,false_detection,,spurious footprint 66.1 m2,flag_unsupported_detection,,false_detection
+ERR-0095,inputs/extracted_buildings_t2.geojson,EXT-T2-0335,false_detection,,spurious footprint 49.0 m2,flag_unsupported_detection,,false_detection
+ERR-0096,inputs/extracted_buildings_t2.geojson,EXT-T2-0336,false_detection,,spurious footprint 56.4 m2,flag_unsupported_detection,,false_detection
+ERR-0097,inputs/extracted_buildings_t2.geojson,EXT-T2-0337,false_detection,,spurious footprint 88.9 m2,flag_unsupported_detection,,false_detection

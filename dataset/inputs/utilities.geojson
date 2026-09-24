@@ -1,0 +1,22 @@
+{
+"type": "FeatureCollection",
+"name": "utilities",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "utility_id": "UTIL-001", "utility_type": "water", "status": "active" }, "geometry": { "type": "LineString", "coordinates": [ [ 75.001105196106948, 27.122559921584134 ], [ 75.00243953335719, 27.122559904746542 ] ] } },
+{ "type": "Feature", "properties": { "utility_id": "UTIL-002", "utility_type": "telecom", "status": "proposed" }, "geometry": { "type": "LineString", "coordinates": [ [ 75.001715332585519, 27.123985262399028 ], [ 75.001715361009502, 27.125848486058185 ] ] } },
+{ "type": "Feature", "properties": { "utility_id": "UTIL-003", "utility_type": "water", "status": "abandoned" }, "geometry": { "type": "LineString", "coordinates": [ [ 75.000748235791391, 27.124004473887581 ], [ 75.003133153446328, 27.124004440933621 ] ] } },
+{ "type": "Feature", "properties": { "utility_id": "UTIL-004", "utility_type": "sewer", "status": "active" }, "geometry": { "type": "LineString", "coordinates": [ [ 75.001562242167452, 27.126893566196546 ], [ 75.002897242275282, 27.126893545001014 ] ] } },
+{ "type": "Feature", "properties": { "utility_id": "UTIL-005", "utility_type": "telecom", "status": "abandoned" }, "geometry": { "type": "LineString", "coordinates": [ [ 75.003329768301867, 27.12415574969533 ], [ 75.003329829210585, 27.126212533071755 ] ] } },
+{ "type": "Feature", "properties": { "utility_id": "UTIL-006", "utility_type": "sewer", "status": "abandoned" }, "geometry": { "type": "LineString", "coordinates": [ [ 75.000676104987235, 27.125449023904377 ], [ 75.002965817366132, 27.125448994216832 ] ] } },
+{ "type": "Feature", "properties": { "utility_id": "UTIL-007", "utility_type": "water", "status": "proposed" }, "geometry": { "type": "LineString", "coordinates": [ [ 75.00116961976093, 27.124004471010576 ], [ 75.00243206764172, 27.12400445482357 ] ] } },
+{ "type": "Feature", "properties": { "utility_id": "UTIL-008", "utility_type": "sewer", "status": "abandoned" }, "geometry": { "type": "LineString", "coordinates": [ [ 75.001072873988619, 27.124004471782918 ], [ 75.00333964526304, 27.124004436175429 ] ] } },
+{ "type": "Feature", "properties": { "utility_id": "UTIL-009", "utility_type": "water", "status": "abandoned" }, "geometry": { "type": "LineString", "coordinates": [ [ 75.00203390106293, 27.122559911206135 ], [ 75.003388623951935, 27.122559885055431 ] ] } },
+{ "type": "Feature", "properties": { "utility_id": "UTIL-010", "utility_type": "telecom", "status": "abandoned" }, "geometry": { "type": "LineString", "coordinates": [ [ 75.003329729050833, 27.122830193123381 ], [ 75.003329767177519, 27.124117780471703 ] ] } },
+{ "type": "Feature", "properties": { "utility_id": "UTIL-011", "utility_type": "sewer", "status": "active" }, "geometry": { "type": "LineString", "coordinates": [ [ 75.001723095023891, 27.122559915362956 ], [ 75.003782925693557, 27.122559874989062 ] ] } },
+{ "type": "Feature", "properties": { "utility_id": "UTIL-012", "utility_type": "power", "status": "active" }, "geometry": { "type": "LineString", "coordinates": [ [ 75.001715334002327, 27.124078139907486 ], [ 75.001715353722162, 27.125370810085109 ] ] } },
+{ "type": "Feature", "properties": { "utility_id": "UTIL-013", "utility_type": "sewer", "status": "active" }, "geometry": { "type": "LineString", "coordinates": [ [ 75.004944141237303, 27.122787050680991 ], [ 75.004944219504566, 27.124567137106002 ] ] } },
+{ "type": "Feature", "properties": { "utility_id": "UTIL-014", "utility_type": "telecom", "status": "proposed" }, "geometry": { "type": "LineString", "coordinates": [ [ 75.002043787240765, 27.126893560014324 ], [ 75.004517604484533, 27.126893502225748 ] ] } },
+{ "type": "Feature", "properties": { "utility_id": "UTIL-015", "utility_type": "sewer", "status": "active" }, "geometry": { "type": "LineString", "coordinates": [ [ 75.001408449747061, 27.12689356782311 ], [ 75.002676649539893, 27.126893549378536 ] ] } }
+]
+}

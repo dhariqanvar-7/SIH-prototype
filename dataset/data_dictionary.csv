@@ -1,0 +1,36 @@
+file,field,type,description
+cadastral.gpkg,parcel_id,string,Canonical parcel identifier (P-###)
+cadastral.gpkg,ward_id,string,Administrative ward label
+cadastral.gpkg,block_id,string,Block identifier (BLK-##)
+cadastral.gpkg,land_use,string,Land-use class
+cadastral.gpkg,area_m2,float,Geometric area in m^2
+extracted_buildings_t1.geojson,extracted_id,string,Extractor-side id
+extracted_buildings_t2.geojson,extracted_id,string,Extractor-side id
+revenue.csv,record_id,string,Revenue record id
+revenue.csv,survey_no,string,Revenue survey number (may be formatted)
+revenue.csv,owner_ref,string,Fictional owner reference
+revenue.csv,recorded_area_m2,float,Area as recorded by revenue dept
+municipal.csv,property_id,string,Municipal property id
+municipal.csv,plot_ref,string,Municipal plot reference
+municipal.csv,address,string,Fictional postal address
+municipal.csv,use_type,string,Municipal use classification
+ground_truth_observations.geojson,observation_id,string,Observation-area polygon id
+ground_truth_observations.geojson,observed_use,string,Field-observed use
+ground_truth_observations.geojson,verification_status,string,verification state
+gnss_observations.csv,point_id,string,GNSS point id
+gnss_observations.csv,easting,float,EPSG:32643 easting (metres); survey date unknown
+gnss_observations.csv,northing,float,EPSG:32643 northing (metres); survey date unknown
+gnss_observations.csv,accuracy_m,float,Reported accuracy (m)
+utilities.geojson,utility_id,string,Utility feature id
+utilities.geojson,utility_type,string,water | sewer | power | telecom
+utilities.geojson,status,string,active | proposed | abandoned
+evaluation_only/clean_parcels.gpkg,parcel_id,string,Answer key — canonical parcel
+evaluation_only/clean_buildings_t1.gpkg,building_id,string,Answer key — t1 footprint
+evaluation_only/clean_buildings_t2.gpkg,building_id,string,Answer key — t2 footprint
+evaluation_only/injected_errors.csv,error_id,string,Error row id
+evaluation_only/injected_errors.csv,error_type,string,Class of injected error
+evaluation_only/injected_errors.csv,expected_action,string,Correct system behaviour
+evaluation_only/expected_changes.csv,change_type,string,added | removed | extended
+evaluation_only/record_links.csv,source_file,string,Input file the row belongs to
+evaluation_only/record_links.csv,source_feature_id,string,Row id inside that file
+evaluation_only/record_links.csv,parcel_id,string,Canonical parcel it maps to
