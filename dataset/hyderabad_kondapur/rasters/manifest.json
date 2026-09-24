@@ -1,0 +1,178 @@
+{
+  "retrieved_at_utc": "2026-09-24T10:09:34.476532+00:00",
+  "bbox_wsen": [
+    78.35,
+    17.45,
+    78.364,
+    17.462
+  ],
+  "scene_id": "S2B_T44QKE_20251213T052354_L2A",
+  "acquisition_datetime": "2025-12-13T05:24:03.413Z",
+  "scene_cloud_percent": 0.000409,
+  "selection_attempts": [
+    {
+      "id": "S2B_T44QKE_20251213T052354_L2A",
+      "bad_scl_aoi_fraction": 0.0
+    }
+  ],
+  "selection_note": "Lowest scene cloud score among first catalogue page of dry-season 2025-11 through 2026-03 scenes in EPSG:32644 covering AOI; AOI quality independently checked with SCL.",
+  "bad_scl_aoi_fraction": 0.0,
+  "scl_classes": {
+    "2": 10,
+    "4": 2076,
+    "5": 2765,
+    "6": 10,
+    "7": 79
+  },
+  "processing": "Native pixel grids retained, exterior pixel centers masked. No upsampling. Physical reflectance = DN * scale + offset; nodata excluded.",
+  "outputs": {
+    "scene_classification_20m.tif": {
+      "source_url": "https://e84-earth-search-sentinel-data.s3.us-west-2.amazonaws.com/sentinel-2-c1-l2a/44/Q/KE/2025/12/S2B_T44QKE_20251213T052354_L2A/SCL.tif",
+      "crs": "EPSG:32644",
+      "resolution": [
+        20.0,
+        20.0
+      ],
+      "width": 76,
+      "height": 68,
+      "bands": 1,
+      "nodata": 0.0,
+      "valid_aoi_fraction": 1.0
+    },
+    "sentinel_red_10m.tif": {
+      "source_url": "https://e84-earth-search-sentinel-data.s3.us-west-2.amazonaws.com/sentinel-2-c1-l2a/44/Q/KE/2025/12/S2B_T44QKE_20251213T052354_L2A/B04.tif",
+      "crs": "EPSG:32644",
+      "resolution": [
+        10.0,
+        10.0
+      ],
+      "width": 152,
+      "height": 136,
+      "bands": 1,
+      "nodata": 0.0,
+      "valid_aoi_fraction": 1.0,
+      "scale": 0.0001,
+      "offset": -0.1
+    },
+    "sentinel_green_10m.tif": {
+      "source_url": "https://e84-earth-search-sentinel-data.s3.us-west-2.amazonaws.com/sentinel-2-c1-l2a/44/Q/KE/2025/12/S2B_T44QKE_20251213T052354_L2A/B03.tif",
+      "crs": "EPSG:32644",
+      "resolution": [
+        10.0,
+        10.0
+      ],
+      "width": 152,
+      "height": 136,
+      "bands": 1,
+      "nodata": 0.0,
+      "valid_aoi_fraction": 1.0,
+      "scale": 0.0001,
+      "offset": -0.1
+    },
+    "sentinel_blue_10m.tif": {
+      "source_url": "https://e84-earth-search-sentinel-data.s3.us-west-2.amazonaws.com/sentinel-2-c1-l2a/44/Q/KE/2025/12/S2B_T44QKE_20251213T052354_L2A/B02.tif",
+      "crs": "EPSG:32644",
+      "resolution": [
+        10.0,
+        10.0
+      ],
+      "width": 152,
+      "height": 136,
+      "bands": 1,
+      "nodata": 0.0,
+      "valid_aoi_fraction": 1.0,
+      "scale": 0.0001,
+      "offset": -0.1
+    },
+    "sentinel_nir_10m.tif": {
+      "source_url": "https://e84-earth-search-sentinel-data.s3.us-west-2.amazonaws.com/sentinel-2-c1-l2a/44/Q/KE/2025/12/S2B_T44QKE_20251213T052354_L2A/B08.tif",
+      "crs": "EPSG:32644",
+      "resolution": [
+        10.0,
+        10.0
+      ],
+      "width": 152,
+      "height": 136,
+      "bands": 1,
+      "nodata": 0.0,
+      "valid_aoi_fraction": 1.0,
+      "scale": 0.0001,
+      "offset": -0.1
+    },
+    "imagery_truecolor_10m.tif": {
+      "source_url": "https://e84-earth-search-sentinel-data.s3.us-west-2.amazonaws.com/sentinel-2-c1-l2a/44/Q/KE/2025/12/S2B_T44QKE_20251213T052354_L2A/TCI.tif",
+      "crs": "EPSG:32644",
+      "resolution": [
+        10.0,
+        10.0
+      ],
+      "width": 152,
+      "height": 136,
+      "bands": 3,
+      "nodata": 0.0,
+      "valid_aoi_fraction": 1.0
+    },
+    "surface_elevation_glo30.tif": {
+      "source_url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N17_00_E078_00_DEM/Copernicus_DSM_COG_10_N17_00_E078_00_DEM.tif",
+      "crs": "EPSG:4326",
+      "resolution": [
+        0.0002777777777777778,
+        0.0002777777777777778
+      ],
+      "width": 51,
+      "height": 44,
+      "bands": 1,
+      "nodata": -9999,
+      "valid_aoi_fraction": 1.0,
+      "min_m": 588.2469482421875,
+      "max_m": 621.7026977539062,
+      "surface_model": "DSM, not bare-earth DTM",
+      "vertical_datum": "EGM2008 orthometric height",
+      "source_release": "AWS Copernicus DEM 2021 release",
+      "nominal_resolution_m": 30
+    }
+  },
+  "sources": {
+    "sentinel": "https://github.com/Element84/earth-search",
+    "dem": "https://registry.opendata.aws/copernicus-dem/"
+  },
+  "limitations": [
+    "10 m imagery cannot validate individual cadastral/building boundaries.",
+    "30 m DSM cannot provide reliable individual building heights.",
+    "Dates differ from footprint imagery whose acquisition dates are unknown."
+  ],
+  "files": {
+    "imagery_rgbnir_10m.tif": {
+      "bytes": 128011,
+      "sha256": "6d500b9a34721a59efbfc687c0fb2ff46db5dc8bdb9b41f0e0ccf123be9a67e0"
+    },
+    "imagery_truecolor_10m.tif": {
+      "bytes": 52870,
+      "sha256": "483c27cc80f35d34b7001a892d88130ca84411d82051fff2756e7d8eede80679"
+    },
+    "scene_classification_20m.tif": {
+      "bytes": 1714,
+      "sha256": "94ab534fd91d7a91ed1bb94bc58ef072285062e52054cfb4d4a83a47e9155fdc"
+    },
+    "sentinel_blue_10m.tif": {
+      "bytes": 31391,
+      "sha256": "da4f19e3781dbd19618debb3a125f33e5be4acb42b53a3797246353966af00d1"
+    },
+    "sentinel_green_10m.tif": {
+      "bytes": 31780,
+      "sha256": "610a50597f25e53e4fbebe600e95a94315318a0f2fe6dc7bcfc3ed304805f630"
+    },
+    "sentinel_nir_10m.tif": {
+      "bytes": 32574,
+      "sha256": "5116c5a842665573de682a251d7834f135a1b3f45e91bf57c7336ab3146267c9"
+    },
+    "sentinel_red_10m.tif": {
+      "bytes": 32892,
+      "sha256": "a22e3a306ddafdb79807dc949c5d3f56201a9b30a131b0dff9df3de940976cb0"
+    },
+    "surface_elevation_glo30.tif": {
+      "bytes": 7685,
+      "sha256": "28868d0ad4475c43087a5bc71a291706fd3459862cf4aa3977324dfaa2715b34"
+    }
+  }
+}

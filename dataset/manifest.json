@@ -124,8 +124,8 @@
     },
     {
       "path": "inputs\\extracted_buildings_t1.geojson",
-      "bytes": 42551,
-      "sha256_canonical": "e3b9b7a34f48001ccf3cdbaac86b1cd3ce405dc221a1a8b570173e7e4464ec98",
+      "bytes": 42675,
+      "sha256_canonical": "61b9e8656957dabf92529fc5331145eae96b36aaaf92aeee3bf1563740c831ac",
       "synthetic": true,
       "crs": "EPSG:4326",
       "geometry_type": [
@@ -136,8 +136,8 @@
     },
     {
       "path": "inputs\\extracted_buildings_t2.geojson",
-      "bytes": 44037,
-      "sha256_canonical": "7bedf5268f20cab6f5c4d7d2de72abff10009e601d80218f4d2d26d5a1d5e5f9",
+      "bytes": 44164,
+      "sha256_canonical": "ae9c4c93e6c5e1df4b01351dd627e2108f1614d4cd27483bbf15e6a09dd10c50",
       "synthetic": true,
       "crs": "EPSG:4326",
       "geometry_type": [
@@ -158,8 +158,8 @@
     },
     {
       "path": "inputs\\ground_truth_observations.geojson",
-      "bytes": 38780,
-      "sha256_canonical": "9e436bc580095849281f41f66926279c03a8f8a02cb5651246a58a877efea1e0",
+      "bytes": 38817,
+      "sha256_canonical": "de062bc4f793a4eaaa48dedf7e56a5959c69ee4bab4f089fe9f3e3215252df42",
       "synthetic": true,
       "crs": "EPSG:4326",
       "geometry_type": [
@@ -198,8 +198,8 @@
     },
     {
       "path": "inputs\\utilities.geojson",
-      "bytes": 4034,
-      "sha256_canonical": "6c446da362d4dfcbd26ff6109b591454b464be4365e7825f58cd3f097ccebf2e",
+      "bytes": 4056,
+      "sha256_canonical": "918cc18868b28d26aa6380cdef9223f6489e01941802986eb590c79e6da2dc9d",
       "synthetic": true,
       "crs": "EPSG:4326",
       "geometry_type": [
@@ -208,5 +208,5 @@
       "record_count": 15
     }
   ],
-  "metadata_correction": "CRS, observation geometry, units and acquisition dates corrected; inputs unchanged"
+  "metadata_correction": "CRS, observation geometry, units and acquisition dates corrected; inputs unchanged. Manifest sha256/bytes for 4 re-saved input GeoJSON files re-synced to shipped file contents; data itself unchanged."
 }

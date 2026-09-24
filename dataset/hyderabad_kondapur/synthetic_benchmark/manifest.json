@@ -1,0 +1,75 @@
+{
+  "seed": 20260924,
+  "synthetic": true,
+  "metric_crs": "EPSG:32644",
+  "geometry_crs": "EPSG:4326",
+  "counts": {
+    "parcels": 300,
+    "revenue_records": 300,
+    "ground_truth_observations": 300,
+    "gnss_observations": 30,
+    "utility_segments": 60,
+    "building_intersections": 977
+  },
+  "controlled_errors": {
+    "shifted_parcels": 30,
+    "area_mismatch_records": 20,
+    "overlapping_error_cases": 0
+  },
+  "method": "300 seeded Voronoi cells from interior real building representative points, clipped to AOI, subtracting assumed 3 m road buffers. Parcel boundaries, survey numbers, land use and owners are invented.",
+  "limitations": [
+    "Cells may split buildings or contain multiple buildings; they are not reconstructed cadastral boundaries.",
+    "Assumed road buffers are not surveyed road widths.",
+    "No manual imagery or field validation; GT is synthetic.",
+    "Expected building intersections are geometric answers against invented parcels, not ownership matches.",
+    "Utility grid does not follow actual pipes or roads and is only a network-format test fixture.",
+    "Inputs contain controlled displacements; shifted parcels may overlap or cross AOI.",
+    "Evaluation files must not be supplied to the matching engine."
+  ],
+  "provenance": {
+    "buildings": "../buildings.geojson",
+    "roads": "../roads.geojson",
+    "upstream_licenses": [
+      "Microsoft CDLA-Permissive-2.0",
+      "OpenStreetMap ODbL-1.0"
+    ]
+  },
+  "files": {
+    "evaluation_only/control_points_reference.csv": {
+      "bytes": 3007,
+      "sha256": "bb07b0ccc2309d4bd72575508439cf059518c54c9677bbb31a68484ead0ce6c1"
+    },
+    "evaluation_only/expected_building_intersections.csv": {
+      "bytes": 102721,
+      "sha256": "3439cc80837048de16a5609abedfec5e8992512b9948c044851520938988d574"
+    },
+    "evaluation_only/expected_record_matches.csv": {
+      "bytes": 18213,
+      "sha256": "d09bda4dbfe3a0130e56e02fc550be45c5824d8f7e0daf6ef9a8334a7796b0ea"
+    },
+    "evaluation_only/parcels_reference.geojson": {
+      "bytes": 1257204,
+      "sha256": "3b9269edb1babb623ca0a2f6db9537cea08e4e789c8a81abe867d2af51979c2a"
+    },
+    "inputs/gnss_observations.csv": {
+      "bytes": 5030,
+      "sha256": "86122eae6f543745960eb02251e94c41e43838309f7932e55dad57435e51e2f2"
+    },
+    "inputs/ground_truth_observations.csv": {
+      "bytes": 31127,
+      "sha256": "b6a8169826bdfac14ea5fa6dc7baf42d919acc46b9701aeaebd0a8dc00d80b83"
+    },
+    "inputs/parcels.geojson": {
+      "bytes": 1245410,
+      "sha256": "3bbfda5a736a41cf5348ae06879ed210acc8ec53950e811b27ad190e1f3562f7"
+    },
+    "inputs/revenue_records.csv": {
+      "bytes": 27933,
+      "sha256": "6e1abdf6e807d47dafce392c52c94a91b7bb1ffe2d918494f0f34d89d7ddba55"
+    },
+    "inputs/utility_network_synthetic.geojson": {
+      "bytes": 33188,
+      "sha256": "6fd4ebf073b833f34cf4edb2fc6847e1a49b41d292896a72c3ed478600e498e2"
+    }
+  }
+}

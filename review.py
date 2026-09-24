@@ -25,10 +25,29 @@ class ReviewStore:
         df = self.audit(fingerprint)
         return dict(zip(df.proposal,df.decision))
 
+    def save_proposal(self, fingerprint, proposal, decision, reviewer, note, proposals):
+        """A record may have one accepted parcel; a parcel may have many records."""
+        if proposal['kind']!='department_link' or decision!='accepted':
+            return self.save(fingerprint,proposal['proposal_id'],decision,reviewer,note)
+        if not reviewer.strip(): raise ValueError('Reviewer name is required')
+        alternatives={p['proposal_id'] for p in proposals if p['kind']=='department_link'
+                      and p['source']==proposal['source'] and p['feature_id']==proposal['feature_id']
+                      and p['proposal_id']!=proposal['proposal_id']}
+        with self.connect() as db:
+            db.execute('BEGIN IMMEDIATE')
+            current=dict(db.execute('SELECT proposal,decision FROM audit WHERE dataset=? ORDER BY id',(fingerprint,)).fetchall())
+            at=datetime.now(timezone.utc).isoformat()
+            for pid in sorted(alternatives):
+                if current.get(pid)=='accepted':
+                    db.execute('INSERT INTO audit(dataset,proposal,decision,reviewer,note,at) VALUES(?,?,?,?,?,?)',
+                               (fingerprint,pid,'rejected',reviewer.strip(),'Superseded by reviewed alternative '+proposal['proposal_id'],at))
+            db.execute('INSERT INTO audit(dataset,proposal,decision,reviewer,note,at) VALUES(?,?,?,?,?,?)',
+                       (fingerprint,proposal['proposal_id'],'accepted',reviewer.strip(),note,at))
+
 def export_geojson(result, decisions):
     """Keep original boundaries unless a specific repair was accepted."""
     parcels = result['originals']['parcels'].copy()
-    parcels['source'] = 'inputs/cadastral.gpkg'
+    parcels['source'] = result.get('parcel_source', 'inputs/cadastral.gpkg')
     parcels['dataset_fingerprint'] = result['fingerprint']
     parcels['geometry_status'] = ['original_valid' if g.is_valid else 'original_invalid' for g in parcels.geometry]
     for i,r in parcels.iterrows():
@@ -37,6 +56,6 @@ def export_geojson(result, decisions):
         if repair:
             parcels.at[i,'geometry'] = from_wkt(repair['proposed_wkt'])
             parcels.at[i,'geometry_status'] = 'accepted_repair'
-        links = [p for p in accepted if p['target_id']==r.parcel_id and p['kind'] in {'record_link','building_link'}]
+        links = [p for p in accepted if p['target_id']==r.parcel_id and p['kind'] in {'record_link','building_link','department_link'}]
         parcels.at[i,'accepted_links'] = json.dumps(links)
     return parcels.to_crs('EPSG:4326').to_json()

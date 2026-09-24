@@ -1,0 +1,149 @@
+{
+  "workload": "Fictional records on Kondapur synthetic parcels; not real departmental accuracy",
+  "policy": "Fixed engineering thresholds, not trained or probability-calibrated. Test split not used for tuning.",
+  "runtime": {
+    "algorithm_version": "iges-er-1.0",
+    "index_seconds": 0.036935499999799504,
+    "query_seconds": 1.5276222000002235,
+    "records": 1610,
+    "parcels": 300,
+    "candidate_pairs": 7118,
+    "exhaustive_pairs": 483000,
+    "quarantined_parcels": [],
+    "status_counts": {
+      "strong_proposal": 1034,
+      "needs_review": 352,
+      "unmatched": 224
+    }
+  },
+  "splits": {
+    "development": {
+      "records": 316,
+      "linkable_records": 316,
+      "strong_proposals": 202,
+      "candidate_recall": 0.9082278481012658,
+      "strong_precision": 1.0,
+      "strong_recall": 0.6392405063291139,
+      "top1_recall": 0.8765822784810127,
+      "review_records": 77,
+      "unmatched_records": 37
+    },
+    "test": {
+      "records": 1294,
+      "linkable_records": 1244,
+      "strong_proposals": 832,
+      "candidate_recall": 0.9083601286173634,
+      "strong_precision": 1.0,
+      "strong_recall": 0.6688102893890675,
+      "top1_recall": 0.8842443729903537,
+      "review_records": 275,
+      "unmatched_records": 187
+    }
+  },
+  "test_baselines": {
+    "id_only": {
+      "predictions": 889,
+      "correct": 797,
+      "precision": 0.8965129358830146,
+      "recall": 0.6406752411575563
+    },
+    "proximity_only": {
+      "predictions": 903,
+      "correct": 805,
+      "precision": 0.8914728682170543,
+      "recall": 0.6471061093247589
+    }
+  },
+  "test_scenarios": {
+    "missing_identifier": {
+      "records": 108,
+      "retrieved": 108,
+      "top1_correct": 108,
+      "strong_wrong": 0
+    },
+    "clean": {
+      "records": 114,
+      "retrieved": 114,
+      "top1_correct": 114,
+      "strong_wrong": 0
+    },
+    "old_record": {
+      "records": 107,
+      "retrieved": 107,
+      "top1_correct": 107,
+      "strong_wrong": 0
+    },
+    "identifier_only": {
+      "records": 105,
+      "retrieved": 105,
+      "top1_correct": 98,
+      "strong_wrong": 0
+    },
+    "address_typo": {
+      "records": 108,
+      "retrieved": 108,
+      "top1_correct": 108,
+      "strong_wrong": 0
+    },
+    "missing_scope": {
+      "records": 108,
+      "retrieved": 0,
+      "top1_correct": 0,
+      "strong_wrong": 0
+    },
+    "area_error": {
+      "records": 109,
+      "retrieved": 109,
+      "top1_correct": 109,
+      "strong_wrong": 0
+    },
+    "wrong_identifier": {
+      "records": 104,
+      "retrieved": 104,
+      "top1_correct": 85,
+      "strong_wrong": 0
+    },
+    "format_variation": {
+      "records": 113,
+      "retrieved": 113,
+      "top1_correct": 113,
+      "strong_wrong": 0
+    },
+    "additional_account": {
+      "records": 30,
+      "retrieved": 27,
+      "top1_correct": 27,
+      "strong_wrong": 0
+    },
+    "missing_geometry": {
+      "records": 112,
+      "retrieved": 112,
+      "top1_correct": 112,
+      "strong_wrong": 0
+    },
+    "no_parcel_in_study_area": {
+      "records": 50,
+      "retrieved": 0,
+      "top1_correct": 50,
+      "strong_wrong": 0
+    },
+    "location_shift": {
+      "records": 112,
+      "retrieved": 112,
+      "top1_correct": 109,
+      "strong_wrong": 0
+    },
+    "duplicate_account": {
+      "records": 14,
+      "retrieved": 11,
+      "top1_correct": 10,
+      "strong_wrong": 0
+    }
+  },
+  "exhaustive_comparison": {
+    "sample_records": 100,
+    "same_top1_decision": 100,
+    "seconds": 3.7048297999999704,
+    "note": "Full scorer against all scoped parcels; differences expose retrieval limitations. Duplicate-account review downgrade is applied only in batch resolution."
+  }
+}

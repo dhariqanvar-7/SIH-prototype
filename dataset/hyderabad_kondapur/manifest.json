@@ -1,0 +1,178 @@
+{
+  "aoi": "Kondapur, Hyderabad",
+  "bbox_wsen": [
+    78.35,
+    17.45,
+    78.364,
+    17.462
+  ],
+  "area_km2": 1.9750700306758882,
+  "geometry_crs": "EPSG:4326",
+  "metric_crs": "EPSG:32644",
+  "created_at_utc": "2026-09-24T10:00:36.141542+00:00",
+  "selection": "Full valid geometries intersecting AOI; boundary-crossing features are not clipped.",
+  "microsoft": {
+    "index_url": "https://bfppub.blob.core.windows.net/%24web/2026-08-13/dataset-links.csv",
+    "tiles": [
+      {
+        "Location": "India",
+        "QuadKey": "123301331",
+        "Url": "https://bfppub.z5.web.core.windows.net/2026-08-13/global-buildings.geojsonl/RegionName=India/quadkey=123301331/part-00073-110f5303-ff85-4c71-a2bf-c6070024fec8.c000.csv.gz",
+        "Size": "53.7MB",
+        "UploadDate": "2026-08-13"
+      }
+    ],
+    "license": "CDLA-Permissive-2.0",
+    "scanned": 628630,
+    "buildings": 480,
+    "invalid_bbox_candidates": 0,
+    "imagery_acquisition_date": "unknown; upload date is not imagery acquisition date"
+  },
+  "osm": {
+    "license": "ODbL-1.0",
+    "attribution": "\u00a9 OpenStreetMap contributors",
+    "copyright_url": "https://www.openstreetmap.org/copyright",
+    "snapshot": {
+      "timestamp_osm_base": "2026-09-22T08:45:51Z",
+      "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+    },
+    "counts": {
+      "roads": 251,
+      "landuse": 6,
+      "amenities": 38,
+      "utilities": 13,
+      "other_features": 20
+    },
+    "unconverted_count": 2,
+    "limitations": "Relations retained only in raw response. Utilities are mapped features, not a complete connected network. Road counts are OSM ways, not unique named roads."
+  },
+  "pending": [],
+  "excluded": [
+    "drone imagery"
+  ],
+  "files": {
+    ".gitignore": {
+      "bytes": 14,
+      "sha256": "f05d3e6b86e8fab06c8942f09c858d602d2411c54986fbc1389bbca895e97c1f"
+    },
+    "amenities.geojson": {
+      "bytes": 19134,
+      "sha256": "b7ac446ce071d13e48f9e116bac869b1dcd18b323c23e53a8c07784b80876f18"
+    },
+    "aoi.geojson": {
+      "bytes": 750,
+      "sha256": "2fad7fd99069584084a5e497918005807b6239f4d4881994490b2f05659cadfa"
+    },
+    "buildings.geojson": {
+      "bytes": 575905,
+      "sha256": "6bf787cf632f8a0c855fb268a59a99296e35248d220f111600013513c61324f8"
+    },
+    "buildings_invalid_candidates.geojson": {
+      "bytes": 54,
+      "sha256": "c3311fccb903ee2126af2cf493ed98daa5daa7b7962f5344a25e397e46cbd3c4"
+    },
+    "landuse.geojson": {
+      "bytes": 9236,
+      "sha256": "016008324cefd259fc627d9f29998a8043a41d645e97714d84694387de3ee416"
+    },
+    "osm_unconverted.json": {
+      "bytes": 259,
+      "sha256": "1530cf1eba650c4ca28fe96e1bb7fbe4be3cc064720bcb61d8be5a3cf52a9d37"
+    },
+    "other_features.geojson": {
+      "bytes": 34917,
+      "sha256": "ae5899917b3b88e3d1f92f9c367f1f9d3e7f933c32f2fa8a94b96a629507c63a"
+    },
+    "raw/microsoft_123301331.geojsonl.gz": {
+      "bytes": 56282513,
+      "sha256": "6884613ae014c41d5e2a5c5f10c20f45e1a61477bbd20d80abc166e2465ad143"
+    },
+    "raw/microsoft_123301331.geojsonl.gz.source.json": {
+      "bytes": 246,
+      "sha256": "a7bc63ac48bc3a3a48d4f282ab7ae847486cbe56af14956b6bd94a02ed54cf5a"
+    },
+    "raw/microsoft_dataset_links.csv": {
+      "bytes": 6382044,
+      "sha256": "de61b569b0c23c364d61173632d8c5487ea30bf20912c55b9fa1ab4a89d01148"
+    },
+    "raw/microsoft_dataset_links.csv.source.json": {
+      "bytes": 148,
+      "sha256": "c55fb4dd2919e1c9ddea67a60b9cb02ded025725a5abf8917da9334dee8c545d"
+    },
+    "raw/osm_query.overpass": {
+      "bytes": 462,
+      "sha256": "06930604ea1c5bb58552c19ec530138f0dde75081d7cd29c442609016a3a72a7"
+    },
+    "raw/osm_response.json": {
+      "bytes": 257040,
+      "sha256": "2576a3c4fcf462173e820481a41816da9166314d102ba98bd98d983b1f60c25d"
+    },
+    "raw/osm_response.json.source.json": {
+      "bytes": 115,
+      "sha256": "920545b096753cc2de631e01f962f85872886cee17b92b3ef4147c0f57ac4fb7"
+    },
+    "roads.geojson": {
+      "bytes": 251998,
+      "sha256": "883e792f35fa0a5f651291f079818ed3183089c758fb7e246332d135d6c60822"
+    },
+    "utilities.geojson": {
+      "bytes": 14389,
+      "sha256": "f3d9c4afbaf4a3b9d53cba4fe997fda6b0dcbb4134115238c74961efceaa19db"
+    },
+    "rasters/manifest.json": {
+      "bytes": 5882,
+      "sha256": "6529d18b409c0821ffc86f97d707adc04e7667702a20a1e6ca19a634ed1e8404"
+    },
+    "synthetic_benchmark/manifest.json": {
+      "bytes": 2987,
+      "sha256": "b1dfd739d66508b07c3f1bc15206f1a796f8bcad8f823ced7b206aca03da697b"
+    },
+    "validation_remaining.json": {
+      "bytes": 216,
+      "sha256": "cdcd93e28c80988e549fe95e43a6c209af41262dab7d9a4610892d63f9b709e4"
+    },
+    "REMAINING_DATA.md": {
+      "bytes": 7082,
+      "sha256": "3c55cc1498dadcfafa3a2ca3fdb2fdf9099230f6028acaa3616b69374faec9b4"
+    },
+    "rasters/imagery_preview.png": {
+      "bytes": 45129,
+      "sha256": "c92387ab7a93a2d0b6bdb9b8d78d10f35f8a9376f61894e99ec6dd79c80355bc"
+    },
+    "raw/sentinel_search.json": {
+      "bytes": 2181532,
+      "sha256": "c9beaa0913b23e640c6bfec24cc5bb0c295df92c6f07a4080e8b751db4f1f37d"
+    },
+    "raw/sentinel_selected_item.json": {
+      "bytes": 26529,
+      "sha256": "9efeeabbfe73cb339c8bd231e4ad30f23a8becfa02239d8cfda3598d695f924d"
+    },
+    "raw/dem_search.json": {
+      "bytes": 5161,
+      "sha256": "eb92411a43b09bc54c62210b98c61a25f5c6cfb9a258c9c9f70da5fa1ecad204"
+    },
+    "raw/bhubharati_gis.html": {
+      "bytes": 25578,
+      "sha256": "7ccf52f426e167bfc08a12972e5b825effa4aafe374761a47683dcda1324e7e8"
+    },
+    "raw/bhubharati_client.js": {
+      "bytes": 73977,
+      "sha256": "6b5286e2c22c2eb42549bf0cde324df563eae618d94100f71bf3158437927887"
+    }
+  },
+  "unacquired_real_sources": [
+    "official cadastral parcel export",
+    "official municipal GIS export",
+    "field ground truth",
+    "actual GNSS/CORS observations",
+    "complete utility network",
+    "high-resolution orthophoto / bare-earth DTM"
+  ],
+  "supplements": {
+    "rasters": "rasters/manifest.json",
+    "synthetic_benchmark": "synthetic_benchmark/manifest.json",
+    "availability_and_methods": "REMAINING_DATA.md",
+    "validation": "validation_remaining.json"
+  },
+  "integration_status": "Default app workspace; vector matching, raster display and EPSG:32644 metric processing enabled. Evaluation answer keys remain separate."
+}

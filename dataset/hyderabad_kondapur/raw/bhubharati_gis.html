@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Bhu Bharati</title>
+<script type="text/javascript">
+	var scriptFolder="GISEditor",projectionval="32644",mapTabelName="t_rev_parceldata", khasraFieldName="survey_number", bhucodeFieldName="village_id", khasraIdFieldName="old_village_code",geoUrl="http://10.10.104.62:7081/dharanigis/", featureNS="http://192.168.123.3:7081/dharanigis/wsdharani", proxyhost="https://bhubharati.telangana.gov.in/gis/proxy?", heronproxyhost="https://bhubharati.telangana.gov.in/gis/proxy?", phpfileurl="", javaServicePath="/gis/", pahaniCopy="https://bhubharati.telangana.gov.in/viewPahani",  redirectDharani="https://bhubharati.telangana.gov.in:443/gis/gotodharani", ecCopy="https://bhubharati.telangana.gov.in/getECofPropertyBySurveyNo", refimages_url="http://10.10.104.62:7081/referenceimages/";
+	var dharaniBackUrl="https://bhubharati.telangana.gov.in/homePage?lang=en";
+	var gisAppContextPath ="/gis";
+</script>
+
+
+
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.5/ol.css"
+	type="text/css">
+<link
+	href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
+	rel="stylesheet">
+<link
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+	rel="stylesheet">
+<link
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	rel="stylesheet">
+<link rel="icon" href="./img/logo_small.png" type="image/gif"	sizes="16x16">
+<link rel="stylesheet" href="./css/style.css" />
+<link rel="stylesheet" href="./css/style1.css" />
+<link rel="stylesheet" href="./css/jquery-confirm.min.css" />
+<link rel="stylesheet" href="./css/jquery-ui.css">
+<link rel="stylesheet" href="./css/colorbox.css">
+
+</head>
+<BODY ondragstart="return false;" ondrop="return false;" oncopy="return false" onpaste="return false">
+	<div class="container-fluid">
+		<!-- <script src="webjars/jquery/3.3.1/jquery.min.js"></script> -->
+<script src="./js/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<header class="border-bottom blockshadowmin nav-down">
+
+<script>
+var csrf = "";	
+var contextPathUrl = "";
+/* alert('en'); */
+  	$(function () {
+	  $('[data-toggle="tooltip"]').tooltip({
+		  animation: true,
+		  html: true,
+		  placement: 'bottom',
+		  delay: { show: 1000, hide: 3000 }
+	    });   
+	  $('[data-toggle="tooltip"]').on('mouseleave mouseout', function(){
+	      $('[data-toggle="tooltip"]').tooltip('hide');
+	    });
+});
+ 
+	function getAction(id) {			
+		console.log(id);
+		var vill_id = "";
+		var survey_no = "";		
+		if ($('#village_id').length && $('#village_id').val() != 0)
+	   	{			
+			vill_id = $('#village_id').val();
+			console.log(vill_id);
+	   	}
+		if($('#surveyNoField').length && $('#surveyNoField').val() != 0){
+			survey_no = $("#surveyNoField").val();
+			console.log(survey_no);
+		}		
+		if(vill_id != "" && survey_no != ""){			
+			window.location.replace('?lang=' + id);
+			//window.location.replace('?lang=' + id + '&village_id=' + vill_id + '&survey_number=' + survey_no);	
+		} else if(vill_id != "") {
+			window.location.replace('?lang=' + id);
+			//window.location.replace('?lang=' + id + '&village_id=' + vill_id);
+		} else {
+			window.location.replace('?lang=' + id);
+		}					
+	}	
+	
+	function backToDharani(){
+		window.location=dharaniBackUrl;
+	}
+	
+	$(document).bind("contextmenu",function(e){
+		  return false;
+		    });
+	window.history.forward();
+	function preventBack(){
+		window.history.forward();
+	}
+	window.onpageshow = function(evt){
+		if (evt.persisted)
+			preventBack();
+	}
+	window.onunload = function() {
+		void (0);
+	}	
+	 $(document).ready(function() {			
+		 $("#survey_id").keypress(function (e) {
+		        var key = e.keyCode || e.which;
+		        var reg_exp = new RegExp("^[a-zA-Z0-9,/]+$");
+		        var is_valid = reg_exp.test(String.fromCharCode(key));
+		        if (!is_valid) {
+		        	e.preventDefault();
+		        }
+		        return is_valid;
+		      });
+	}); 
+</script>	
+		
+	<div class="wrap">
+		<div id="topbar" class="row mb-2">
+			<div class="col-12 col-sm-5 col-md-5 col-lg-6 text-right order-sm-2">
+				<div class="site-settings">
+					<span id="telugu"><a data-toggle="tooltip" title=Telugu Version class="font-adjust lang  py-0 py-sm-2" id="te" onclick="getAction(this.id)">తెలుగు</a></span>
+				      <a data-toggle="tooltip" title='Standard View' class="font-adjust d-none d-sm-block" id="makeorig" href="#">A</a>   
+				    <a data-toggle="tooltip"  title='High Contrast View' class="font-adjust d-none d-sm-block" id="makeblack" href="#">A</a>        
+                    <a data-toggle="tooltip"  title='Increase Font Size' class="font-adjust d-none d-sm-block" id="fontup" href="#">+A</a>
+                    <a data-toggle="tooltip"  title='Reset Font Size' class="font-adjust d-none d-sm-block" id="fontreset" href="#">A</a>
+                    <a data-toggle="tooltip"  title='Decrease Font Size' class="font-adjust d-none d-sm-block" id="fontdown" href="#">-A</a>
+					<div class="clear"></div>
+				</div>
+
+			</div>
+			<div class="col-12 col-sm-7 col-md-7 col-lg-6 order-sm-1">
+				<a class="float-left mr-2 tlogo d-none" id ="dharaniHeader" >
+				<img id="dharaniImg"
+					src="img/logo_small.png" class="img-fluid" width="100%" alt="Gov Of Telangana">	
+				</a>
+				<div class="customlogo ">
+							<div class="text-white">భూ భారతి | بھو بھارتی | Bhu Bharathi</div>
+							<p class="text-white">RECORD OF RIGHTS</p>
+						</div>
+			</div>
+			<!-- <div class="col-12 col-sm-7 col-md-7 col-lg-6 order-sm-1">
+				<div  class="row">
+					<a class="col-4 col-sm-3 col-md-2 col-lg-2 float-sm-left tlogo" href="home">
+					<img  src="img/govt-of-telangana-logo.png" class="img-fluid" alt="Gov Of Telangana">
+					</a>
+	
+					<div class="col-8 col-sm-8 my-auto customlogo  float-sm-left">
+						<div>ధరణి |دھرنی| Dharani</div>
+						<p>Integrated Land Records Management System</p>
+					</div>
+				</div>
+			</div> -->
+		</div>
+
+		<div id="secondbar" class="row mapcontrols">
+				<span class="col-12 col-sm-5 col-md-5 col-lg-3 my-2 d-none d-sm-block">
+					<!-- <a href="javascript:backToDharani();">
+						<i class="fa fa-home" title="Back to home" style="float:left;font-size:32px;border: 1px dashed #c1c1c1;margin-top:0px;"></i>
+					</a> -->
+					<img src="./img/icons/zoom-in.png" id="zoomin" data-toggle="tooltip" title='<b class="title-bold">Zoom In</b><hr> Enlarge the map up to preset extent at single click.' class="dashed img-fluid mr-2" />
+					<img src="./img/icons/zoom-out.png" id="zoomout"  data-toggle="tooltip"  title='<b class="title-bold">Zoom Out</b><hr> Reduce the map up to preset extent at single click.' class="dashed img-fluid mr-2" />
+					<img src="./img/icons/pan.png" id="panmap" data-toggle="tooltip" title='<b class="title-bold">Pan</b><hr> Move around the map.' class="dashed img-fluid mr-2" />
+					<img src="./img/icons/full-extent.png" id="fullextent" data-toggle="tooltip" title='<b class="title-bold">Zoom to Full Extent</b><hr> View the map in full extent.' class="dashed img-fluid mr-2"/>
+					<img src="./img/icons/clear-feature.png" id="clearselection" data-toggle="tooltip" title='<b class="title-bold">Clear Selection</b><hr> Clear/unselect the selected features.' class="dashed img-fluid mr-2" />	
+					</span>
+					
+					<!-- Important Note -->
+					<span class="col-1 col-sm-1 pr-1 d-none d-sm-block">
+						<input type="text" class="form-control form-control-sm mt-2" id="scale" placeholder="Scale" readonly	>
+					</span>	
+					<span style="padding-left: 20px;"><input type="text" style="width: 150px;" class="form-control form-control-sm mt-2" id="survey_id" placeholder="Survey No" ></span>
+					<span style="padding-left: 5px;"><img src="./img/icons/search.png" id="searchkid" class="my-1" data-toggle="tooltip" title='<b>Search Survey Number</b>' /></span>
+					<!-- <span style="padding: 4px 0px 0px 5px;"><img src="./img/icons/view-doc.png" id="viewtippon" data-toggle="tooltip" title="View Tippon" class="dashed img-fluid mr-2 my-1" /></span> -->
+					<span id="CloseGIS" style="padding-top:6px;"> <i class="fa fa-home" data-toggle="tooltip" title='<b class="title-bold">Close GIS Window</b><hr> Close GIS window and move back to previous page.' style="cursor:pointer;float:left;font-size:32px;margin-top:0px;"></i></span>
+						
+					   	<!-- <span style="padding-top: 05px;" data-toggle="tooltip" title="Import field data"><i class="fa fa-download" id="fileupload"></i></span>
+					   	<p style="float: left;padding:4px;">  <img src="./img/icons/save.png" id="saveFeildData" data-toggle="tooltip" title="Save Tippon Data" class="dashed img-fluid mr-2"  style="display:none;"/></p>
+					   	<span style="padding-top: 05px;" data-toggle="tooltip" title="Export Feature data"><i class="fa fa-upload" id="filedownload"></i></span> -->						   	
+					   <span class="col-sm-8 d-none d-block-sm"></span>			  
+				<span class="col-sm-7 d-none d-block-sm"></span>  
+		</div>
+	</div>
+	
+</header>
+<BODY ondragstart="return false;" ondrop="return false;" oncopy="return false" onpaste="return false"></BODY></div>
+	<!DOCTYPE html>
+<head>
+	<link rel="stylesheet" href="./css/jquery.msgbox.css">
+ 	<link rel="stylesheet" href="./css/ol-layerswitcher.css" /> 	
+ 	<style> 		
+		.layer-switcher {
+		    position: initial;
+		 
+		    line-height: 15px;
+		}
+		
+		.headerbg, div.ui-widget-header {
+			background: #7fc131;
+			background: -moz-linear-gradient(top, #7fc131 0%, #649C21 100%);
+			background: -webkit-linear-gradient(top, #7fc131 0%, #649C21 100%);
+			background: linear-gradient(to bottom, #7fc131 0%, #649C21 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#649C21',
+				endColorstr='#8bc733', GradientType=0);
+			padding: 1px;
+			color: #fff;
+			font-weight: bold;
+		}
+			
+ 	</style>
+ 	<style>
+		/* The Modal (background) */
+		/* .modal {
+		    display: none; /* Hidden by default */
+		    position: fixed; /* Stay in place */
+		    z-index: 1; /* Sit on top */
+		    padding-top: 100px; /* Location of the box */
+		    left: 0;
+		    top: 0;
+		    width: 100%; /* Full width */
+		    height: 100%; /* Full height */
+		    overflow: auto; /* Enable scroll if needed */		  	
+		  	background: lightgray;
+		} */
+		
+		/* Modal Content */
+		.modal-content {
+		    position: relative;
+		    background-color: #fefefe;
+		    margin: auto;
+		    padding: 0;
+		    border: 6px solid #828282;
+		    width: 80%;
+		    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+		    -webkit-animation-name: animatetop;
+		    -webkit-animation-duration: 0.4s;
+		    animation-name: animatetop;
+		    animation-duration: 0.4s
+		}
+		
+		/* Add Animation */
+		@-webkit-keyframes animatetop {
+		    from {top:-300px; opacity:0} 
+		    to {top:0; opacity:1}
+		}
+		
+		@keyframes animatetop {
+		    from {top:-300px; opacity:0}
+		    to {top:0; opacity:1}
+		}
+		
+		/* The Close Button */
+		.close {
+		    color: black;
+		    float: right;
+		    margin-left: 98%;
+		    font-size: 28px;
+		    font-weight: bold;
+		}
+		
+		.close:hover,
+		.close:focus {
+		    color: red;
+		    text-decoration: none;
+		    cursor: pointer;
+		}
+		.modal-body {padding: 2px 2px;}
+		
+		.surveyChaltaDiv {
+		    margin: auto;
+		    width: 20%;
+		    padding: 20px;
+		    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		    top: 50%;
+		    left: 40%;
+		    position: absolute;
+		    background: #DAEEB6;
+		    border-radius: 10px;
+		}
+		
+		.hideSurveyChaltaForm {
+		    display: none;
+		}
+		
+		.disclaimerPanel {
+			font-size: 18px;
+			font-weight:bold;
+			display: inline-block;			
+			color: red;
+			height: 23px;
+			top: 95%;
+			position: absolute;
+			width:100%;
+			z-index:99999;
+			text-shadow: -1px 0 #fbfbfb, 0 2px #fbfbfb, 2px 0 #fbfbfb, 0 -1px #fbfbfb;
+		}
+	</style>
+ </head>
+<BODY ondragstart="return false;" ondrop="return false;" oncopy="return false" onpaste="return false">
+<script type="text/javascript">
+  var selectDistrict = 'Select District';
+  var selectDivision = 'Select Division';
+  var selectMandal = 'Select Mandal';
+  var selectVillage = 'Select Village';
+  
+    //alert(abc);
+  var alert_vdna = 'Village Data Not Available.';
+  var alert_snne = 'Survey number is not available in the Village map.';
+  var alert_ndas = 'Revenue data not available for Selected Survey Number!';
+  var alert_vmnl = 'Please Select the village first.';
+  var alert_notice ='Alert!';
+  //alerts for fmbentrypage
+  var alert_baseline = 'Line must have only 2 Coordinates.';
+  var alert_selectedoffset = 'Please select line to draw offsets.';
+  var alert_drawoffsets = 'Please select line or draw baseline to create offsets.';
+  var alert_selectpointtodrawoffsets = 'Please select point on the selected line only.';
+  var alert_distanceoftheline = 'Distance must be less than the selected line length.';
+  var alert_savepolygon = 'Please select polygon to save.';
+  var alert_GLines = 'G_Lines should have maximum 2 vertices.';
+  var alert_Invalidlength = 'Invalid Offset Length.';
+  var alert_viewarea = 'Please polygonize before viewing area.';
+  var alert_snsearch = 'Please enter survey number to search.';
+  var alert_Error = 'Error';
+  var alert_sError = 'Some Error Occurred.';
+  var alert_FLines = 'Invalid FLines to create polygon.';
+  var alert_offflsdl = 'You can not Draw the Offsets on F-Lines and Subdivision Line.';
+  var alert_eblflooflhblgl = 'You can not extend  baseline on F-Lines, Subdivision Line, offsetlines, hangingbaseline and guessline.';
+  var alert_enterdist = 'Please enter distance from first point.';
+  var alert_fpsp = 'Please select first and second point.';
+  var alert_triangle = 'Voilation of Triangle Inequality method. Sum of the lengths of any 2 sides of a triangle must be greater than the third side. Please Modify and try again.';
+  var alert_doffonsline = 'Please create distance / offsets between the 2 coordinates of selected line only.';
+  var alert_sbasel = 'Please select base line.';
+  //alerts for fmbviewpage
+  var alert_noSNo = 'No survey number found.';
+  var alert_polytoex = 'Please Select one Parcel, Using Select Polygon to Export tool.';
+  var alert_selvillsn= 'Please Select Village and Survey Number.';
+  var alert_nopahani = 'No pahani details found.';
+  var alert_sformat = 'Please select a Format and Layer to Download.';
+  var alert_esurvey = 'Please Enter Survey Number.';
+  var alert_datanf = 'Tippon is not available.';
+  var alert_nsrecord = 'No Survey Records Found.';
+  var alert_addpoints = 'Please add point on selected Fline.';
+  var alert_ptabledata = 'Plane Table Data Import.';
+  var alert_nouploadfeatures = 'There are no upload features to Move.';
+  var alert_pvtiippon = 'Please Verify Tippon Map.';
+  var alert_pvtonch= 'Please Verify Tonch Map.';
+  var alert_pvlandparcel= 'Please Verify Landparcel Map.';
+  var alert_gisSubmission = 'Gis is Not Ready For Submission.';
+  var alert_psscale = 'Please Select Scale.';
+  var alert_psLandparcel = 'Please Select Landparcel.';
+  var alert_fdinsert = 'Fail during insert.';
+  var alert_ilcpoly = 'Invalid lines to create polygon.';
+  var alert_pvtiipponview = 'Please view and verify Tippon Map.';
+  var alert_pvtonchview = 'Please view and verify Tonch Map.';
+  var alert_pvlandparcelview = 'Please view and verify Landparcel Map.';
+  var alert_subdivisionareavalidation = 'Please subdivide survey number according to allotted share.';
+  
+  var label_surveyNumber = 'Survey/Sub-Division No.';
+  var label_ownerName = 'Name Of Pattedar';
+  var label_fatherName = 'Father Name';
+  var label_area = 'Area (Ac. Gts)';
+  
+  var alert_sptosplit = 'Please select a Polygon to split using select tool.';
+  var alert_lolexccedglength = 'Entered Distance should not exceed the given Line Distance.';
+  var alert_dsnull = 'Entered Distance should not be null.';
+  var alert_sptomerge = 'Please select 2 Polygons to Merge using select tool.';
+  var alert_sptoeditattributes = 'Please select a Parcel to edit attributes using select tool.';
+  
+</script><div class="col-11 col-sm-5 col-md-5 col-lg-3 sidebar sidebar-left pull-left float-sm-left menu_mt">
+		<div class="panel-group sidebar-body" id="accordion-left">
+			<div class="panel panel-default">
+				<div class="clickable panel-heading bg-green" data-toggle="collapse" id="villageInfoDiv" href="#loadvillages">
+					<h4 class="panel-title title_panel">
+						<a class="collapsed"> <i class="fa fa-list-alt"></i>
+							Select Village</a> <span class="pull-right slide-submenu"> <i
+							class="fa fa-chevron-left"></i>
+						</span>
+					</h4>
+				</div>
+
+				<div id="loadvillages" class="panel-collapse collapse show">
+					<div class="form-group">
+						<input type="hidden" id="districtField" value="" />
+						<input type="hidden" id="divisionField" value="" />
+						<input type="hidden" id="mandalField" value="" /> 
+						<input type="hidden" id="tmField" value="false" />
+						
+						<table lang="te" class="table bg-white table-sm table-small-font">
+							<tr>
+								<td>District</td>
+								<td>
+									<select  id="district_id" onchange="ILFS.loadDivisions();" class="form-control">
+										<option value="0">Select District</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Division</td>
+								<td><select  id="division_id" onchange="ILFS.loadMandals();" class="form-control">
+										<option value="0">Select Division</option>
+								</select></td>
+							</tr>
+							<tr>
+								<td>Mandal</td>
+								<td><select  id="mandal_id"
+									onchange="ILFS.loadVillages();" class="form-control">
+										<option value="0">Select Mandal</option>
+								</select></td>
+							</tr>
+							<tr>
+								<td>Village</td>
+								<td><select  id="village_id"
+									onchange="ILFS.loadVillageMap('fromCombo');" class="form-control">
+										<option value="0">Select Village</option>
+								</select></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading bg-green" data-toggle="collapse" href="#layerswitcher" id="layerInfoDiv" aria-expanded="false">
+					<h4 class="panel-title title_panel">
+						<a class="collapsed"> <i class="fa fa-list-alt"></i>
+							Layers</a>								
+					</h4>
+				</div>						
+				<div lang="te" id="layerswitcher" class="panel-collapse collapse" aria-expanded="false" >
+					<div id="layers" class="layer-switcher bg-white"></div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading bg-green" data-toggle="collapse" href="#properties" id="parcelInfoDiv">
+					<h4 class="panel-title title_panel">
+						<a> <i class="fa fa-list-alt"></i> Parcel Info</a>
+					</h4>
+				</div>
+				<div id="properties" class="panel-collapse bg-white collapse show">
+
+					<div class="table-responsive thin">
+						<div class="force-overflow">
+							<form method="POST" name="requestForm" id="requestForm" enctype="multipart/form-data">								
+								<span id="info_message">Click on the map to get parcel information</span>
+								<span id="location"></span>
+								
+								 <input type="hidden" name="districtLl" id="districtLl" value=""/>
+								 <input type="hidden" name="mandalLl" id="mandalLl" value=""/>
+								 <input type="hidden" name="villageLl" id="villageLl" value=""/>
+								 <input type="hidden" name=villageIdPdf id="villageIdPdf" value=""/>
+								 <input type="hidden" name=khataNumberPdf id="khataNumberPdf" value="0"/>
+								 <input type="hidden" name=surveyNumberPdf id="surveyNumberPdf" value=""/>
+								 <input type="hidden" id="csrf" name="csrf" value=""/>
+								 <input type="hidden" id="flag" name="flag" value="publicportal"/>
+							</form>
+							<form method="POST" name="requestFormEC" id="requestFormEC" enctype="multipart/form-data">
+								 <input type="hidden" id="villageIdEC" name="villageIdEC" value=""/>
+								 <input type="hidden" id="surveyNoEC" name="surveyNoEC" value=""/>
+							</form>
+						</div>
+					</div>							
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<div class="col-11 col-sm-5 col-md-5 col-lg-3 sidebar sidebar-right pull-right float-left float-sm-right menu_mt1" >
+         <div class="panel-group sidebar-body" id="accordion-right">
+           <div class="panel panel-default">
+             <div class="panel-heading" data-toggle="collapse" href="#taskpane">
+               <h4 class="panel-title  title_panel">
+                 <a  class="text-white" >
+                   <i class="fa fa-tasks"></i>
+                   Legends</a>
+                 <span class="pull-right slide-submenu">
+                   <i class="fa fa-chevron-right"></i>
+                 </span>
+               </h4>
+             </div>
+             <div id="taskpane" class="panel-collapse collapse show">
+               <div class="panel-body bg-white">	                  
+                 	<div class="table-responsive thin">	                  
+                  	<span id="buvan_legend1"></span>
+                  	<!-- <span id="buvan_legend2"></span> -->
+				</div>					    	                                 
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     
+       
+       <div class="mini-submenu mini-submenu-left pull-left">
+			<i class="fa fa-list-alt"></i>
+	   </div>
+	<div class="mini-submenu mini-submenu-right pull-right">
+		<i class="fa fa-tasks"></i>
+	</div>
+		
+	<div id="map" class="map">
+		<!-- <marquee class="disclaimerPanel" id="disclaimerPanel" onmouseover="this.stop();" onmouseout="this.start();">
+		Disclaimer : The cadastral map data is in draft stage and requires certain locational adjustments.
+	</marquee>	 -->
+	</div>
+	<div>
+			<span id="length"></span> <span id="mouse-position"></span>
+		</div>
+	<!-- <div id="imageDialogs" class="imageDialogs" title="Survey Images">
+		<table width="100%" cellpadding="5" cellspacing="5" id="imageTable">
+			<thead>
+				<tr>
+					<th>Map Name</th>
+					<th>From Survey</th>
+					<th>To Survey</th>
+					<th align="center">Show</th>
+				</tr>
+			</thead>
+		</table>
+	</div>
+	
+	<div id="surveyChaltaDiv" class="surveyChaltaDiv hideSurveyChaltaForm" title="Enter Survey & Chalta Number">
+		<button id="closeSurveyChalta" style="float: right;">X</button>
+		<label><b>Survey Number</b></label> <input type="number" id="surveyNumberText"
+			class="form-control marginBottom" placeholder="Enter Survey Number"
+			name="surveyNumberText"> <label><b>Chalta Number</b></label> <input
+			type="number" class="form-control marginBottom" id="chaltaNumberText"
+			placeholder="Enter Chalta Number" name="chaltaNumberText">
+		<button type="button" id="btnSaveData"
+			class="btn btn-primary btn center-block item" onclick="saveWipData();">Save</button>
+	</div> -->
+	
+	
+		<!-- The Modal -->
+	<div id="myModal" class="modal" >	
+	  <!-- Modal content -->
+	  <div class="modal-content">
+	     <span class="close">&times;</span>
+	    <div  id="myModalContent" class="modal-body">
+	    </div>
+	  </div>	
+	</div>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.5/ol.js"></script>
+	
+	<script src="./js/jquery-ui.js"></script>
+	<script src="./js/jquery.colorbox.js"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script> -->
+	<script src="https://code.jquery.com/jquery-migrate-3.0.0.min.js"></script>
+	<script src="./js/jquery.msgbox.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="webjars/bootbox/4.4.0/bootbox.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./js/datafileload.js"></script>
+	<script type="text/javascript" src="./js/ILFSWebClient.js" charset="utf-8"></script>
+	<script type="text/javascript" src="./js/applyMargins.js" charset="utf-8"></script>	
+	<script type="text/javascript" src="./js/proj4.js"></script>
+	<script type="text/javascript" src="./js/ol-layerswitcher.js"></script>	
+	<script type="text/javascript" src="./js/custom.js" charset="utf-8"></script>
+	<script type="text/javascript" src="./js/messagesPopup.js"></script>
+	<script type="text/javascript" src="./js/surveyOperations_Tippon.js" charset="utf-8"></script>
+	<!-- <script type="text/javascript" src="./js/tiff.min.js" charset="utf-8"></script> -->
+	<script type="text/javascript" src="./js/searchBySegment.js" charset="utf-8"></script>
+	<script type="text/javascript" src="./js/functions.js" charset="utf-8"></script>	
+	</BODY></body>
+
+</html>

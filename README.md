@@ -1,43 +1,91 @@
 # BhuSetu — SIH 26013
 
-Local synthetic urban land integration demo. Run from PowerShell:
+Urban land integration prototype. The default workspace is **Kondapur, Hyderabad**:
+480 real Microsoft building footprints, 251 OSM road/path segments, Sentinel-2
+imagery and Copernicus elevation, alongside 300 synthetic parcels and fictional
+revenue records. Verification and GNSS observations are simulated. The earlier
+100-parcel synthetic demonstration remains selectable in the sidebar.
 
-```powershell
-cd C:\Users\aadhi\SIH
-.\.venv\Scripts\python.exe -m streamlit run app.py --server.address 127.0.0.1
-```
+The **Parcel profile** and **Department matching** tabs now connect land to
+1,610 fictional revenue, municipal, electricity, water and survey records.
+Matching combines scoped identifier indexes, an R-tree and address-token search,
+then scores department-specific evidence and flags uncertainty. See the
+[algorithm and measured results](reports/MATCHING_REPORT.md) and
+[SIH demonstration guide](reports/DEMO_WALKTHROUGH.md).
 
-Open http://localhost:8501. Select the `.venv` interpreter in VS Code.
-For a fresh setup, create a Python virtual environment and run `python -m pip install -r requirements.txt`.
-The existing `SIH.py` is an older generator, preserved unchanged; the application entry point is `app.py`.
-The old `requirement.txt` contains shell syntax; use `requirements.txt`.
+## Run
+
+From PowerShell in this project, run `./start.ps1`, then open http://localhost:8501.
+The launcher prefers `.venv` and can use the bundled Codex Python runtime with
+local packages if the virtual environment points to a missing Python installation.
+For a fresh environment, create `.venv`, install `requirements.txt`, and run
+`python -m streamlit run app.py --server.address 127.0.0.1`.
 
 ## Demo walkthrough
 
-1. Open Map & evidence; toggle cadastral, T1/T2, utilities, polygon observation areas and GNSS layers.
-2. Select a parcel for source properties, candidate scores and observation evidence.
-3. Review queue shows invalid polygons, overlaps, duplicates, missing records, area/use conflicts and uncertain building links.
-4. Select a proposal, inspect its evidence, accept/reject and save. Decisions persist in `state/reviews.sqlite` with reviewer, UTC time and append-only history. Set pending to undo a decision. Dataset fingerprints isolate changed inputs.
-5. Building changes compares actual footprint geometry across acquisition dates despite different IDs.
-6. Export integrated parcel GeoJSON, proposal decisions, audit CSV and change CSV.
+1. **Map & evidence:** choose a parcel, toggle real and synthetic vector layers,
+   and display satellite imagery or surface elevation. Hover for properties.
+2. **Review queue:** inspect overlaps, ambiguous building links and area conflicts.
+   Accept/reject proposals; decisions persist with reviewer and audit history.
+3. **Building changes:** Kondapur has one footprint snapshot with unknown imagery
+   dates, so temporal analysis is unavailable. The legacy workspace retains its
+   two synthetic snapshots for demonstrating change analysis.
+4. **Validation:** inspect geometry results, source status and raster coverage.
+5. **Export:** download integrated parcels, decisions, source status and audit.
+   Synthetic labels and source provenance remain attached to parcel exports.
 
-## Data and method
+## Dataset and method
 
-Pipeline reads only `dataset/inputs` and manifest. Metric calculations use EPSG:32643; map and export use EPSG:4326. Every input geometry is checked before spatial operations. Invalid features are excluded from matching, preserved in originals, and given make_valid repair proposals. Accepted parcel repairs affect export; matching remains based on valid original geometries, so review does not silently rewrite evidence. Overlaps and other conflicts remain advisory.
+The new source package is in `dataset/hyderabad_kondapur`. Its
+[dataset guide](dataset/hyderabad_kondapur/REMAINING_DATA.md) describes source
+availability, licences, acquisition dates and synthetic substitutes. Nothing in
+this dataset establishes legal boundaries, real ownership or surveyed accuracy.
 
-Record references are normalized, with one proposal per source record. Multiple records are retained for human review. Building candidates use a spatial index within 15 m; score is 0.75 × building overlap fraction + 0.15 × proximity + 0.10 × area fit. Scores are heuristic, not probabilities. Temporal matching greedily assigns candidates by IoU, centroid distance and area similarity. Area growth above 15% is a possible extension. Extraction omissions and displacement can produce false changes.
+Metric operations use **EPSG:32644** for Kondapur and **EPSG:32643** for the legacy
+demo. Inputs are transformed explicitly; map and GeoJSON exports use EPSG:4326.
+Satellite imagery is 10 m and elevation is approximately 30 m. Elevation is a
+surface model, not a detailed bare-earth model. Raster overlays are georeferenced;
+source files remain unchanged.
 
-The legacy GeoJSON has unknown CRS and stays quarantined. To admit it requires explicit source CRS confirmation and a documented ingestion rule; this demo provides no automatic assignment. GNSS date is unknown and no reference correspondences exist. Observations are polygon areas, not points. Synthetic data does not establish real-world model performance or legal accuracy. No learned classifier is claimed.
+`data_sources.py` adapts the new formats without rewriting source data.
+`pipeline.py` reads only operational inputs and relevant metadata. Evaluation
+answers are not read by the app or matching engine. Input fingerprints isolate
+review decisions between workspaces and data revisions; raster files are included
+in cache invalidation.
 
-Original inputs and answer keys were preserved. Previous metadata/generator copies are in `backups/pre-mvp`; `fix_metadata.py` corrects metadata with the generator's canonical hash convention. Root and dataset generators contain the same corrections and refuse to overwrite existing output directories. Generate into a new directory to preserve original data. `SIH.py` is an untouched legacy copy and should not be used to regenerate.
+The original baseline record links use normalized parcel identifiers. The newer
+departmental matcher handles inconsistent and missing fields without receiving
+the hidden parcel answer. Building candidates lie within
+15 m of valid parcels; scores combine 75% building-overlap fraction, 15% proximity
+and 10% area fit. Scores are heuristic rankings, not probabilities. Accepted
+repairs affect export; matching continues to use valid original geometries.
+No correction or association is accepted automatically.
+
+Kondapur includes 30 displaced synthetic parcels and 20 inflated record areas.
+Voronoi-based test parcels can cut buildings and are not recovered cadastral
+boundaries. Synthetic utilities are separate from real OSM objects. OSM data
+are not authoritative municipal records. The dataset guide includes Microsoft,
+OpenStreetMap and Copernicus attribution.
 
 ## Validation
 
+With the project environment active:
+
 ```powershell
-.\.venv\Scripts\python.exe -m pytest -q
-.\.venv\Scripts\python.exe evaluate.py
+python -m pytest -q
+python evaluate.py
+python evaluate.py --legacy
+python evaluate_departments.py
+python benchmark_matching.py --size 100000
 ```
 
-Evaluation loads answer keys only after the input-only pipeline finishes. It measures record link correctness and reports temporal counts, not temporal accuracy. Tests cover source hash preservation, metadata hashes, answer-key isolation, invalid geometry review, persistence, reversal, changed-dataset isolation, spatial changes and Streamlit rendering.
+Evaluation reads answer keys only after input-only pipeline output exists. The
+Kondapur evaluator measures synthetic record linkage and area-conflict detection;
+it does not establish real-world cadastral or building association accuracy.
+Tests cover answer-key isolation, coordinate systems, source preservation, raster
+extent/transparency, review persistence, export provenance and both workspaces.
 
-This MVP does not implement imagery segmentation, live department APIs, authentication, production synchronization or cadastral adjudication. Map vectors are local; optional OpenStreetMap tiles and browser map libraries require network access.
+Original synthetic data and previous generator copies remain preserved. The
+legacy unknown-CRS fixture stays quarantined. `SIH.py` is an untouched historical
+generator, not the app entry point. The prototype does not implement image
+segmentation, authentication, live department APIs or production synchronization.

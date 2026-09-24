@@ -1,0 +1,23 @@
+{
+  "synthetic": true,
+  "seed": 260130924,
+  "records": 1610,
+  "parcels": 300,
+  "schema_version": 1,
+  "metric_crs": "EPSG:32644",
+  "departments": [
+    "revenue",
+    "municipal",
+    "electricity",
+    "water",
+    "survey"
+  ],
+  "notice": "All departmental identities, addresses and associations are invented. No real owner, service account or field measurement.",
+  "evaluation": "Parcel-separated development/test split. Fixed rules are not trained or calibrated. Do not supply answers to matcher.",
+  "provenance": "Synthetic parcel reference on Microsoft/OSM geography; retain upstream CDLA-Permissive-2.0 and ODbL attribution.",
+  "files": {
+    "evaluation_only/answers.json": "f2a852e839e56b6046b2e89ba2a1ca554d4d31403f41a6f22d182df50a1b75a9",
+    "inputs/parcel_directory.json": "bd55dc27981fd4d3e7b12b6dc51274e7c9b02cd340410b4522ca8076e0496ff6",
+    "inputs/records.json": "e77f040e1f9950bcde8f9feb6d4db81a5b17b7a4009cbe9db2e7accc54e4d682"
+  }
+}

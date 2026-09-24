@@ -1,0 +1,40 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kondapur, Hyderabad",
+        "bbox_order": "west,south,east,north",
+        "metric_crs": "EPSG:32644"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.364,
+              17.45
+            ],
+            [
+              78.364,
+              17.462
+            ],
+            [
+              78.35,
+              17.462
+            ],
+            [
+              78.35,
+              17.45
+            ],
+            [
+              78.364,
+              17.45
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

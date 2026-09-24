@@ -8,3 +8,4 @@ streamlit>=1.40,<2
 folium>=0.18,<1
 streamlit-folium>=0.24,<1
 pytest>=8,<10
+rasterio>=1.4,<2

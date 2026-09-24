@@ -1,0 +1,7 @@
+{
+  "rasters_hashes": "passed",
+  "synthetic_benchmark_hashes": "passed",
+  "raster_geometry_and_finite_pixels": "passed",
+  "synthetic_geometry_validity_and_labels": "passed",
+  "record_references": "passed"
+}

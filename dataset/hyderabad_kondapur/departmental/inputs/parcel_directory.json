@@ -1,0 +1,2402 @@
+[
+  {
+    "parcel_id": "SYN-P0001",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "7402/A",
+    "address": "Plot 8780, Demo Street 1, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0002",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "6599/B",
+    "address": "Plot 9292, Demo Street 2, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0003",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "2590/C",
+    "address": "Plot 9159, Demo Street 3, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0004",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "1352/A",
+    "address": "Plot 2184, Demo Street 4, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0005",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "6345/B",
+    "address": "Plot 3548, Demo Street 5, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0006",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "3556/C",
+    "address": "Plot 754, Demo Street 6, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0007",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "8387/A",
+    "address": "Plot 4544, Demo Street 7, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0008",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "3217/B",
+    "address": "Plot 5165, Demo Street 8, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0009",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "6753/C",
+    "address": "Plot 4293, Demo Street 9, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0010",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "8476/A",
+    "address": "Plot 391, Demo Street 10, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0011",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "2943/B",
+    "address": "Plot 1927, Demo Street 11, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0012",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5362/C",
+    "address": "Plot 2316, Demo Street 12, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0013",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "2235/A",
+    "address": "Plot 4940, Demo Street 1, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0014",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5970/B",
+    "address": "Plot 2858, Demo Street 2, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0015",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "7085/C",
+    "address": "Plot 6775, Demo Street 3, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0016",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "8572/A",
+    "address": "Plot 9024, Demo Street 4, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0017",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5978/B",
+    "address": "Plot 6745, Demo Street 5, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0018",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5978/B",
+    "address": "Plot 1036, Demo Street 6, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0019",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "1144/A",
+    "address": "Plot 6593, Demo Street 7, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0020",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "4784/B",
+    "address": "Plot 8242, Demo Street 8, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0021",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "7191/C",
+    "address": "Plot 8059, Demo Street 9, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0022",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "4954/A",
+    "address": "Plot 3876, Demo Street 10, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0023",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "3789/B",
+    "address": "Plot 2911, Demo Street 11, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0024",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "6923/C",
+    "address": "Plot 8622, Demo Street 12, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0025",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5987/A",
+    "address": "Plot 6386, Demo Street 1, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0026",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "6974/B",
+    "address": "Plot 5117, Demo Street 2, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0027",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "4187/C",
+    "address": "Plot 2455, Demo Street 3, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0028",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "4425/A",
+    "address": "Plot 4207, Demo Street 4, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0029",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "2733/B",
+    "address": "Plot 247, Demo Street 5, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0030",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "4431/C",
+    "address": "Plot 4602, Demo Street 6, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0031",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5109/A",
+    "address": "Plot 9316, Demo Street 7, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0032",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "3784/B",
+    "address": "Plot 5967, Demo Street 8, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0033",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "6076/C",
+    "address": "Plot 2636, Demo Street 9, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0034",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "3780/A",
+    "address": "Plot 7566, Demo Street 10, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0035",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "3780/A",
+    "address": "Plot 5906, Demo Street 11, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0036",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "3526/C",
+    "address": "Plot 1012, Demo Street 12, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0037",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5183/A",
+    "address": "Plot 3757, Demo Street 1, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0038",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "6412/B",
+    "address": "Plot 5230, Demo Street 2, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0039",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "6796/C",
+    "address": "Plot 9182, Demo Street 3, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0040",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "2731/A",
+    "address": "Plot 3940, Demo Street 4, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0041",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5168/B",
+    "address": "Plot 5127, Demo Street 5, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0042",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "8722/C",
+    "address": "Plot 950, Demo Street 6, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0043",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "7345/A",
+    "address": "Plot 8274, Demo Street 7, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0044",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "8261/B",
+    "address": "Plot 5807, Demo Street 8, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0045",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "8877/C",
+    "address": "Plot 102, Demo Street 9, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0046",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "2106/A",
+    "address": "Plot 6490, Demo Street 10, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0047",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "2935/B",
+    "address": "Plot 2285, Demo Street 11, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0048",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5983/C",
+    "address": "Plot 3104, Demo Street 12, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0049",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "3473/A",
+    "address": "Plot 4344, Demo Street 1, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0050",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "7018/B",
+    "address": "Plot 109, Demo Street 2, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0051",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5982/C",
+    "address": "Plot 5358, Demo Street 3, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0052",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5982/C",
+    "address": "Plot 3561, Demo Street 4, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0053",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "6161/B",
+    "address": "Plot 7076, Demo Street 5, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0054",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "7768/C",
+    "address": "Plot 2539, Demo Street 6, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0055",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5055/A",
+    "address": "Plot 8886, Demo Street 7, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0056",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "2735/B",
+    "address": "Plot 2234, Demo Street 8, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0057",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "7473/C",
+    "address": "Plot 7526, Demo Street 9, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0058",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "7488/A",
+    "address": "Plot 7865, Demo Street 10, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0059",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "8582/B",
+    "address": "Plot 3255, Demo Street 11, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0060",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "4165/C",
+    "address": "Plot 4691, Demo Street 12, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0061",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "3516/A",
+    "address": "Plot 8777, Demo Street 1, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0062",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "2253/B",
+    "address": "Plot 8756, Demo Street 2, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0063",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "1328/C",
+    "address": "Plot 7516, Demo Street 3, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0064",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5372/A",
+    "address": "Plot 2259, Demo Street 4, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0065",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "8016/B",
+    "address": "Plot 8383, Demo Street 5, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0066",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "1081/C",
+    "address": "Plot 6523, Demo Street 6, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0067",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "6702/A",
+    "address": "Plot 8581, Demo Street 7, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0068",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5652/B",
+    "address": "Plot 8615, Demo Street 8, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0069",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5652/B",
+    "address": "Plot 1956, Demo Street 9, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0070",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "2038/A",
+    "address": "Plot 684, Demo Street 10, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0071",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "6218/B",
+    "address": "Plot 3268, Demo Street 11, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0072",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "3939/C",
+    "address": "Plot 9259, Demo Street 12, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0073",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "7413/A",
+    "address": "Plot 7614, Demo Street 1, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0074",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "8124/B",
+    "address": "Plot 5796, Demo Street 2, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0075",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "7477/C",
+    "address": "Plot 5886, Demo Street 3, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0076",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5740/A",
+    "address": "Plot 900, Demo Street 4, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0077",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "4985/B",
+    "address": "Plot 3019, Demo Street 5, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0078",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "2432/C",
+    "address": "Plot 4900, Demo Street 6, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0079",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "6712/A",
+    "address": "Plot 5631, Demo Street 7, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0080",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "7442/B",
+    "address": "Plot 8857, Demo Street 8, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0081",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "7961/C",
+    "address": "Plot 5532, Demo Street 9, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0082",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5061/A",
+    "address": "Plot 5529, Demo Street 10, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0083",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "8724/B",
+    "address": "Plot 4185, Demo Street 11, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0084",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "8425/C",
+    "address": "Plot 7660, Demo Street 12, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0085",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "1808/A",
+    "address": "Plot 1327, Demo Street 1, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0086",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "1808/A",
+    "address": "Plot 2556, Demo Street 2, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0087",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "7826/C",
+    "address": "Plot 348, Demo Street 3, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0088",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "8837/A",
+    "address": "Plot 1375, Demo Street 4, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0089",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "4354/B",
+    "address": "Plot 4928, Demo Street 5, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0090",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "1229/C",
+    "address": "Plot 7361, Demo Street 6, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0091",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "3470/A",
+    "address": "Plot 4687, Demo Street 7, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0092",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5884/B",
+    "address": "Plot 5106, Demo Street 8, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0093",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "1429/C",
+    "address": "Plot 8230, Demo Street 9, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0094",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5446/A",
+    "address": "Plot 4509, Demo Street 10, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0095",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "1362/B",
+    "address": "Plot 2385, Demo Street 11, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0096",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "1492/C",
+    "address": "Plot 1433, Demo Street 12, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0097",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "2918/A",
+    "address": "Plot 7425, Demo Street 1, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0098",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "7684/B",
+    "address": "Plot 1054, Demo Street 2, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0099",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "8705/C",
+    "address": "Plot 1305, Demo Street 3, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0100",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "7252/A",
+    "address": "Plot 1819, Demo Street 4, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0101",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "2853/B",
+    "address": "Plot 9495, Demo Street 5, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0102",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "2602/C",
+    "address": "Plot 5084, Demo Street 6, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0103",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "2602/C",
+    "address": "Plot 9011, Demo Street 7, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0104",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "1317/B",
+    "address": "Plot 6210, Demo Street 8, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0105",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "1627/C",
+    "address": "Plot 5403, Demo Street 9, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0106",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "4332/A",
+    "address": "Plot 6633, Demo Street 10, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0107",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "8059/B",
+    "address": "Plot 8830, Demo Street 11, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0108",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "7316/C",
+    "address": "Plot 5003, Demo Street 12, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0109",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "2797/A",
+    "address": "Plot 6157, Demo Street 1, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0110",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "2617/B",
+    "address": "Plot 9323, Demo Street 2, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0111",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "3400/C",
+    "address": "Plot 7083, Demo Street 3, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0112",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "3387/A",
+    "address": "Plot 5955, Demo Street 4, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0113",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "2561/B",
+    "address": "Plot 8795, Demo Street 5, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0114",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "6831/C",
+    "address": "Plot 7172, Demo Street 6, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0115",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "2052/A",
+    "address": "Plot 7023, Demo Street 7, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0116",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "3268/B",
+    "address": "Plot 1978, Demo Street 8, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0117",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "2437/C",
+    "address": "Plot 9435, Demo Street 9, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0118",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "8631/A",
+    "address": "Plot 8851, Demo Street 10, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0119",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "3790/B",
+    "address": "Plot 373, Demo Street 11, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0120",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "3790/B",
+    "address": "Plot 4321, Demo Street 12, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0121",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "6451/A",
+    "address": "Plot 1189, Demo Street 1, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0122",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "1066/B",
+    "address": "Plot 8333, Demo Street 2, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0123",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "3872/C",
+    "address": "Plot 6350, Demo Street 3, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0124",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "8511/A",
+    "address": "Plot 5838, Demo Street 4, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0125",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "3800/B",
+    "address": "Plot 6819, Demo Street 5, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0126",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "8407/C",
+    "address": "Plot 8847, Demo Street 6, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0127",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "6866/A",
+    "address": "Plot 6113, Demo Street 7, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0128",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "7115/B",
+    "address": "Plot 7299, Demo Street 8, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0129",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5370/C",
+    "address": "Plot 5613, Demo Street 9, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0130",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "8959/A",
+    "address": "Plot 1838, Demo Street 10, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0131",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "6726/B",
+    "address": "Plot 828, Demo Street 11, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0132",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "3882/C",
+    "address": "Plot 1904, Demo Street 12, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0133",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5255/A",
+    "address": "Plot 3924, Demo Street 1, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0134",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "1369/B",
+    "address": "Plot 8746, Demo Street 2, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0135",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5488/C",
+    "address": "Plot 7461, Demo Street 3, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0136",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "4428/A",
+    "address": "Plot 8199, Demo Street 4, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0137",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "4428/A",
+    "address": "Plot 9266, Demo Street 5, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0138",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "2704/C",
+    "address": "Plot 5179, Demo Street 6, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0139",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "7566/A",
+    "address": "Plot 1102, Demo Street 7, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0140",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5546/B",
+    "address": "Plot 8459, Demo Street 8, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0141",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "4884/C",
+    "address": "Plot 1070, Demo Street 9, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0142",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5235/A",
+    "address": "Plot 1682, Demo Street 10, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0143",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "7980/B",
+    "address": "Plot 8030, Demo Street 11, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0144",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "3868/C",
+    "address": "Plot 8831, Demo Street 12, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0145",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5447/A",
+    "address": "Plot 3343, Demo Street 1, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0146",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "3180/B",
+    "address": "Plot 475, Demo Street 2, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0147",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "7206/C",
+    "address": "Plot 7648, Demo Street 3, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0148",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5551/A",
+    "address": "Plot 9221, Demo Street 4, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0149",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "1936/B",
+    "address": "Plot 3541, Demo Street 5, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0150",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "1630/C",
+    "address": "Plot 159, Demo Street 6, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0151",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "2208/A",
+    "address": "Plot 2376, Demo Street 7, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0152",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "1339/B",
+    "address": "Plot 7678, Demo Street 8, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0153",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "6156/C",
+    "address": "Plot 1242, Demo Street 9, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0154",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "6156/C",
+    "address": "Plot 7421, Demo Street 10, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0155",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "1379/B",
+    "address": "Plot 3210, Demo Street 11, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0156",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5177/C",
+    "address": "Plot 2557, Demo Street 12, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0157",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "1004/A",
+    "address": "Plot 6192, Demo Street 1, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0158",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "7444/B",
+    "address": "Plot 2180, Demo Street 2, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0159",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "6547/C",
+    "address": "Plot 7965, Demo Street 3, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0160",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "2715/A",
+    "address": "Plot 7118, Demo Street 4, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0161",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5384/B",
+    "address": "Plot 9392, Demo Street 5, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0162",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "7698/C",
+    "address": "Plot 8055, Demo Street 6, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0163",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "1006/A",
+    "address": "Plot 6767, Demo Street 7, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0164",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "2383/B",
+    "address": "Plot 8078, Demo Street 8, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0165",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "3566/C",
+    "address": "Plot 5499, Demo Street 9, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0166",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5115/A",
+    "address": "Plot 5968, Demo Street 10, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0167",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "7560/B",
+    "address": "Plot 3261, Demo Street 11, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0168",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "7636/C",
+    "address": "Plot 6228, Demo Street 12, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0169",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "4652/A",
+    "address": "Plot 2815, Demo Street 1, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0170",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "4172/B",
+    "address": "Plot 2404, Demo Street 2, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0171",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "4172/B",
+    "address": "Plot 5761, Demo Street 3, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0172",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "2812/A",
+    "address": "Plot 7974, Demo Street 4, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0173",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "2739/B",
+    "address": "Plot 1919, Demo Street 5, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0174",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "8938/C",
+    "address": "Plot 5440, Demo Street 6, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0175",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "2408/A",
+    "address": "Plot 3788, Demo Street 7, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0176",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "2296/B",
+    "address": "Plot 3794, Demo Street 8, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0177",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "4115/C",
+    "address": "Plot 7456, Demo Street 9, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0178",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "1168/A",
+    "address": "Plot 432, Demo Street 10, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0179",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "8429/B",
+    "address": "Plot 3763, Demo Street 11, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0180",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5315/C",
+    "address": "Plot 4498, Demo Street 12, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0181",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "6018/A",
+    "address": "Plot 7848, Demo Street 1, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0182",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "7691/B",
+    "address": "Plot 3525, Demo Street 2, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0183",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "3371/C",
+    "address": "Plot 3482, Demo Street 3, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0184",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "1600/A",
+    "address": "Plot 581, Demo Street 4, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0185",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "3807/B",
+    "address": "Plot 2081, Demo Street 5, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0186",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "6885/C",
+    "address": "Plot 9307, Demo Street 6, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0187",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "1196/A",
+    "address": "Plot 1332, Demo Street 7, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0188",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "1196/A",
+    "address": "Plot 2641, Demo Street 8, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0189",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "2750/C",
+    "address": "Plot 7309, Demo Street 9, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0190",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5480/A",
+    "address": "Plot 882, Demo Street 10, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0191",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "3155/B",
+    "address": "Plot 4643, Demo Street 11, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0192",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "7049/C",
+    "address": "Plot 8567, Demo Street 12, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0193",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5047/A",
+    "address": "Plot 6673, Demo Street 1, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0194",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "3123/B",
+    "address": "Plot 9386, Demo Street 2, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0195",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "3637/C",
+    "address": "Plot 3107, Demo Street 3, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0196",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "8408/A",
+    "address": "Plot 2808, Demo Street 4, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0197",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "6330/B",
+    "address": "Plot 1987, Demo Street 5, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0198",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "8586/C",
+    "address": "Plot 3957, Demo Street 6, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0199",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5957/A",
+    "address": "Plot 4667, Demo Street 7, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0200",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "1637/B",
+    "address": "Plot 5898, Demo Street 8, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0201",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "8861/C",
+    "address": "Plot 3539, Demo Street 9, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0202",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "8330/A",
+    "address": "Plot 1224, Demo Street 10, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0203",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "4699/B",
+    "address": "Plot 8271, Demo Street 11, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0204",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "3452/C",
+    "address": "Plot 6039, Demo Street 12, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0205",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "3452/C",
+    "address": "Plot 7259, Demo Street 1, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0206",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "2101/B",
+    "address": "Plot 9427, Demo Street 2, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0207",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "7349/C",
+    "address": "Plot 3938, Demo Street 3, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0208",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "1810/A",
+    "address": "Plot 2852, Demo Street 4, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0209",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "3565/B",
+    "address": "Plot 9279, Demo Street 5, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0210",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "8292/C",
+    "address": "Plot 4249, Demo Street 6, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0211",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "6791/A",
+    "address": "Plot 6906, Demo Street 7, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0212",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "7791/B",
+    "address": "Plot 7735, Demo Street 8, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0213",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "2720/C",
+    "address": "Plot 5562, Demo Street 9, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0214",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "6493/A",
+    "address": "Plot 8044, Demo Street 10, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0215",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5763/B",
+    "address": "Plot 7388, Demo Street 11, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0216",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5968/C",
+    "address": "Plot 7943, Demo Street 12, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0217",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "4111/A",
+    "address": "Plot 7766, Demo Street 1, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0218",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5453/B",
+    "address": "Plot 5372, Demo Street 2, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0219",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "4093/C",
+    "address": "Plot 8744, Demo Street 3, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0220",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "3102/A",
+    "address": "Plot 3896, Demo Street 4, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0221",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5016/B",
+    "address": "Plot 6708, Demo Street 5, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0222",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5016/B",
+    "address": "Plot 486, Demo Street 6, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0223",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "2198/A",
+    "address": "Plot 3724, Demo Street 7, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0224",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "2782/B",
+    "address": "Plot 8862, Demo Street 8, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0225",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "8039/C",
+    "address": "Plot 1357, Demo Street 9, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0226",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5458/A",
+    "address": "Plot 8803, Demo Street 10, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0227",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5063/B",
+    "address": "Plot 3358, Demo Street 11, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0228",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "1672/C",
+    "address": "Plot 5189, Demo Street 12, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0229",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "4239/A",
+    "address": "Plot 3094, Demo Street 1, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0230",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "3616/B",
+    "address": "Plot 7520, Demo Street 2, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0231",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "1542/C",
+    "address": "Plot 4136, Demo Street 3, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0232",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "7011/A",
+    "address": "Plot 2318, Demo Street 4, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0233",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5834/B",
+    "address": "Plot 8685, Demo Street 5, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0234",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "3888/C",
+    "address": "Plot 8953, Demo Street 6, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0235",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "6951/A",
+    "address": "Plot 5349, Demo Street 7, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0236",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "7268/B",
+    "address": "Plot 345, Demo Street 8, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0237",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "6250/C",
+    "address": "Plot 3787, Demo Street 9, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0238",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "6234/A",
+    "address": "Plot 2082, Demo Street 10, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0239",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "6234/A",
+    "address": "Plot 8266, Demo Street 11, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0240",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "3550/C",
+    "address": "Plot 8910, Demo Street 12, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0241",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "3315/A",
+    "address": "Plot 9055, Demo Street 1, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0242",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "2656/B",
+    "address": "Plot 4108, Demo Street 2, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0243",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "4214/C",
+    "address": "Plot 6580, Demo Street 3, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0244",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "8087/A",
+    "address": "Plot 8449, Demo Street 4, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0245",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "2823/B",
+    "address": "Plot 7362, Demo Street 5, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0246",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "4550/C",
+    "address": "Plot 3687, Demo Street 6, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0247",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "1597/A",
+    "address": "Plot 7855, Demo Street 7, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0248",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "2697/B",
+    "address": "Plot 5317, Demo Street 8, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0249",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "7203/C",
+    "address": "Plot 256, Demo Street 9, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0250",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "8298/A",
+    "address": "Plot 1258, Demo Street 10, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0251",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5252/B",
+    "address": "Plot 471, Demo Street 11, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0252",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "4067/C",
+    "address": "Plot 3050, Demo Street 12, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0253",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5548/A",
+    "address": "Plot 6546, Demo Street 1, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0254",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "2077/B",
+    "address": "Plot 8095, Demo Street 2, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0255",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "1758/C",
+    "address": "Plot 7143, Demo Street 3, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0256",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "1758/C",
+    "address": "Plot 1753, Demo Street 4, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0257",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "4182/B",
+    "address": "Plot 5209, Demo Street 5, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0258",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "3676/C",
+    "address": "Plot 9309, Demo Street 6, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0259",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "1631/A",
+    "address": "Plot 5194, Demo Street 7, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0260",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "1536/B",
+    "address": "Plot 2675, Demo Street 8, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0261",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "8461/C",
+    "address": "Plot 2238, Demo Street 9, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0262",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "4555/A",
+    "address": "Plot 9133, Demo Street 10, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0263",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "2586/B",
+    "address": "Plot 5981, Demo Street 11, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0264",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "4931/C",
+    "address": "Plot 6222, Demo Street 12, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0265",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "4357/A",
+    "address": "Plot 7091, Demo Street 1, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0266",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "6198/B",
+    "address": "Plot 6844, Demo Street 2, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0267",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5121/C",
+    "address": "Plot 8461, Demo Street 3, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0268",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "4967/A",
+    "address": "Plot 6263, Demo Street 4, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0269",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "7690/B",
+    "address": "Plot 6709, Demo Street 5, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0270",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "4809/C",
+    "address": "Plot 2239, Demo Street 6, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0271",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "2897/A",
+    "address": "Plot 5467, Demo Street 7, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0272",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5414/B",
+    "address": "Plot 8339, Demo Street 8, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0273",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5414/B",
+    "address": "Plot 9281, Demo Street 9, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0274",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "7974/A",
+    "address": "Plot 8771, Demo Street 10, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0275",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5640/B",
+    "address": "Plot 5748, Demo Street 11, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0276",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "4585/C",
+    "address": "Plot 8711, Demo Street 12, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0277",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "2176/A",
+    "address": "Plot 5863, Demo Street 1, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0278",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "8601/B",
+    "address": "Plot 6834, Demo Street 2, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0279",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5067/C",
+    "address": "Plot 3009, Demo Street 3, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0280",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "6992/A",
+    "address": "Plot 2105, Demo Street 4, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0281",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "3362/B",
+    "address": "Plot 9365, Demo Street 5, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0282",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "6467/C",
+    "address": "Plot 1878, Demo Street 6, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0283",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "1458/A",
+    "address": "Plot 5657, Demo Street 7, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0284",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "3875/B",
+    "address": "Plot 6415, Demo Street 8, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0285",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "3158/C",
+    "address": "Plot 9477, Demo Street 9, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0286",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5785/A",
+    "address": "Plot 8560, Demo Street 10, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0287",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "3970/B",
+    "address": "Plot 3652, Demo Street 11, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0288",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "3029/C",
+    "address": "Plot 5846, Demo Street 12, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0289",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "2522/A",
+    "address": "Plot 1755, Demo Street 1, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0290",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "2522/A",
+    "address": "Plot 3059, Demo Street 2, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0291",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "2779/C",
+    "address": "Plot 7314, Demo Street 3, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0292",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "3214/A",
+    "address": "Plot 1920, Demo Street 4, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0293",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "2908/B",
+    "address": "Plot 8005, Demo Street 5, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0294",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "4756/C",
+    "address": "Plot 3898, Demo Street 6, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0295",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "3032/A",
+    "address": "Plot 5926, Demo Street 7, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0296",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5352/B",
+    "address": "Plot 6007, Demo Street 8, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0297",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "4761/C",
+    "address": "Plot 225, Demo Street 9, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0298",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "5677/A",
+    "address": "Plot 9068, Demo Street 10, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0299",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "7423/B",
+    "address": "Plot 8992, Demo Street 11, Kondapur",
+    "synthetic": true
+  },
+  {
+    "parcel_id": "SYN-P0300",
+    "district": "DEMO-RANGAREDDY",
+    "village": "DEMO-KONDAPUR",
+    "survey_number": "4866/C",
+    "address": "Plot 8335, Demo Street 12, Kondapur",
+    "synthetic": true
+  }
+]

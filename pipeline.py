@@ -7,11 +7,16 @@ import geopandas as gpd
 import pandas as pd
 from shapely import make_valid
 from shapely.validation import explain_validity
+from data_sources import is_kondapur, load_kondapur, KONDAPUR_INPUTS
+from departmental import run_departments
+from entity_resolution import VERSION as MATCHER_VERSION
 
 CRS = 'EPSG:32643'
-VERSION = '1'
+VERSION = '3-' + MATCHER_VERSION
 
 def normalize_id(value):
+    if re.fullmatch(r'SYN-P[0-9]{4}', str(value).strip().upper()):
+        return str(value).strip().upper()
     match = re.fullmatch(r'(?:P\s*[-/]?\s*)?(\d+)', str(value).strip().upper())
     return f'P-{int(match[1]):03d}' if match else None
 
@@ -20,9 +25,10 @@ def normalize_use(value):
 
 def fingerprint(root):
     h = hashlib.sha256(VERSION.encode())
-    for p in sorted((Path(root) / 'inputs').iterdir()):
-        h.update(p.name.encode()); h.update(p.read_bytes())
-    h.update((Path(root) / 'manifest.json').read_bytes())
+    root = Path(root)
+    paths = [root/p for p in KONDAPUR_INPUTS] if is_kondapur(root) else sorted((root/'inputs').iterdir()) + [root/'manifest.json']
+    for p in paths:
+        h.update(p.relative_to(root).as_posix().encode()); h.update(p.read_bytes())
     return h.hexdigest()
 
 def compare_dates(t1, t2):
@@ -65,17 +71,26 @@ def run(root):
                     source=source, feature_id=str(feature), target_id=str(target), **evidence)
         proposals.append(item)
         return item
-    manifest = json.loads((root/'manifest.json').read_text())
-    meta = {Path(e['path'].replace('\\','/')).name:e for e in manifest['files']}
-    specs = [('parcels','cadastral.gpkg','parcel_id'), ('t1','extracted_buildings_t1.geojson','extracted_id'),
-             ('t2','extracted_buildings_t2.geojson','extracted_id'),
-             ('observations','ground_truth_observations.geojson','observation_id'), ('utilities','utilities.geojson','utility_id')]
+    modern = is_kondapur(root)
+    source = load_kondapur(root) if modern else None
+    metric_crs = 'EPSG:32644' if modern else CRS
+    meta = {}
+    if modern:
+        specs = [(name, name, 'parcel_id' if name=='parcels' else 'extracted_id' if name=='buildings' else 'observation_id' if name=='observations' else 'id') for name in source['frames']]
+    else:
+        manifest = json.loads((root/'manifest.json').read_text())
+        meta = {Path(e['path'].replace('\\','/')).name:e for e in manifest['files']}
+        specs = [('parcels','cadastral.gpkg','parcel_id'), ('t1','extracted_buildings_t1.geojson','extracted_id'),
+                 ('t2','extracted_buildings_t2.geojson','extracted_id'),
+                 ('observations','ground_truth_observations.geojson','observation_id'), ('utilities','utilities.geojson','utility_id')]
     originals = {}
     for name, filename, idcol in specs:
-        g = gpd.read_file(root/'inputs'/filename)
-        if not meta[filename].get('crs') or g.crs is None:
+        g = source['frames'][name].copy() if modern else gpd.read_file(root/'inputs'/filename)
+        if g.crs is None or (not modern and not meta[filename].get('crs')):
             raise ValueError(f'Unconfirmed CRS: {filename}')
-        g = g.to_crs(CRS)
+        if idcol not in g:
+            g[idcol] = [f'{name}-{i}' for i in range(len(g))]
+        g = g.to_crs(metric_crs)
         originals[name] = g.copy()
         good = []
         for i, r in g.iterrows():
@@ -100,10 +115,12 @@ def run(root):
             area = a.geometry.intersection(b.geometry).area
             if area > .1:
                 conflicts.append(dict(kind='parcel_overlap',source='parcels',feature_id=a.parcel_id,
-                                      detail=f'{b.parcel_id}: {area:.2f} m²'))
+                                      detail=f'{b.parcel_id}: {area:.2f} mÂ²'))
     links = []
-    for source, idcol, refcol in [('revenue','record_id','survey_no'),('municipal','property_id','plot_ref')]:
-        records = pd.read_csv(root/'inputs'/f'{source}.csv',dtype=str,keep_default_na=False)
+    dataset_source = source
+    record_specs = [('revenue','record_id','parcel_id')] if modern else [('revenue','record_id','survey_no'),('municipal','property_id','plot_ref')]
+    for source, idcol, refcol in record_specs:
+        records = dataset_source['records'].copy() if modern else pd.read_csv(root/'inputs'/f'{source}.csv',dtype=str,keep_default_na=False)
         records['parcel_id'] = records[refcol].map(normalize_id)
         if source == 'municipal': records['normalized_use'] = records.use_type.map(normalize_use)
         for _, r in records.iterrows():
@@ -125,13 +142,15 @@ def run(root):
         for pid in sorted(set(originals['parcels'].parcel_id)-set(records.parcel_id)):
             conflicts.append(dict(kind='missing_record',source=source,feature_id=pid,detail='No normalized reference'))
     candidates = []
-    for date in ['t1','t2']:
+    for date in (['buildings'] if modern else ['t1','t2']):
         for _, b in layers[date].iterrows():
             matches = []
             for j in parcels.sindex.query(b.geometry.buffer(15)):
                 p = parcels.iloc[j]
                 overlap = b.geometry.intersection(p.geometry).area/b.geometry.area
                 distance = b.geometry.distance(p.geometry)
+                if distance > 15:
+                    continue
                 fit = min(1, p.geometry.area/b.geometry.area)
                 score = .75*overlap + .15*max(0,1-distance/15) + .10*fit
                 matches.append(dict(source=date,feature_id=b.extracted_id,parcel_id=p.parcel_id,
@@ -155,13 +174,28 @@ def run(root):
                                  observed_use=o.observed_use,verification_status=o.verification_status))
             if normalize_use(o.observed_use)!=normalize_use(p.land_use):
                 conflicts.append(dict(kind='observation_disagreement',source='observations',feature_id=o.observation_id,detail=p.parcel_id))
-    gnss = pd.read_csv(root/'inputs/gnss_observations.csv')
-    layers['gnss'] = gpd.GeoDataFrame(gnss,geometry=gpd.points_from_xy(gnss.easting,gnss.northing),crs=meta['gnss_observations.csv']['crs']).to_crs(CRS)
-    changes = compare_dates(layers['t1'],layers['t2'])
+    if modern:
+        layers['gnss'] = dataset_source['gnss'].to_crs(metric_crs)
+        changes = pd.DataFrame(columns=['t1_id','t2_id','change','score','iou','centroid_distance_m','area_change_pct'])
+    else:
+        gnss = pd.read_csv(root/'inputs/gnss_observations.csv')
+        layers['gnss'] = gpd.GeoDataFrame(gnss,geometry=gpd.points_from_xy(gnss.easting,gnss.northing),crs=meta['gnss_observations.csv']['crs']).to_crs(metric_crs)
+        changes = compare_dates(layers['t1'],layers['t2'])
     for row in changes.to_dict('records'):
         if row['change']!='stable':
             proposal('change', 't1_t2',row['t1_id'] or row['t2_id'],row['t2_id'],**row)
-    return dict(fingerprint=fingerprint(root), layers=layers, originals=originals, proposals=proposals,
+    departments = run_departments(root, parcels) if modern else None
+    if departments:
+        proposals.extend(departments['proposals'])
+    return dict(fingerprint=fingerprint(root), layers=layers, originals=originals, proposals=proposals, departments=departments,
                 conflicts=pd.DataFrame(conflicts),validation=pd.DataFrame(validation),
                 candidates=pd.DataFrame(candidates),links=pd.DataFrame(links),changes=changes,
-                evidence=pd.DataFrame(evidence),quarantine=['legacy_parcels_no_crs.geojson: source CRS unknown; 100 features excluded'])
+                evidence=pd.DataFrame(evidence, columns=['parcel_id','observation_id','observed_use','verification_status']),
+                quarantine=[] if modern else ['legacy_parcels_no_crs.geojson: source CRS unknown; 100 features excluded'],
+                metric_crs=metric_crs, temporal_available=not modern,
+                dataset_name='Kondapur · real geography + synthetic records' if modern else 'Legacy synthetic demonstration',
+                layer_labels=dataset_source['labels'] if modern else {k:k for k in layers},
+                provenance=dataset_source['provenance'] if modern else pd.DataFrame(),
+                raster_paths=dataset_source['raster_paths'] if modern else {},
+                raster_metadata=dataset_source['raster_metadata'] if modern else {},
+                parcel_source='synthetic_benchmark/inputs/parcels.geojson' if modern else 'inputs/cadastral.gpkg')

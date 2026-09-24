@@ -1,0 +1,1385 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0001",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.3523621005439,
+            17.450000069184693
+          ],
+          [
+            78.3523349950335,
+            17.451876084966607
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0002",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.3523349950335,
+            17.451876084966607
+          ],
+          [
+            78.35230565198597,
+            17.453906700347968
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0003",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.35230565198597,
+            17.453906700347968
+          ],
+          [
+            78.35227630498066,
+            17.45593731526771
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0004",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.35227630498066,
+            17.45593731526771
+          ],
+          [
+            78.35224695401737,
+            17.457967929725783
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0005",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.35224695401737,
+            17.457967929725783
+          ],
+          [
+            78.35221759909588,
+            17.459998543722143
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0006",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.35221759909588,
+            17.459998543722143
+          ],
+          [
+            78.35218866086227,
+            17.46200006509909
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0007",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.3500000075199,
+            17.45184498900924
+          ],
+          [
+            78.3523349950335,
+            17.451876084966607
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0008",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.3523349950335,
+            17.451876084966607
+          ],
+          [
+            78.35469667086815,
+            17.451907508468327
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0009",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.35469667086815,
+            17.451907508468327
+          ],
+          [
+            78.35705835163012,
+            17.451938904002468
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0010",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.35705835163012,
+            17.451938904002468
+          ],
+          [
+            78.35942003731496,
+            17.45197027156877
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0011",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.35942003731496,
+            17.45197027156877
+          ],
+          [
+            78.36178172791833,
+            17.45200161116698
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0012",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.36178172791833,
+            17.45200161116698
+          ],
+          [
+            78.36400000808352,
+            17.452031022179153
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0013",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.35472420521184,
+            17.450000110285053
+          ],
+          [
+            78.35469667086815,
+            17.451907508468327
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0014",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.35469667086815,
+            17.451907508468327
+          ],
+          [
+            78.35466735391971,
+            17.453938127733817
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0015",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.35466735391971,
+            17.453938127733817
+          ],
+          [
+            78.354638033017,
+            17.455968746537767
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0016",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.354638033017,
+            17.455968746537767
+          ],
+          [
+            78.35460870815983,
+            17.457999364880134
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0017",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.35460870815983,
+            17.457999364880134
+          ],
+          [
+            78.35457937934797,
+            17.460029982760858
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0018",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.35457937934797,
+            17.460029982760858
+          ],
+          [
+            78.35455092045866,
+            17.462000108289345
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0019",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.35000001263846,
+            17.453875991946045
+          ],
+          [
+            78.35230565198597,
+            17.453906700347968
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0020",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.35230565198597,
+            17.453906700347968
+          ],
+          [
+            78.35466735391971,
+            17.453938127733817
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0021",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.35466735391971,
+            17.453938127733817
+          ],
+          [
+            78.35702906078099,
+            17.453969527148622
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0022",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.35702906078099,
+            17.453969527148622
+          ],
+          [
+            78.35939077256542,
+            17.454000898592145
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0023",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.35939077256542,
+            17.454000898592145
+          ],
+          [
+            78.36175248926864,
+            17.45403224206411
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0024",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.36175248926864,
+            17.45403224206411
+          ],
+          [
+            78.36400001287336,
+            17.45406204398859
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0025",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.35708631399942,
+            17.450000123300992
+          ],
+          [
+            78.35705835163012,
+            17.451938904002468
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0026",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.35705835163012,
+            17.451938904002468
+          ],
+          [
+            78.35702906078099,
+            17.453969527148622
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0027",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.35702906078099,
+            17.453969527148622
+          ],
+          [
+            78.35699976598113,
+            17.45600014983333
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0028",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.35699976598113,
+            17.45600014983333
+          ],
+          [
+            78.35697046723031,
+            17.458030772056535
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0029",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.35697046723031,
+            17.458030772056535
+          ],
+          [
+            78.35694116452834,
+            17.460061393818176
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0030",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.35694116452834,
+            17.460061393818176
+          ],
+          [
+            78.35691318417504,
+            17.462000123374672
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0031",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.35000001444583,
+            17.45590699451358
+          ],
+          [
+            78.35227630498066,
+            17.45593731526771
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0032",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.35227630498066,
+            17.45593731526771
+          ],
+          [
+            78.354638033017,
+            17.455968746537767
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0033",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.354638033017,
+            17.455968746537767
+          ],
+          [
+            78.35699976598113,
+            17.45600014983333
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0034",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.35699976598113,
+            17.45600014983333
+          ],
+          [
+            78.35936150386867,
+            17.45603152515415
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0035",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.35936150386867,
+            17.45603152515415
+          ],
+          [
+            78.36172324667524,
+            17.456062872499952
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0036",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.36172324667524,
+            17.456062872499952
+          ],
+          [
+            78.36400001436944,
+            17.456093065428266
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0037",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.35944842690226,
+            17.4500001082324
+          ],
+          [
+            78.35942003731496,
+            17.45197027156877
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0038",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.35942003731496,
+            17.45197027156877
+          ],
+          [
+            78.35939077256542,
+            17.454000898592145
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0039",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.35939077256542,
+            17.454000898592145
+          ],
+          [
+            78.35936150386867,
+            17.45603152515415
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0040",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.35936150386867,
+            17.45603152515415
+          ],
+          [
+            78.35933223122447,
+            17.458062151254722
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0041",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.35933223122447,
+            17.458062151254722
+          ],
+          [
+            78.35930295463264,
+            17.460092776893838
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0042",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.35930295463264,
+            17.460092776893838
+          ],
+          [
+            78.35927545200698,
+            17.462000110354953
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0043",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.35000001294192,
+            17.45793799671178
+          ],
+          [
+            78.35224695401737,
+            17.457967929725783
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0044",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.35224695401737,
+            17.457967929725783
+          ],
+          [
+            78.35460870815983,
+            17.457999364880134
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0045",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.35460870815983,
+            17.457999364880134
+          ],
+          [
+            78.35697046723031,
+            17.458030772056535
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0046",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.35697046723031,
+            17.458030772056535
+          ],
+          [
+            78.35933223122447,
+            17.458062151254722
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0047",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.35933223122447,
+            17.458062151254722
+          ],
+          [
+            78.36169400013792,
+            17.458093502474462
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0048",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.36169400013792,
+            17.458093502474462
+          ],
+          [
+            78.3640000125717,
+            17.458124086498135
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0049",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.36181054391595,
+            17.450000065079188
+          ],
+          [
+            78.36178172791833,
+            17.45200161116698
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0050",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.36178172791833,
+            17.45200161116698
+          ],
+          [
+            78.36175248926864,
+            17.45403224206411
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0051",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.36175248926864,
+            17.45403224206411
+          ],
+          [
+            78.36172324667524,
+            17.456062872499952
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0052",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.36172324667524,
+            17.456062872499952
+          ],
+          [
+            78.36169400013792,
+            17.458093502474462
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0053",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.36169400013792,
+            17.458093502474462
+          ],
+          [
+            78.36166474965646,
+            17.460124131987577
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0054",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.36166474965646,
+            17.460124131987577
+          ],
+          [
+            78.3616377239501,
+            17.462000069230093
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0055",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.35000000812667,
+            17.4599689985406
+          ],
+          [
+            78.35221759909588,
+            17.459998543722143
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0056",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.35221759909588,
+            17.459998543722143
+          ],
+          [
+            78.35457937934797,
+            17.460029982760858
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0057",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.35457937934797,
+            17.460029982760858
+          ],
+          [
+            78.35694116452834,
+            17.460061393818176
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0058",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.35694116452834,
+            17.460061393818176
+          ],
+          [
+            78.35930295463264,
+            17.460092776893838
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0059",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.35930295463264,
+            17.460092776893838
+          ],
+          [
+            78.36166474965646,
+            17.460124131987577
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SYN-WATER-0060",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.36166474965646,
+            17.460124131987577
+          ],
+          [
+            78.36400000748004,
+            17.460155107198148
+          ]
+        ]
+      },
+      "properties": {
+        "utility_type": "water",
+        "layout": "fictional_grid_not_actual_alignment",
+        "synthetic": true,
+        "source": "BhuSetu synthetic benchmark"
+      }
+    }
+  ]
+}

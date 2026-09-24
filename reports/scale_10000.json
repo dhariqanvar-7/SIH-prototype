@@ -1,0 +1,22 @@
+{
+  "algorithm_version": "iges-er-1.0",
+  "parcels": 10000,
+  "records": 10000,
+  "index_seconds": 0.47509790000003704,
+  "streaming_query_seconds": 8.665025499999956,
+  "records_per_second": 1154.064693750763,
+  "candidate_pairs": 48520,
+  "exhaustive_pairs": 100000000,
+  "average_candidates": 4.852,
+  "max_candidates": 6,
+  "pair_reduction_fraction": 0.9995148,
+  "peak_process_working_set_mb": 62.19921875,
+  "status_counts": {
+    "strong_proposal": 10000
+  },
+  "top1_correct": 10000,
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "workload": "Synthetic 30 m grid parcels on 40 m spacing, administrative blocks of 1000 parcels; missing IDs, address typos and displaced points.",
+  "limits": "Measures one-process index construction and streaming record matching only. Excludes file/database I/O, UI, audit writes and cross-record duplicate checks. Not a crore-scale or production benchmark."
+}

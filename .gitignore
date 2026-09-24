@@ -2,3 +2,7 @@
 __pycache__/
 .pytest_cache/
 state/
+
+# Large local datasets
+/dataset/hyd_cadastral_geojson/hyd_cadastral.geojson
+/dataset/hyderabad_kondapur/raw/microsoft_123301331.geojsonl.gz

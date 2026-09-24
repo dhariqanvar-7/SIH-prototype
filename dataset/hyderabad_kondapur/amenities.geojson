@@ -1,0 +1,844 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "node/6771713703",
+      "properties": {
+        "amenity": "cinema",
+        "name": "AMB Cinemas",
+        "source": "OpenStreetMap",
+        "synthetic": false,
+        "osm_type": "node",
+        "osm_id": 6771713703
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3634764,
+          17.457321
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/7010429411",
+      "properties": {
+        "amenity": "fast_food",
+        "cuisine": "international;italian;pizza",
+        "level": "-1",
+        "name": "Spar Kitchen",
+        "outdoor_seating": "no",
+        "source": "OpenStreetMap",
+        "synthetic": false,
+        "osm_type": "node",
+        "osm_id": 7010429411
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3634724,
+          17.4576504
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/7066081505",
+      "properties": {
+        "amenity": "cinema",
+        "name": "Platinum",
+        "source": "OpenStreetMap",
+        "synthetic": false,
+        "osm_type": "node",
+        "osm_id": 7066081505
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3627119,
+          17.4522209
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/7123865288",
+      "properties": {
+        "amenity": "pub",
+        "name": "10 Downing Street",
+        "source": "OpenStreetMap",
+        "synthetic": false,
+        "osm_type": "node",
+        "osm_id": 7123865288
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3632696,
+          17.4526995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8759381105",
+      "properties": {
+        "addr:district": "Hyderabad",
+        "addr:full": "Plot NO.21, Level, 2, Jayabheri Enclave, Gachibowli, Hyderabad",
+        "addr:postcode": "500032",
+        "addr:state": "Telangana",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Praba's VCare Health Clinic (P) Ltd, Gachibowli",
+        "source": "OpenStreetMap",
+        "synthetic": false,
+        "osm_type": "node",
+        "osm_id": 8759381105
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3631503,
+          17.4507108
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9803882494",
+      "properties": {
+        "alt_name": "Dunkin' Donuts",
+        "amenity": "fast_food",
+        "brand": "Dunkin'",
+        "brand:wikidata": "Q847743",
+        "cuisine": "donut;coffee_shop",
+        "name": "Dunkin'",
+        "takeaway": "yes",
+        "source": "OpenStreetMap",
+        "synthetic": false,
+        "osm_type": "node",
+        "osm_id": 9803882494
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3632614,
+          17.4526175
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10150942412",
+      "properties": {
+        "amenity": "atm",
+        "brand": "HDFC Bank",
+        "brand:wikidata": "Q631047",
+        "operator": "HDFC Bank",
+        "operator:wikidata": "Q631047",
+        "short_name": "HDFC",
+        "source": "OpenStreetMap",
+        "synthetic": false,
+        "osm_type": "node",
+        "osm_id": 10150942412
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.356004,
+          17.4619676
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10150942414",
+      "properties": {
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "source": "OpenStreetMap",
+        "synthetic": false,
+        "osm_type": "node",
+        "osm_id": 10150942414
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3547514,
+          17.4605484
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10150942416",
+      "properties": {
+        "amenity": "restaurant",
+        "cuisine": "chinese",
+        "source": "OpenStreetMap",
+        "synthetic": false,
+        "osm_type": "node",
+        "osm_id": 10150942416
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3545874,
+          17.4603438
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10150963018",
+      "properties": {
+        "amenity": "fast_food",
+        "cuisine": "pizza",
+        "name": "900 Degree Brick Oven Pizza",
+        "source": "OpenStreetMap",
+        "synthetic": false,
+        "osm_type": "node",
+        "osm_id": 10150963018
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3553882,
+          17.4599986
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11954599614",
+      "properties": {
+        "addr:district": "Rangareddy",
+        "addr:state": "Telangana",
+        "addr:subdistrict": "Serilingampally (U)",
+        "amenity": "childcare",
+        "name": "Sriramnagar II (Main)",
+        "source": "OpenStreetMap",
+        "synthetic": false,
+        "osm_type": "node",
+        "osm_id": 11954599614
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.354291,
+          17.461021
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12685116397",
+      "properties": {
+        "amenity": "parking",
+        "name": "botanical garden parking",
+        "source": "OpenStreetMap",
+        "synthetic": false,
+        "osm_type": "node",
+        "osm_id": 12685116397
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3612862,
+          17.4570999
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13273677625",
+      "properties": {
+        "amenity": "bench",
+        "source": "OpenStreetMap",
+        "synthetic": false,
+        "osm_type": "node",
+        "osm_id": 13273677625
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3611084,
+          17.455341
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13273707554",
+      "properties": {
+        "amenity": "ticket_validator",
+        "source": "OpenStreetMap",
+        "synthetic": false,
+        "osm_type": "node",
+        "osm_id": 13273707554
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3578615,
+          17.4581435
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13273708485",
+      "properties": {
+        "amenity": "bench",
+        "source": "OpenStreetMap",
+        "synthetic": false,
+        "osm_type": "node",
+        "osm_id": 13273708485
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3602578,
+          17.4549978
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13273708487",
+      "properties": {
+        "amenity": "drinking_water",
+        "source": "OpenStreetMap",
+        "synthetic": false,
+        "osm_type": "node",
+        "osm_id": 13273708487
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.355582,
+          17.4583316
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13273709258",
+      "properties": {
+        "amenity": "bench",
+        "source": "OpenStreetMap",
+        "synthetic": false,
+        "osm_type": "node",
+        "osm_id": 13273709258
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3614104,
+          17.4555786
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13273719583",
+      "properties": {
+        "amenity": "fountain",
+        "source": "OpenStreetMap",
+        "synthetic": false,
+        "osm_type": "node",
+        "osm_id": 13273719583
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3603676,
+          17.4563851
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13273719584",
+      "properties": {
+        "amenity": "waste_basket",
+        "source": "OpenStreetMap",
+        "synthetic": false,
+        "osm_type": "node",
+        "osm_id": 13273719584
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3547976,
+          17.4587106
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13273721761",
+      "properties": {
+        "amenity": "shelter",
+        "source": "OpenStreetMap",
+        "synthetic": false,
+        "osm_type": "node",
+        "osm_id": 13273721761
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3621943,
+          17.4550968
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13273724169",
+      "properties": {
+        "amenity": "shelter",
+        "source": "OpenStreetMap",
+        "synthetic": false,
+        "osm_type": "node",
+        "osm_id": 13273724169
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3626424,
+          17.4552393
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13273731538",
+      "properties": {
+        "amenity": "restaurant",
+        "source": "OpenStreetMap",
+        "synthetic": false,
+        "osm_type": "node",
+        "osm_id": 13273731538
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.354782,
+          17.4588243
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13273731678",
+      "properties": {
+        "amenity": "water_point",
+        "source": "OpenStreetMap",
+        "synthetic": false,
+        "osm_type": "node",
+        "osm_id": 13273731678
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3613206,
+          17.4562405
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13273734778",
+      "properties": {
+        "amenity": "waste_basket",
+        "source": "OpenStreetMap",
+        "synthetic": false,
+        "osm_type": "node",
+        "osm_id": 13273734778
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3627546,
+          17.4559499
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13273735147",
+      "properties": {
+        "amenity": "bench",
+        "source": "OpenStreetMap",
+        "synthetic": false,
+        "osm_type": "node",
+        "osm_id": 13273735147
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3606737,
+          17.4551994
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13273735516",
+      "properties": {
+        "amenity": "shelter",
+        "source": "OpenStreetMap",
+        "synthetic": false,
+        "osm_type": "node",
+        "osm_id": 13273735516
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3601744,
+          17.4559874
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13273737257",
+      "properties": {
+        "amenity": "shelter",
+        "source": "OpenStreetMap",
+        "synthetic": false,
+        "osm_type": "node",
+        "osm_id": 13273737257
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3616678,
+          17.4544774
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13273738650",
+      "properties": {
+        "amenity": "toilets",
+        "source": "OpenStreetMap",
+        "synthetic": false,
+        "osm_type": "node",
+        "osm_id": 13273738650
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3553616,
+          17.4582132
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13273739147",
+      "properties": {
+        "amenity": "taxi",
+        "source": "OpenStreetMap",
+        "synthetic": false,
+        "osm_type": "node",
+        "osm_id": 13273739147
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3631577,
+          17.4557616
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13273739351",
+      "properties": {
+        "amenity": "restaurant",
+        "source": "OpenStreetMap",
+        "synthetic": false,
+        "osm_type": "node",
+        "osm_id": 13273739351
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3611717,
+          17.4549551
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13273739353",
+      "properties": {
+        "amenity": "shelter",
+        "source": "OpenStreetMap",
+        "synthetic": false,
+        "osm_type": "node",
+        "osm_id": 13273739353
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3612389,
+          17.4558823
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13273739707",
+      "properties": {
+        "amenity": "drinking_water",
+        "source": "OpenStreetMap",
+        "synthetic": false,
+        "osm_type": "node",
+        "osm_id": 13273739707
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3610056,
+          17.4554137
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13273740617",
+      "properties": {
+        "amenity": "shelter",
+        "source": "OpenStreetMap",
+        "synthetic": false,
+        "osm_type": "node",
+        "osm_id": 13273740617
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3608009,
+          17.4549983
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13273746938",
+      "properties": {
+        "amenity": "toilets",
+        "source": "OpenStreetMap",
+        "synthetic": false,
+        "osm_type": "node",
+        "osm_id": 13273746938
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3619715,
+          17.4548663
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/416947060",
+      "properties": {
+        "amenity": "ranger_station",
+        "building": "yes",
+        "source": "OpenStreetMap",
+        "synthetic": false,
+        "osm_type": "way",
+        "osm_id": 416947060
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.3550478,
+              17.4590258
+            ],
+            [
+              78.3551128,
+              17.459084
+            ],
+            [
+              78.3551623,
+              17.4590337
+            ],
+            [
+              78.3550972,
+              17.4589755
+            ],
+            [
+              78.3550478,
+              17.4590258
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/759760236",
+      "properties": {
+        "amenity": "cinema",
+        "building": "yes",
+        "source": "OpenStreetMap",
+        "synthetic": false,
+        "osm_type": "way",
+        "osm_id": 759760236
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.3548391,
+              17.4585425
+            ],
+            [
+              78.3550506,
+              17.4586543
+            ],
+            [
+              78.3550907,
+              17.4586353
+            ],
+            [
+              78.3551335,
+              17.4586353
+            ],
+            [
+              78.3551707,
+              17.4586598
+            ],
+            [
+              78.3553394,
+              17.4585834
+            ],
+            [
+              78.3552736,
+              17.4584907
+            ],
+            [
+              78.3550935,
+              17.4583762
+            ],
+            [
+              78.3549391,
+              17.4584198
+            ],
+            [
+              78.3548391,
+              17.4585425
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1054043092",
+      "properties": {
+        "amenity": "shelter",
+        "building": "yes",
+        "source": "OpenStreetMap",
+        "synthetic": false,
+        "osm_type": "way",
+        "osm_id": 1054043092
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.3602428,
+              17.4556156
+            ],
+            [
+              78.3602408,
+              17.4555488
+            ],
+            [
+              78.3601778,
+              17.4555505
+            ],
+            [
+              78.3601798,
+              17.4556173
+            ],
+            [
+              78.3602428,
+              17.4556156
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1369711074",
+      "properties": {
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "shed",
+        "building": "yes",
+        "name": "palapitta cycle room",
+        "source": "OpenStreetMap",
+        "synthetic": false,
+        "osm_type": "way",
+        "osm_id": 1369711074
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.356992,
+              17.4592632
+            ],
+            [
+              78.3570577,
+              17.4593912
+            ],
+            [
+              78.3571638,
+              17.4593416
+            ],
+            [
+              78.3571707,
+              17.459355
+            ],
+            [
+              78.3572087,
+              17.4593373
+            ],
+            [
+              78.3572018,
+              17.4593238
+            ],
+            [
+              78.3572462,
+              17.4593031
+            ],
+            [
+              78.3571804,
+              17.4591752
+            ],
+            [
+              78.356992,
+              17.4592632
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
