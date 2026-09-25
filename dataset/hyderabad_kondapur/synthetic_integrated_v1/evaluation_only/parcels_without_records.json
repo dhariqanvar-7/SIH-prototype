@@ -1,0 +1,86 @@
+[
+  {
+    "parcel_id": "SYN-P0024",
+    "scenario": "parcel_without_departmental_record",
+    "split": "test",
+    "expected_matchable": true,
+    "notes": "The parcel has no departmental record in this package."
+  },
+  {
+    "parcel_id": "SYN-P0076",
+    "scenario": "parcel_without_departmental_record",
+    "split": "test",
+    "expected_matchable": true,
+    "notes": "The parcel has no departmental record in this package."
+  },
+  {
+    "parcel_id": "SYN-P0079",
+    "scenario": "parcel_without_departmental_record",
+    "split": "test",
+    "expected_matchable": true,
+    "notes": "The parcel has no departmental record in this package."
+  },
+  {
+    "parcel_id": "SYN-P0159",
+    "scenario": "parcel_without_departmental_record",
+    "split": "test",
+    "expected_matchable": true,
+    "notes": "The parcel has no departmental record in this package."
+  },
+  {
+    "parcel_id": "SYN-P0236",
+    "scenario": "parcel_without_departmental_record",
+    "split": "development",
+    "expected_matchable": true,
+    "notes": "The parcel has no departmental record in this package."
+  },
+  {
+    "parcel_id": "SYN-P0244",
+    "scenario": "parcel_without_departmental_record",
+    "split": "development",
+    "expected_matchable": true,
+    "notes": "The parcel has no departmental record in this package."
+  },
+  {
+    "parcel_id": "SYN-P0247",
+    "scenario": "parcel_without_departmental_record",
+    "split": "test",
+    "expected_matchable": true,
+    "notes": "The parcel has no departmental record in this package."
+  },
+  {
+    "parcel_id": "SYN-P0257",
+    "scenario": "parcel_without_departmental_record",
+    "split": "development",
+    "expected_matchable": true,
+    "notes": "The parcel has no departmental record in this package."
+  },
+  {
+    "parcel_id": "SYN-P0290",
+    "scenario": "parcel_without_departmental_record",
+    "split": "test",
+    "expected_matchable": true,
+    "notes": "The parcel has no departmental record in this package."
+  },
+  {
+    "parcel_id": "SYN-P0293",
+    "scenario": "parcel_without_departmental_record",
+    "split": "test",
+    "expected_matchable": true,
+    "notes": "The parcel has no departmental record in this package."
+  },
+  {
+    "parcel_id": "SYN-P0295",
+    "scenario": "parcel_without_departmental_record",
+    "split": "test",
+    "expected_matchable": true,
+    "notes": "The parcel has no departmental record in this package."
+  },
+  {
+    "parcel_id": "SYN-P0299",
+    "scenario": "parcel_without_departmental_record",
+    "split": "test",
+    "expected_matchable": true,
+    "notes": "The parcel has no departmental record in this package."
+  }
+]

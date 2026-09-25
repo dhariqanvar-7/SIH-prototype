@@ -6,8 +6,8 @@ All departmental records in this demonstration are clearly labelled synthetic.
 1. **Unified profile and a strong association**
    Select `SYN-P0060` in Map & evidence, then open Parcel profile.
    Inspect `SYN-0461BE42FA7DBEBD` (water). Explain the available
-   evidence and that a strong proposal is still pending human review. Show the
-   original record, candidate explanations and review controls.
+   evidence and that a strong proposal is automatically approved. Show the
+   original record, candidate explanations and the override controls.
 2. **Ambiguity rather than a forced link**
    Open Department matching, choose `revenue` and `needs_review`,
    then find `SYN-C2FE862275B593D9`. The top candidates have equal scores.
@@ -20,8 +20,8 @@ All departmental records in this demonstration are clearly labelled synthetic.
    and appended to the audit. Do not portray a rejection as an ownership ruling.
 4. **Multiple accounts on one parcel**
    Select `SYN-P0001` and open Parcel profile. The generator includes extra
-   electricity/water accounts on this parcel. Different accounts can coexist;
-   same-account duplicate source records are separately flagged for review.
+   electricity/water accounts on this parcel. Multiple accounts from the same
+   department require human review; reviewers can approve both if appropriate.
 5. **No supported association**
    Filter for unmatched and inspect `SYN-49655225731EB48F`.
    Explain the stated reason rather than inventing a parcel match.
@@ -41,13 +41,13 @@ comparison and preserve an auditable explanation for every proposed link.”
 ## Claims supported by measurements
 
 - 1,610 synthetic records, 300 parcels: 7,118 scored pairs versus 483,000 possible.
-- Held-out synthetic strong-proposal precision 100%, recall 66.88%; candidate
+- Held-out synthetic strong-proposal precision 100%, recall 63.18%; candidate
   recall 90.84%. Missing scope and ambiguous evidence remain unresolved.
 - One local scale experiment: 100,000 records × 100,000 synthetic grid parcels,
   439,095 scored pairs, approximately 6 s indexing + 151 s streaming matching,
   approximately 318 MB peak process working set.
-- Fourteen tests passed. No real departmental accuracy, calibrated probability,
-  new scientific algorithm, automated ownership decision, or crore-scale result
+- No real departmental accuracy, calibrated probability, new scientific algorithm,
+  automated ownership decision, or crore-scale result
   is claimed. Scale timing excludes database I/O, UI, audit and batch duplicates.
 
 The proposed production design uses PostGIS, administrative partitioning,

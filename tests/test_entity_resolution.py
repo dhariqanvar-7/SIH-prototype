@@ -4,7 +4,7 @@ from pathlib import Path
 from shapely.geometry import box
 from entity_resolution import Resolver, survey_key
 from departmental import run_departments
-from review import ReviewStore
+from review import ReviewStore, effective_decisions
 
 
 def parcels():
@@ -51,8 +51,19 @@ def test_missing_id_recovers_and_ambiguous_ids_abstain():
 def test_multiple_accounts_and_duplicate_warning():
     results,_=Resolver(parcels()).resolve([record(record_id='R1'),record(record_id='R2',account_id='SECOND'),record(record_id='R3')])
     assert all(r['proposed_parcel_id']=='A' for r in results)
-    assert results[1]['status']=='strong_proposal' and not results[1]['duplicate_record_ids']
+    assert all(r['status']=='needs_review' for r in results)
+    assert not results[1]['duplicate_record_ids']
+    assert set(results[1]['same_type_record_ids'])=={'R1','R3'}
+    assert any('Multiple municipal records' in conflict for conflict in results[1]['candidates'][0]['conflicts'])
     assert results[0]['status']=='needs_review' and set(results[0]['duplicate_record_ids'])=={'R1','R3'}
+
+
+def test_different_departments_on_one_parcel_can_still_auto_approve():
+    results,_=Resolver(parcels()).resolve([
+        record(record_id='M',department='municipal',account_id='M-1'),
+        record(record_id='W',department='water',account_id='W-1')])
+    assert all(r['status']=='strong_proposal' for r in results)
+    assert all(not r['same_type_record_ids'] for r in results)
 
 
 def test_review_switch_is_atomic_and_does_not_remove_other_records(tmp_path):
@@ -66,6 +77,31 @@ def test_review_switch_is_atomic_and_does_not_remove_other_records(tmp_path):
     assert len(store.audit('data'))==4
     store.save_proposal('data',b,'pending','Reviewer','undo',proposals)
     assert store.decisions('data')['b']=='pending'
+
+
+def test_strong_top_candidate_is_auto_approved_but_explicit_override_wins():
+    strong = dict(proposal_id='strong', kind='department_link', matching_status='strong_proposal', candidate_rank=1)
+    alternative = dict(proposal_id='alternative', kind='department_link', matching_status='strong_proposal', candidate_rank=2)
+    decisions = effective_decisions([strong, alternative], {})
+    assert decisions == {'strong':'auto_approved'}
+    overridden = effective_decisions([strong], {'strong':'rejected'})
+    assert overridden == {'strong':'rejected'}
+
+
+def test_accepting_an_alternative_suppresses_auto_approval():
+    strong = dict(proposal_id='strong', kind='department_link', source='water', feature_id='R',
+                  matching_status='strong_proposal', candidate_rank=1)
+    alternative = dict(proposal_id='alternative', kind='department_link', source='water', feature_id='R',
+                       matching_status='strong_proposal', candidate_rank=2)
+    assert effective_decisions([strong, alternative], {'alternative':'accepted'}) == {'alternative':'accepted'}
+
+
+def test_same_department_parcel_proposals_never_auto_approve():
+    a = dict(proposal_id='a', kind='department_link', source='water', feature_id='R1',
+             target_id='P1', matching_status='strong_proposal', candidate_rank=1)
+    b = dict(a, proposal_id='b', feature_id='R2', matching_status='needs_review')
+    assert effective_decisions([a,b], {}) == {}
+    assert effective_decisions([a,b], {'b':'accepted'}) == {'b':'accepted'}
 
 
 def test_exhaustive_small_comparison_and_distant_unmatched():

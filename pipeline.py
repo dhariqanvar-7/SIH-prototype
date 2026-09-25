@@ -7,7 +7,7 @@ import geopandas as gpd
 import pandas as pd
 from shapely import make_valid
 from shapely.validation import explain_validity
-from data_sources import is_kondapur, load_kondapur, KONDAPUR_INPUTS
+from data_sources import is_kondapur, is_integrated, load_kondapur, KONDAPUR_INPUTS, INTEGRATED_INPUTS
 from departmental import run_departments
 from entity_resolution import VERSION as MATCHER_VERSION
 
@@ -26,9 +26,17 @@ def normalize_use(value):
 def fingerprint(root):
     h = hashlib.sha256(VERSION.encode())
     root = Path(root)
-    paths = [root/p for p in KONDAPUR_INPUTS] if is_kondapur(root) else sorted((root/'inputs').iterdir()) + [root/'manifest.json']
+    if is_integrated(root):
+        base = root.parent
+        paths = [base/p for p in INTEGRATED_INPUTS]
+    elif is_kondapur(root):
+        base = root
+        paths = [root/p for p in KONDAPUR_INPUTS]
+    else:
+        base = root
+        paths = sorted((root/'inputs').iterdir()) + [root/'manifest.json']
     for p in paths:
-        h.update(p.relative_to(root).as_posix().encode()); h.update(p.read_bytes())
+        h.update(p.relative_to(base).as_posix().encode()); h.update(p.read_bytes())
     return h.hexdigest()
 
 def compare_dates(t1, t2):
@@ -71,8 +79,10 @@ def run(root):
                     source=source, feature_id=str(feature), target_id=str(target), **evidence)
         proposals.append(item)
         return item
-    modern = is_kondapur(root)
-    source = load_kondapur(root) if modern else None
+    integrated = is_integrated(root)
+    modern = integrated or is_kondapur(root)
+    source = load_kondapur(root.parent if integrated else root,
+                           integrated_package=root if integrated else None) if modern else None
     metric_crs = 'EPSG:32644' if modern else CRS
     meta = {}
     if modern:
@@ -118,7 +128,7 @@ def run(root):
                                       detail=f'{b.parcel_id}: {area:.2f} mÂ²'))
     links = []
     dataset_source = source
-    record_specs = [('revenue','record_id','parcel_id')] if modern else [('revenue','record_id','survey_no'),('municipal','property_id','plot_ref')]
+    record_specs = [] if integrated else [('revenue','record_id','parcel_id')] if modern else [('revenue','record_id','survey_no'),('municipal','property_id','plot_ref')]
     for source, idcol, refcol in record_specs:
         records = dataset_source['records'].copy() if modern else pd.read_csv(root/'inputs'/f'{source}.csv',dtype=str,keep_default_na=False)
         records['parcel_id'] = records[refcol].map(normalize_id)
@@ -166,6 +176,25 @@ def run(root):
                     conflicts.append(dict(kind='ambiguous_building',source=date,feature_id=b.extracted_id,detail='Low overlap or competing candidate'))
             else:
                 conflicts.append(dict(kind='unmatched_building',source=date,feature_id=b.extracted_id,detail='No valid parcel within 15 m'))
+    utility_evidence = []
+    if integrated:
+        for layer_name in ('utility_points', 'utility_lines'):
+            for _, feature in layers[layer_name].iterrows():
+                geometry = feature.geometry
+                for j in parcels.sindex.query(geometry.buffer(35)):
+                    parcel = parcels.iloc[j]
+                    distance = geometry.distance(parcel.geometry)
+                    if distance > 35:
+                        continue
+                    overlap_m = (geometry.intersection(parcel.geometry).length
+                                 if layer_name == 'utility_lines' else None)
+                    utility_evidence.append(dict(
+                        parcel_id=parcel.parcel_id, utility_id=feature.utility_id,
+                        department=feature.department, connection_id=feature.connection_id,
+                        feature_type='service point' if layer_name == 'utility_points' else 'utility line',
+                        distance_m=round(distance, 2),
+                        overlap_m=round(overlap_m, 2) if overlap_m is not None else None,
+                        spatial_score=round(max(0, 1-distance/35), 4)))
     evidence = []
     for _, o in layers['observations'].iterrows():
         for j in parcels.sindex.query(o.geometry,predicate='intersects'):
@@ -184,18 +213,23 @@ def run(root):
     for row in changes.to_dict('records'):
         if row['change']!='stable':
             proposal('change', 't1_t2',row['t1_id'] or row['t2_id'],row['t2_id'],**row)
-    departments = run_departments(root, parcels) if modern else None
+    departments = run_departments(root, parcels, integrated=integrated) if modern else None
     if departments:
         proposals.extend(departments['proposals'])
     return dict(fingerprint=fingerprint(root), layers=layers, originals=originals, proposals=proposals, departments=departments,
                 conflicts=pd.DataFrame(conflicts),validation=pd.DataFrame(validation),
                 candidates=pd.DataFrame(candidates),links=pd.DataFrame(links),changes=changes,
+                utility_evidence=pd.DataFrame(utility_evidence,
+                    columns=['parcel_id','utility_id','department','connection_id','feature_type',
+                             'distance_m','overlap_m','spatial_score']),
                 evidence=pd.DataFrame(evidence, columns=['parcel_id','observation_id','observed_use','verification_status']),
                 quarantine=[] if modern else ['legacy_parcels_no_crs.geojson: source CRS unknown; 100 features excluded'],
                 metric_crs=metric_crs, temporal_available=not modern,
-                dataset_name='Kondapur · real geography + synthetic records' if modern else 'Legacy synthetic demonstration',
+                dataset_name=('Kondapur · integrated synthetic v1' if integrated else
+                              'Kondapur · real geography + synthetic records' if modern else 'Legacy synthetic demonstration'),
                 layer_labels=dataset_source['labels'] if modern else {k:k for k in layers},
                 provenance=dataset_source['provenance'] if modern else pd.DataFrame(),
                 raster_paths=dataset_source['raster_paths'] if modern else {},
                 raster_metadata=dataset_source['raster_metadata'] if modern else {},
-                parcel_source='synthetic_benchmark/inputs/parcels.geojson' if modern else 'inputs/cadastral.gpkg')
+                parcel_source=('synthetic_integrated_v1/inputs/parcels.geojson' if integrated else
+                               'synthetic_benchmark/inputs/parcels.geojson' if modern else 'inputs/cadastral.gpkg'))

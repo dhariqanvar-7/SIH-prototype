@@ -60,13 +60,14 @@ def main():
     for r in test:
         t=truth[r['record_id']]; s=scenarios[t['scenario']]; s['records']+=1
         s['retrieved']+=int(bool(t['expected_parcel_id']) and t['expected_parcel_id'] in r['candidate_ids'])
-        s['top1_correct']+=int(r['proposed_parcel_id']==t['expected_parcel_id'])
+        s['top1_correct']+=int(bool(t['expected_parcel_id']) and
+                               r['proposed_parcel_id']==t['expected_parcel_id'])
         s['strong_wrong']+=int(r['status']=='strong_proposal' and r['proposed_parcel_id']!=t['expected_parcel_id'])
     report={'workload':'Fictional records on Kondapur synthetic parcels; not real departmental accuracy',
             'policy':'Fixed engineering thresholds, not trained or probability-calibrated. Test split not used for tuning.',
             'runtime':stats,'splits':metrics,'test_baselines':baselines,'test_scenarios':dict(scenarios),
             'exhaustive_comparison':{'sample_records':len(sample),'same_top1_decision':same,'seconds':exhaustive_seconds,
-              'note':'Full scorer against all scoped parcels; differences expose retrieval limitations. Duplicate-account review downgrade is applied only in batch resolution.'}}
+              'note':'Full scorer against all scoped parcels; differences expose retrieval limitations. Duplicate-account and same-department parcel review downgrades are applied only in batch resolution.'}}
     out=Path(__file__).resolve().parent/'reports';out.mkdir(exist_ok=True)
     (out/'department_accuracy.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
     print(json.dumps(report,indent=2))

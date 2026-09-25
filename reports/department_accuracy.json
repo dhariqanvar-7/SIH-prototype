@@ -3,40 +3,42 @@
   "policy": "Fixed engineering thresholds, not trained or probability-calibrated. Test split not used for tuning.",
   "runtime": {
     "algorithm_version": "iges-er-1.0",
-    "index_seconds": 0.036935499999799504,
-    "query_seconds": 1.5276222000002235,
+    "review_policy_version": "same-department-parcel-v1",
+    "index_seconds": 0.013999099995999131,
+    "query_seconds": 0.8522910000028787,
     "records": 1610,
     "parcels": 300,
     "candidate_pairs": 7118,
     "exhaustive_pairs": 483000,
     "quarantined_parcels": [],
     "status_counts": {
-      "strong_proposal": 1034,
-      "needs_review": 352,
+      "strong_proposal": 973,
+      "needs_review": 413,
       "unmatched": 224
-    }
+    },
+    "same_type_review_records": 120
   },
   "splits": {
     "development": {
       "records": 316,
       "linkable_records": 316,
-      "strong_proposals": 202,
+      "strong_proposals": 187,
       "candidate_recall": 0.9082278481012658,
       "strong_precision": 1.0,
-      "strong_recall": 0.6392405063291139,
+      "strong_recall": 0.5917721518987342,
       "top1_recall": 0.8765822784810127,
-      "review_records": 77,
+      "review_records": 92,
       "unmatched_records": 37
     },
     "test": {
       "records": 1294,
       "linkable_records": 1244,
-      "strong_proposals": 832,
+      "strong_proposals": 786,
       "candidate_recall": 0.9083601286173634,
       "strong_precision": 1.0,
-      "strong_recall": 0.6688102893890675,
+      "strong_recall": 0.6318327974276527,
       "top1_recall": 0.8842443729903537,
-      "review_records": 275,
+      "review_records": 321,
       "unmatched_records": 187
     }
   },
@@ -124,7 +126,7 @@
     "no_parcel_in_study_area": {
       "records": 50,
       "retrieved": 0,
-      "top1_correct": 50,
+      "top1_correct": 0,
       "strong_wrong": 0
     },
     "location_shift": {
@@ -143,7 +145,7 @@
   "exhaustive_comparison": {
     "sample_records": 100,
     "same_top1_decision": 100,
-    "seconds": 3.7048297999999704,
-    "note": "Full scorer against all scoped parcels; differences expose retrieval limitations. Duplicate-account review downgrade is applied only in batch resolution."
+    "seconds": 3.2834216999981436,
+    "note": "Full scorer against all scoped parcels; differences expose retrieval limitations. Duplicate-account and same-department parcel review downgrades are applied only in batch resolution."
   }
 }

@@ -1,13 +1,18 @@
 # BhuSetu — SIH 26013
 
-Urban land integration prototype. The default workspace is **Kondapur, Hyderabad**:
-480 real Microsoft building footprints, 251 OSM road/path segments, Sentinel-2
-imagery and Copernicus elevation, alongside 300 synthetic parcels and fictional
-revenue records. Verification and GNSS observations are simulated. The earlier
-100-parcel synthetic demonstration remains selectable in the sidebar.
+Urban land integration prototype. The default workspace is **Kondapur · Integrated
+synthetic v1**: 300 fictional parcels and 1,580 fictional records across revenue,
+municipal, electricity, water and sewer. It reuses 480 real Microsoft building
+footprints, 251 OSM road/path segments, Sentinel-2 imagery and Copernicus
+elevation. The earlier Kondapur and 100-parcel demonstrations remain selectable.
 
-The **Parcel profile** and **Department matching** tabs now connect land to
-1,610 fictional revenue, municipal, electricity, water and survey records.
+The **Parcel profile** and **Department matching** tabs connect land to the
+selected workspace's fictional records. The earlier Kondapur workspace contains
+1,610 records, including survey records; the integrated workspace has 1,580 and
+adds sewer records and synthetic utility geometry.
+**Approved Records** lists accepted and automatically approved records by parcel.
+Choose a parcel and then a record to inspect its source fields and match evidence;
+a reviewer can return a disputed approval to pending or reject it there.
 Matching combines scoped identifier indexes, an R-tree and address-token search,
 then scores department-specific evidence and flags uncertainty. See the
 [algorithm and measured results](reports/MATCHING_REPORT.md) and
@@ -26,7 +31,9 @@ For a fresh environment, create `.venv`, install `requirements.txt`, and run
 1. **Map & evidence:** choose a parcel, toggle real and synthetic vector layers,
    and display satellite imagery or surface elevation. Hover for properties.
 2. **Review queue:** inspect overlaps, ambiguous building links and area conflicts.
-   Accept/reject proposals; decisions persist with reviewer and audit history.
+   Select a parcel to inspect its proposed department records. Accept, reject,
+   leave pending, or remove a mapping; decisions persist with reviewer and audit
+   history. Other proposal types remain under a separate expander.
 3. **Building changes:** Kondapur has one footprint snapshot with unknown imagery
    dates, so temporal analysis is unavailable. The legacy workspace retains its
    two synthetic snapshots for demonstrating change analysis.
@@ -59,7 +66,21 @@ the hidden parcel answer. Building candidates lie within
 15 m of valid parcels; scores combine 75% building-overlap fraction, 15% proximity
 and 10% area fit. Scores are heuristic rankings, not probabilities. Accepted
 repairs affect export; matching continues to use valid original geometries.
-No correction or association is accepted automatically.
+Strong top-ranked departmental associations are approved automatically and can
+be returned to pending or rejected by a reviewer. Scores are evidence rankings,
+not calibrated confidence probabilities. Building links and geometry repairs
+still use manual review.
+If two records of the same department point to one parcel, both require human
+review, even when their individual evidence scores are strong. A reviewer may
+approve both after checking whether they represent legitimate separate accounts.
+
+The integrated workspace uses the same indexed department matcher and recomputes
+building-to-parcel candidates from the input geometries. Its synthetic utility
+points and lines appear on the map and as proximity evidence in parcel profiles.
+Their connection IDs do not join the fictional department records, so proximity
+alone is not presented as a confirmed service association. The operational
+package is in `dataset/hyderabad_kondapur/synthetic_integrated_v1/inputs/`;
+`evaluation_only/` remains outside the runtime matching path.
 
 Kondapur includes 30 displaced synthetic parcels and 20 inflated record areas.
 Voronoi-based test parcels can cut buildings and are not recovered cadastral

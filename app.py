@@ -6,27 +6,33 @@ import pandas as pd
 import streamlit as st
 from streamlit_folium import st_folium
 from pipeline import run, fingerprint
-from review import ReviewStore, export_geojson
+from entity_resolution import REVIEW_POLICY_VERSION
+from review import ReviewStore, effective_decisions, export_geojson
 from raster_layers import overlay
-from department_ui import profile, queue
+from department_ui import profile, queue, approved_records, review_parcel_departments
 
 ROOT = Path(__file__).resolve().parent
 st.set_page_config(page_title='BhuSetu | Urban land integration',page_icon='🌐',layout='wide')
 st.title('BhuSetu')
 st.caption('SIH 26013 · Urban land integration')
-workspace = st.sidebar.selectbox('Dataset', ['Kondapur, Hyderabad', 'Legacy synthetic demo'], key='workspace')
-root = ROOT/'dataset/hyderabad_kondapur' if workspace == 'Kondapur, Hyderabad' else ROOT/'dataset'
+workspace = st.sidebar.selectbox('Dataset',
+    ['Kondapur · Integrated synthetic v1', 'Kondapur, Hyderabad · Earlier demo', 'Legacy synthetic demo'],
+    key='workspace')
+root = (ROOT/'dataset/hyderabad_kondapur/synthetic_integrated_v1'
+        if workspace == 'Kondapur · Integrated synthetic v1' else
+        ROOT/'dataset/hyderabad_kondapur'
+        if workspace == 'Kondapur, Hyderabad · Earlier demo' else ROOT/'dataset')
 
 @st.cache_data
-def load(path, signature):
+def load(path, signature, review_policy_version):
     return run(Path(path))
 
-result = load(str(root), fingerprint(root))
+result = load(str(root), fingerprint(root), REVIEW_POLICY_VERSION)
 st.caption(result['dataset_name'])
 if result['raster_paths']:
     st.info('Real Microsoft buildings and OpenStreetMap features, with synthetic parcels and fictional records. Survey and verification observations are simulated.')
 store = ReviewStore(ROOT/'state/reviews.sqlite')
-decisions = store.decisions(result['fingerprint'])
+decisions = effective_decisions(result['proposals'], store.decisions(result['fingerprint']))
 st.sidebar.header('Workspace')
 st.sidebar.caption(f"{result['metric_crs']} · distances and areas in metres")
 for message in result['quarantine']:
@@ -38,8 +44,8 @@ a,b,c,d = st.columns(4)
 a.metric('Parcels',len(result['originals']['parcels']))
 b.metric('Conflicts',len(result['conflicts']))
 c.metric('Review proposals',len(result['proposals']))
-d.metric('Accepted',sum(v=='accepted' for v in decisions.values()))
-maptab, profiletab, departmenttab, reviewtab, changetab, datatab, exporttab = st.tabs(['Map & evidence','Parcel profile','Department matching','Review queue','Building changes','Validation','Export'])
+d.metric('Approved',sum(v in {'accepted','auto_approved'} for v in decisions.values()))
+maptab, profiletab, departmenttab, approvedtab, reviewtab, changetab, datatab, exporttab = st.tabs(['Map & evidence','Parcel profile','Department matching','Approved Records','Review queue','Building changes','Validation','Export'])
 with maptab:
     ids = list(result['originals']['parcels'].parcel_id)
     pending = st.session_state.pop('pending_parcel',None)
@@ -61,7 +67,8 @@ with maptab:
         st.caption(note)
     colors = dict(parcels='#64748b',t1='#f59e0b',t2='#0d9488',buildings='#0d9488',
                   roads='#f59e0b',landuse='#22c55e',amenities='#e879f9',other_features='#38bdf8',
-                  observations='#a855f7',utilities='#ef4444',synthetic_utilities='#fb7185',gnss='#2563eb')
+                  observations='#a855f7',utilities='#ef4444',synthetic_utilities='#fb7185',
+                  utility_points='#fb7185',utility_lines='#fb7185',gnss='#2563eb')
     for name in shown:
         frame = result['originals'].get(name,result['layers'][name]).to_crs(4326)
         fields = [x for x in frame.columns if x!='geometry']
@@ -94,25 +101,29 @@ with profiletab:
     profile(result,selected,store,decisions)
 with departmenttab:
     queue(result,store,decisions)
+with approvedtab:
+    approved_records(result,store,decisions,selected)
 with reviewtab:
-    st.dataframe(result['conflicts'],hide_index=True,use_container_width=True)
-    kind = st.selectbox('Proposal type',sorted({p['kind'] for p in result['proposals']}))
-    status = st.selectbox('Review status',['all','pending','accepted','rejected'])
-    items = [p for p in result['proposals'] if p['kind']==kind and (status=='all' or decisions.get(p['proposal_id'],'pending')==status)]
-    if items:
-        item = st.selectbox('Proposal',items,format_func=lambda p:f"{p['source']} / {p['feature_id']} → {p['target_id']} [{decisions.get(p['proposal_id'],'pending')}]")
-        st.json(item)
-        st.caption('Building scores combine overlap, proximity and area fit. Baseline record links use exact normalized IDs; departmental links use multiple evidence fields and contradiction checks. Scores are not probabilities.')
-        with st.form('review'):
-            reviewer = st.text_input('Reviewer name',value='Demo reviewer')
-            decision = st.radio('Decision',['accepted','rejected','pending'],horizontal=True)
-            note = st.text_input('Review note')
-            if st.form_submit_button('Save decision'):
-                if reviewer.strip():
-                    store.save_proposal(result['fingerprint'],item,decision,reviewer,note,result['proposals'])
-                    st.rerun()
-                else: st.error('Enter a reviewer name.')
-    else: st.info('No proposals match this filter.')
+    review_parcel_departments(result,selected,store,decisions)
+    with st.expander('Other proposals and conflicts'):
+        st.dataframe(result['conflicts'],hide_index=True,use_container_width=True)
+        kind = st.selectbox('Proposal type',sorted({p['kind'] for p in result['proposals']}))
+        status = st.selectbox('Review status',['all','pending','auto_approved','accepted','rejected'])
+        items = [p for p in result['proposals'] if p['kind']==kind and (status=='all' or decisions.get(p['proposal_id'],'pending')==status)]
+        if items:
+            item = st.selectbox('Proposal',items,format_func=lambda p:f"{p['source']} / {p['feature_id']} → {p['target_id']} [{decisions.get(p['proposal_id'],'pending')}]")
+            st.json(item)
+            st.caption('Building scores combine overlap, proximity and area fit. Baseline record links use exact normalized IDs; departmental links use multiple evidence fields and contradiction checks. Scores are not probabilities.')
+            with st.form('review'):
+                reviewer = st.text_input('Reviewer name',value='Demo reviewer')
+                decision = st.radio('Decision',['accepted','rejected','pending'],horizontal=True)
+                note = st.text_input('Review note')
+                if st.form_submit_button('Save decision'):
+                    if reviewer.strip():
+                        store.save_proposal(result['fingerprint'],item,decision,reviewer,note,result['proposals'])
+                        st.rerun()
+                    else: st.error('Enter a reviewer name.')
+        else: st.info('No proposals match this filter.')
 with changetab:
     if result['temporal_available']:
         st.subheader('2024-11-15 → 2025-11-20')

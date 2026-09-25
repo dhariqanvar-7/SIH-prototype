@@ -1,0 +1,33 @@
+{
+  "generated_utc": "2026-09-24T19:48:57+00:00",
+  "seed": 20260925,
+  "aoi": {
+    "west": 78.35,
+    "south": 17.45,
+    "east": 78.364,
+    "north": 17.462
+  },
+  "crs_metric": "EPSG:32644",
+  "crs_geojson": "EPSG:4326",
+  "counts": {
+    "parcels": 300,
+    "shifted_geometry_parcels": 30,
+    "parcels_without_departmental_record": 12,
+    "records_by_department": {
+      "revenue": 307,
+      "municipal": 302,
+      "electricity": 323,
+      "water": 324,
+      "sewer": 324
+    },
+    "records_total": 1580,
+    "buildings_reused": 480,
+    "building_parcel_relationships": 1750,
+    "building_parcel_intersections": 975,
+    "utility_points": 900,
+    "utility_lines": 140,
+    "overlapping_parcel_pairs": 62
+  },
+  "validation_failures": [],
+  "notice": "Synthetic demonstration data for TRL 3 evaluation; not official cadastral or ownership data."
+}

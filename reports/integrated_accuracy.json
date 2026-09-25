@@ -1,0 +1,192 @@
+{
+  "dataset": "dataset/hyderabad_kondapur/synthetic_integrated_v1",
+  "workload": "Synthetic parcels and fictional departmental records; not real departmental accuracy",
+  "policy": "Fixed engineering thresholds, not trained or probability-calibrated. Test split not used for tuning.",
+  "runtime": {
+    "algorithm_version": "iges-er-1.0",
+    "review_policy_version": "same-department-parcel-v1",
+    "index_seconds": 0.013069599997834302,
+    "query_seconds": 0.7734876000031363,
+    "records": 1580,
+    "parcels": 300,
+    "candidate_pairs": 7050,
+    "exhaustive_pairs": 474000,
+    "quarantined_parcels": [],
+    "status_counts": {
+      "strong_proposal": 913,
+      "unmatched": 211,
+      "needs_review": 456
+    },
+    "same_type_review_records": 170,
+    "wall_seconds": 0.887
+  },
+  "splits": {
+    "development": {
+      "records": 307,
+      "linkable_records": 307,
+      "strong_proposals": 174,
+      "candidate_recall": 0.915309,
+      "strong_precision": 1.0,
+      "strong_recall": 0.566775,
+      "top1_recall": 0.892508,
+      "review_records": 100,
+      "unmatched_records": 33
+    },
+    "test": {
+      "records": 1273,
+      "linkable_records": 1223,
+      "strong_proposals": 739,
+      "candidate_recall": 0.910875,
+      "strong_precision": 1.0,
+      "strong_recall": 0.604252,
+      "top1_recall": 0.882257,
+      "review_records": 356,
+      "unmatched_records": 178
+    }
+  },
+  "per_department": {
+    "electricity": {
+      "records": 323,
+      "strong_proposals": 184,
+      "strong_precision": 1.0,
+      "strong_recall": 0.587859,
+      "top1_recall": 0.897764,
+      "unmatched": 38
+    },
+    "municipal": {
+      "records": 302,
+      "strong_proposals": 188,
+      "strong_precision": 1.0,
+      "strong_recall": 0.643836,
+      "top1_recall": 0.893836,
+      "unmatched": 37
+    },
+    "revenue": {
+      "records": 307,
+      "strong_proposals": 190,
+      "strong_precision": 1.0,
+      "strong_recall": 0.639731,
+      "top1_recall": 0.811448,
+      "unmatched": 64
+    },
+    "sewer": {
+      "records": 324,
+      "strong_proposals": 175,
+      "strong_precision": 1.0,
+      "strong_recall": 0.557325,
+      "top1_recall": 0.907643,
+      "unmatched": 36
+    },
+    "water": {
+      "records": 324,
+      "strong_proposals": 176,
+      "strong_precision": 1.0,
+      "strong_recall": 0.56051,
+      "top1_recall": 0.907643,
+      "unmatched": 36
+    }
+  },
+  "test_scenarios": {
+    "old_record": {
+      "records": 135,
+      "retrieved": 135,
+      "top1_correct": 135,
+      "strong_wrong": 0
+    },
+    "clean_exact_match": {
+      "records": 137,
+      "retrieved": 137,
+      "top1_correct": 137,
+      "strong_wrong": 0
+    },
+    "wrong_identifier": {
+      "records": 136,
+      "retrieved": 136,
+      "top1_correct": 111,
+      "strong_wrong": 0
+    },
+    "missing_geometry": {
+      "records": 133,
+      "retrieved": 133,
+      "top1_correct": 133,
+      "strong_wrong": 0
+    },
+    "record_without_matching_parcel": {
+      "records": 50,
+      "retrieved": 0,
+      "top1_correct": 0,
+      "strong_wrong": 0
+    },
+    "address_typo": {
+      "records": 126,
+      "retrieved": 126,
+      "top1_correct": 126,
+      "strong_wrong": 0
+    },
+    "missing_district_or_village": {
+      "records": 126,
+      "retrieved": 0,
+      "top1_correct": 0,
+      "strong_wrong": 0
+    },
+    "identifier_only": {
+      "records": 127,
+      "retrieved": 127,
+      "top1_correct": 120,
+      "strong_wrong": 0
+    },
+    "format_variation": {
+      "records": 126,
+      "retrieved": 126,
+      "top1_correct": 126,
+      "strong_wrong": 0
+    },
+    "missing_survey_identifier": {
+      "records": 130,
+      "retrieved": 130,
+      "top1_correct": 130,
+      "strong_wrong": 0
+    },
+    "area_error": {
+      "records": 131,
+      "retrieved": 131,
+      "top1_correct": 131,
+      "strong_wrong": 0
+    },
+    "shifted_location": {
+      "records": 133,
+      "retrieved": 133,
+      "top1_correct": 133,
+      "strong_wrong": 0
+    },
+    "duplicate_account": {
+      "records": 21,
+      "retrieved": 18,
+      "top1_correct": 17,
+      "strong_wrong": 0
+    },
+    "record_competing_between_parcels": {
+      "records": 12,
+      "retrieved": 12,
+      "top1_correct": 3,
+      "strong_wrong": 0
+    },
+    "multiple_accounts_one_parcel": {
+      "records": 57,
+      "retrieved": 51,
+      "top1_correct": 51,
+      "strong_wrong": 0
+    }
+  },
+  "duplicates": {
+    "duplicate_account_records": 16,
+    "duplicate_account_scenario": 21
+  },
+  "intentionally_corrupted_records": 1386,
+  "unmatched_records": 211,
+  "candidate_pairs_after_blocking": 7050,
+  "exhaustive_pairs": 474000,
+  "recordless_parcels": 12,
+  "records_without_operational_parcel_id": true,
+  "notice": "Synthetic demonstration data for TRL 3 evaluation; not official cadastral or ownership data."
+}

@@ -3,10 +3,11 @@
 ## Implemented workflow
 
 Select **Kondapur, Hyderabad**. Click a synthetic parcel boundary on the map or
-choose its ID, then open **Parcel profile**. It shows registry context and proposed
-or reviewed revenue, municipal, electricity, water and survey records. Choose a
-record to see its source fields, competing parcels, supporting evidence, missing
-fields and contradictions. Accept, reject or leave the association pending.
+choose its ID, then open **Parcel profile**. It shows registry context and
+department records, including strong matches that were automatically approved.
+Choose a record to see its source fields, competing parcels, supporting evidence,
+missing fields and contradictions. A reviewer can override an automatic approval
+by rejecting it or returning it to pending.
 
 **Department matching** provides the full record queue, including unmatched
 records. Alternative associations above the review threshold can be accepted.
@@ -65,10 +66,15 @@ This is a deterministic engineering benchmark, not independent real-world valida
    weight >=0.50, at least two evidence groups scoring >=0.70, and no blocking
    contradiction. Score >=0.45 otherwise goes to review; lower/no candidates are
    unmatched. Identifier-only evidence can score 1.0 yet still require review.
-7. Duplicate department/account keys downgrade strong proposals to review.
-   Old dates and area differences remain visible warnings. Dates are not used to
-   invent historical parcel geometry. Every proposed link still requires human
-   acceptance before it becomes an accepted association.
+7. Duplicate department/account keys and multiple records of the same department
+   proposed for one parcel downgrade strong proposals to review. Different
+   departments may still be automatically approved for the same parcel. A reviewer
+   can approve multiple records of one department after checking them. Old dates
+   and area differences remain visible warnings. Dates are not used to invent
+   historical parcel geometry. Only the winning candidate of a strong proposal
+   with no same-department parcel collision is automatically approved; a reviewer
+   can override it.
+   Needs-review and unmatched records remain in the human review workflow.
 
 | Department | Identifier | Spatial | Address | Area |
 |---|---:|---:|---:|---:|
@@ -89,16 +95,16 @@ no claim of a newly invented R-tree or scientific algorithm novelty is made.
 Held-out synthetic test: **1,294 records**, including **1,244** with a known parcel.
 
 - Candidate recall: **90.84%**. Missing administrative scope intentionally prevents retrieval.
-- Strong-proposal precision: **100.00%**, with **832** strong proposals.
-- Strong-proposal recall: **66.88%** of linkable records.
+- Strong-proposal precision: **100.00%**, with **786** strong proposals.
+- Strong-proposal recall: **63.18%** of linkable records.
 - Top-ranked proposed association recall, including review cases: **88.42%**.
-- Needs review: **275**; unmatched: **187**.
+- Needs review: **321**; unmatched: **187**.
 
 | Test method | Precision | Recall |
 |---|---:|---:|
 | id only | 89.65% | 64.07% |
 | proximity only | 89.15% | 64.71% |
-| Strong proposals from combined matcher | 100.00% | 66.88% |
+| Strong proposals from combined matcher | 100.00% | 63.18% |
 
 Precision/recall trade-offs are explicit: the combined matcher abstains more
 conservatively. The baselines use the same administrative scope. Their comparison
@@ -127,7 +133,7 @@ The workload is a synthetic grid, scoped in groups of 1,000 parcels, with missin
 IDs, typos and coordinate displacements. It is easier than the Kondapur accuracy
 benchmark and does not represent irregular real records. Results measure index
 construction and streaming matching, excluding file/database I/O, UI rendering,
-audit writes and batch duplicate-account checks. Single runs, concurrent machine
+audit writes and batch duplicate-account/same-department checks. Single runs, concurrent machine
 load and cache effects limit timing comparisons. Crore-scale operation was NOT tested.
 
 Typical per-record work is index retrieval plus scoring/sorting a candidate set,

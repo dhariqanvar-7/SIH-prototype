@@ -1,0 +1,198 @@
+{
+  "dataset": "hyderabad_kondapur/synthetic_integrated_v1",
+  "notice": "Synthetic demonstration data for TRL 3 evaluation; not official cadastral or ownership data.",
+  "synthetic": true,
+  "generation": {
+    "generated_utc": "2026-09-24T19:48:57+00:00",
+    "generator": "scripts/generate_integrated_dataset.py",
+    "fixed_seed": 20260925
+  },
+  "study_area": {
+    "west": 78.35,
+    "south": 17.45,
+    "east": 78.364,
+    "north": 17.462,
+    "metric_crs": "EPSG:32644",
+    "geojson_crs": "EPSG:4326"
+  },
+  "departments": [
+    "revenue",
+    "municipal",
+    "electricity",
+    "water",
+    "sewer"
+  ],
+  "counts": {
+    "parcels": 300,
+    "shifted_geometry_parcels": 30,
+    "parcels_without_departmental_record": 12,
+    "records_by_department": {
+      "revenue": 307,
+      "municipal": 302,
+      "electricity": 323,
+      "water": 324,
+      "sewer": 324
+    },
+    "records_total": 1580,
+    "buildings_reused": 480,
+    "building_parcel_relationships": 1750,
+    "building_parcel_intersections": 975,
+    "utility_points": 900,
+    "utility_lines": 140,
+    "overlapping_parcel_pairs": 62
+  },
+  "scenario_counts": {
+    "missing_survey_identifier": 130,
+    "old_record": 135,
+    "identifier_only": 127,
+    "missing_district_or_village": 126,
+    "clean_exact_match": 137,
+    "area_error": 131,
+    "wrong_identifier": 136,
+    "multiple_accounts_one_parcel": 57,
+    "missing_geometry": 133,
+    "record_without_matching_parcel": 50,
+    "shifted_location": 133,
+    "format_variation": 126,
+    "address_typo": 126,
+    "duplicate_account": 21,
+    "record_competing_between_parcels": 12
+  },
+  "validation_failures": [],
+  "sources_reused": {
+    "synthetic_benchmark/inputs/parcels.geojson": {
+      "sha256": "3bbfda5a736a41cf5348ae06879ed210acc8ec53950e811b27ad190e1f3562f7",
+      "bytes": 1245410
+    },
+    "synthetic_benchmark/evaluation_only/parcels_reference.geojson": {
+      "sha256": "3b9269edb1babb623ca0a2f6db9537cea08e4e789c8a81abe867d2af51979c2a",
+      "bytes": 1257204
+    },
+    "departmental/inputs/parcel_directory.json": {
+      "sha256": "bd55dc27981fd4d3e7b12b6dc51274e7c9b02cd340410b4522ca8076e0496ff6",
+      "bytes": 66057
+    },
+    "departmental/inputs/records.json": {
+      "sha256": "e77f040e1f9950bcde8f9feb6d4db81a5b17b7a4009cbe9db2e7accc54e4d682",
+      "bytes": 837127
+    },
+    "departmental/evaluation_only/answers.json": {
+      "sha256": "f2a852e839e56b6046b2e89ba2a1ca554d4d31403f41a6f22d182df50a1b75a9",
+      "bytes": 241200
+    },
+    "synthetic_benchmark/evaluation_only/expected_building_intersections.csv": {
+      "sha256": "3439cc80837048de16a5609abedfec5e8992512b9948c044851520938988d574",
+      "bytes": 102721
+    },
+    "synthetic_benchmark/inputs/utility_network_synthetic.geojson": {
+      "sha256": "6fd4ebf073b833f34cf4edb2fc6847e1a49b41d292896a72c3ed478600e498e2",
+      "bytes": 33188
+    },
+    "buildings.geojson": {
+      "sha256": "6bf787cf632f8a0c855fb268a59a99296e35248d220f111600013513c61324f8",
+      "bytes": 575905
+    },
+    "roads.geojson": {
+      "sha256": "883e792f35fa0a5f651291f079818ed3183089c758fb7e246332d135d6c60822",
+      "bytes": 251998
+    },
+    "landuse.geojson": {
+      "sha256": "016008324cefd259fc627d9f29998a8043a41d645e97714d84694387de3ee416",
+      "bytes": 9236
+    },
+    "amenities.geojson": {
+      "sha256": "b7ac446ce071d13e48f9e116bac869b1dcd18b323c23e53a8c07784b80876f18",
+      "bytes": 19134
+    },
+    "utilities.geojson": {
+      "sha256": "f3d9c4afbaf4a3b9d53cba4fe997fda6b0dcbb4134115238c74961efceaa19db",
+      "bytes": 14389
+    },
+    "aoi.geojson": {
+      "sha256": "2fad7fd99069584084a5e497918005807b6239f4d4881994490b2f05659cadfa",
+      "bytes": 750
+    }
+  },
+  "attribution": [
+    "Microsoft GlobalMLBuildingFootprints \u2014 CDLA-Permissive-2.0",
+    "\u00a9 OpenStreetMap contributors \u2014 ODbL-1.0"
+  ],
+  "synthetic_limitations": [
+    "Parcel boundaries are invented (seeded Voronoi clipped to the AOI), not official cadastral boundaries.",
+    "No ownership, ownership transfer or legal title is represented anywhere in this package.",
+    "Administrative scopes (district, mandal, village, ward) use DEMO- labels and are fictional.",
+    "Departmental identities, accounts and service connections are invented; no real customer data.",
+    "30 parcels carry controlled geometry displacement; a small number of overlaps/gaps are intentional.",
+    "Utility points and lines do not follow real pipes, cables or roads.",
+    "Building relationships use Microsoft model-derived footprints, which are predictions, not verified structures.",
+    "Reused records and their true parcel associations come from the departmental fixture; reuse is documented above.",
+    "This is a deterministic engineering benchmark, not independent real-world validation.",
+    "evaluation_only/ must never be read by the matching application."
+  ],
+  "files": {
+    "evaluation_only/answers.json": {
+      "sha256": "491b76e9d96a562dd8dab227f9af9045e167700939a6d7db5acf10fa6af3632c",
+      "bytes": 469284
+    },
+    "evaluation_only/parcels_without_records.json": {
+      "sha256": "1cb7b53b257a6dbc0dae22296e7e9dd52d4df7e0260dc5e5fd0bd26c4ee00a12",
+      "bytes": 2700
+    },
+    "evaluation_only/utility_points_reference.geojson": {
+      "sha256": "b5865bdd9ff6ebbf9c1ad5dba51e369c9080d6e3193c08134b01490dc044275a",
+      "bytes": 240254
+    },
+    "inputs/building_parcel_relationships.csv": {
+      "sha256": "6a3f6652597a4740053bb9099bb62583c88bf49cec964b42228d488a190405fb",
+      "bytes": 116418
+    },
+    "inputs/electricity_records.json": {
+      "sha256": "b827a72e28d0ca580ba8233648886c8f25c94437fab5d1691be824e0b72ed851",
+      "bytes": 207135
+    },
+    "inputs/municipal_records.json": {
+      "sha256": "301c62074a52d8b7f535e9d5621bf9556365ec06a8bcdda920e83b7fdba99096",
+      "bytes": 207018
+    },
+    "inputs/parcels.geojson": {
+      "sha256": "1ced0a4787305d1cb7f89516c11ac47aa7fa72523b7d588d9d2892bfd5acbbd2",
+      "bytes": 616021
+    },
+    "inputs/revenue_records.json": {
+      "sha256": "fe49b472afbfe116190def220fe70cbf18e192e0e2c42df5b7b0186f128340cf",
+      "bytes": 198543
+    },
+    "inputs/sewer_records.json": {
+      "sha256": "2a4f44f073d72fe3f0a3603b63283f7444418e23c2cf1c4c9eaec1a90c959cf7",
+      "bytes": 204124
+    },
+    "inputs/utility_lines.geojson": {
+      "sha256": "4b3c0653ea543ee4d835337d11b7ef3effdb00238a721ccb6b99d7dd00c693eb",
+      "bytes": 41357
+    },
+    "inputs/utility_points.geojson": {
+      "sha256": "4769ecbcea0bd30f060c9e6ddd308d5d7852298e8d9971956a06a9755e1a4d4b",
+      "bytes": 216844
+    },
+    "inputs/water_records.json": {
+      "sha256": "ad28b7cdead043244c65827b25c0015e3e56da316522281089044a185bb4af63",
+      "bytes": 200835
+    },
+    "metadata/data_dictionary.md": {
+      "sha256": "c30dee3c059c91ddfcca480d1a187cca4c61f0762311d13b9e3d565c1e3861dc",
+      "bytes": 9188
+    },
+    "metadata/generation_summary.json": {
+      "sha256": "2d6499a04a5cd953e8cf680118a8e1a8e3b088521f43aa46d4f09196a0ca46b0",
+      "bytes": 894
+    },
+    "scripts/evaluate_integrated.py": {
+      "sha256": "8cd3f30f137dfb0c5a6b8e5833f6d635589d8ca92056acb41dfb072a4bbdc615",
+      "bytes": 6474
+    },
+    "scripts/generate_integrated_dataset.py": {
+      "sha256": "7a85fb108e08900328608cac2df7773792a545b1c525aca4d17d92c1731c7c7b",
+      "bytes": 46065
+    }
+  }
+}

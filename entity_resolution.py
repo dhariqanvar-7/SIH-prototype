@@ -13,12 +13,14 @@ from shapely.geometry import Point
 from shapely.strtree import STRtree
 
 VERSION = 'iges-er-1.0'
+REVIEW_POLICY_VERSION = 'same-department-parcel-v1'
 RADIUS_M = 35
 WEIGHTS = {
     'revenue': dict(identifier=.45, spatial=.25, address=.15, area=.15),
     'municipal': dict(identifier=.25, spatial=.35, address=.30, area=.10),
     'electricity': dict(identifier=.20, spatial=.35, address=.40, area=.05),
     'water': dict(identifier=.20, spatial=.35, address=.40, area=.05),
+    'sewer': dict(identifier=.20, spatial=.35, address=.40, area=.05),
     'survey': dict(identifier=.40, spatial=.45, address=.10, area=.05),
 }
 POLICY = {'strong_threshold':.80, 'review_threshold':.45, 'margin':.12,
@@ -177,11 +179,25 @@ class Resolver:
             # appearing twice is flagged rather than silently deduplicated.
             if r.get('account_id'): signatures[(r['department'],r['account_id'])].append(r['record_id'])
         duplicates={rid:group for group in signatures.values() if len(group)>1 for rid in group}
+        by_parcel_type=defaultdict(list)
+        for result in results:
+            if result['proposed_parcel_id']:
+                by_parcel_type[(result['proposed_parcel_id'],result['department'])].append(result['record_id'])
         for r in results:
             r['duplicate_record_ids']=duplicates.get(r['record_id'],[])
-            if r['duplicate_record_ids'] and r['status']=='strong_proposal': r['status']='needs_review'
-        return results, dict(algorithm_version=VERSION,index_seconds=self.index_seconds,
+            same_type=by_parcel_type.get((r['proposed_parcel_id'],r['department']),[])
+            r['same_type_record_ids']=[rid for rid in same_type if rid!=r['record_id']]
+            if r['same_type_record_ids']:
+                reason=f"Multiple {r['department']} records proposed for parcel {r['proposed_parcel_id']}; human review required"
+                r['reason']=reason
+                if r['candidates'] and r['candidates'][0]['parcel_id']==r['proposed_parcel_id']:
+                    r['candidates'][0]['conflicts'].append(reason)
+            if (r['duplicate_record_ids'] or r['same_type_record_ids']) and r['status']=='strong_proposal':
+                r['status']='needs_review'
+        return results, dict(algorithm_version=VERSION,review_policy_version=REVIEW_POLICY_VERSION,
+            index_seconds=self.index_seconds,
             query_seconds=time.perf_counter()-started,records=len(records),parcels=len(self.parcels),
             candidate_pairs=sum(r['candidate_count'] for r in results),
             exhaustive_pairs=len(records)*len(self.parcels), quarantined_parcels=self.quarantine,
-            status_counts=dict(Counter(r['status'] for r in results)))
+            status_counts=dict(Counter(r['status'] for r in results)),
+            same_type_review_records=sum(bool(r['same_type_record_ids']) for r in results))

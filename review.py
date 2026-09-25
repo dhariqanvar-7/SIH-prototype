@@ -1,5 +1,6 @@
 import json
 import sqlite3
+from collections import defaultdict
 from pathlib import Path
 from datetime import datetime, timezone
 import pandas as pd
@@ -44,6 +45,43 @@ class ReviewStore:
             db.execute('INSERT INTO audit(dataset,proposal,decision,reviewer,note,at) VALUES(?,?,?,?,?,?)',
                        (fingerprint,proposal['proposal_id'],'accepted',reviewer.strip(),note,at))
 
+
+def effective_decisions(proposals, recorded=None):
+    """Return recorded decisions plus safe automatic approvals.
+
+    Only the winning candidate of a strong departmental match is automatically
+    approved.  An explicit reviewer decision always takes precedence, so a
+    reviewer can reject or re-open an automatically approved association.
+    """
+    decisions = dict(recorded or {})
+    proposed_by_type = defaultdict(set)
+    accepted_by_type = defaultdict(set)
+    for p in proposals:
+        if p.get('kind') != 'department_link':
+            continue
+        key = (p.get('target_id'), p.get('source'))
+        if p.get('candidate_rank') == 1:
+            proposed_by_type[key].add(p.get('feature_id'))
+        if decisions.get(p['proposal_id']) == 'accepted':
+            accepted_by_type[key].add(p.get('feature_id'))
+    explicit_accepts = {
+        (p.get('source'), p.get('feature_id')): p['proposal_id']
+        for p in proposals
+        if decisions.get(p['proposal_id']) == 'accepted'
+        and p.get('kind') == 'department_link'
+    }
+    for proposal in proposals:
+        if (proposal.get('kind') == 'department_link'
+                and proposal.get('matching_status') == 'strong_proposal'
+                and proposal.get('candidate_rank') == 1):
+            key = (proposal.get('source'), proposal.get('feature_id'))
+            parcel_type = (proposal.get('target_id'), proposal.get('source'))
+            if (len(proposed_by_type[parcel_type]) == 1
+                    and not (accepted_by_type[parcel_type] - {proposal.get('feature_id')})
+                    and (key not in explicit_accepts or explicit_accepts[key] == proposal['proposal_id'])):
+                decisions.setdefault(proposal['proposal_id'], 'auto_approved')
+    return decisions
+
 def export_geojson(result, decisions):
     """Keep original boundaries unless a specific repair was accepted."""
     parcels = result['originals']['parcels'].copy()
@@ -51,7 +89,8 @@ def export_geojson(result, decisions):
     parcels['dataset_fingerprint'] = result['fingerprint']
     parcels['geometry_status'] = ['original_valid' if g.is_valid else 'original_invalid' for g in parcels.geometry]
     for i,r in parcels.iterrows():
-        accepted = [p for p in result['proposals'] if decisions.get(p['proposal_id'])=='accepted']
+        accepted = [p for p in result['proposals']
+                    if decisions.get(p['proposal_id']) in {'accepted','auto_approved'}]
         repair = next((p for p in accepted if p['kind']=='repair' and p['source']=='parcels' and p['feature_id']==r.parcel_id),None)
         if repair:
             parcels.at[i,'geometry'] = from_wkt(repair['proposed_wkt'])
