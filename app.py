@@ -54,7 +54,8 @@ with maptab:
     if st.session_state.get('selected_parcel') not in ids:
         st.session_state['selected_parcel'] = ids[0]
     selected = st.selectbox('Inspect parcel',ids,key='selected_parcel')
-    shown = st.multiselect('Visible layers',list(result['layers']),default=['parcels','buildings','roads'] if result['raster_paths'] else ['parcels','t2','utilities','observations'], format_func=lambda k:result['layer_labels'].get(k,k))
+    default_layers = [name for name in ('roads', 'parcels') if name in result['layers']]
+    shown = st.multiselect('Visible layers',list(result['layers']),default=default_layers, format_func=lambda k:result['layer_labels'].get(k,k))
     raster_shown = st.multiselect('Raster layers',list(result['raster_paths']),default=['Satellite imagery']) if result['raster_paths'] else []
     p = result['originals']['parcels']
     center = p.to_crs(4326).geometry.union_all().centroid if p.geometry.is_valid.all() else p.to_crs(4326).geometry.iloc[0].centroid
